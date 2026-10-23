@@ -1,0 +1,262 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 686" role="img" aria-labelledby="t d">
+  <title id="t">Инвентаризация данных</title>
+  <desc id="d">Склад данных: на стеллаже коробки с наборами — таблица, карта, график, база данных, документы, у каждой бирка с цветом доступности. Слева человек сканирует бирку, справа человек ведёт реестр на планшете. Над стеллажом — карточка реестра с цветными отметками и лупа.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e3f1f6"/>
+      <stop offset="1" stop-color="#f6fbfb"/>
+    </linearGradient>
+    <linearGradient id="box" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#efd3a2"/>
+      <stop offset="1" stop-color="#e2bd84"/>
+    </linearGradient>
+    <linearGradient id="post" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2a6a80"/>
+      <stop offset="1" stop-color="#1f5567"/>
+    </linearGradient>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#1f4e5f" flood-opacity="0.16"/>
+    </filter>
+    <g id="leaf"><path d="M0 0 C 18 -30 52 -40 80 -36 C 66 -10 34 8 0 0 Z"/></g>
+    <g id="check"><path d="M-6 0 l4 4 l8 -9" fill="none" stroke="#2e7d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>
+  </defs>
+
+  <!-- Небо и дальний план -->
+  <rect width="1600" height="686" fill="url(#sky)"/>
+  <circle cx="230" cy="120" r="110" fill="#ffffff" opacity="0.3"/>
+  <circle cx="1380" cy="150" r="90" fill="#ffffff" opacity="0.28"/>
+  <path d="M0 440 C 220 380 420 410 620 400 C 860 388 1080 360 1300 380 C 1450 392 1540 380 1600 372 L1600 686 L0 686 Z" fill="#dcebe5"/>
+
+  <!-- Здание слева -->
+  <g fill="#cfdfe3">
+    <rect x="96" y="330" width="210" height="96"/>
+    <rect x="86" y="318" width="230" height="16"/>
+    <path d="M150 318 Q 201 250 252 318 Z"/>
+    <rect x="197" y="262" width="8" height="24"/><circle cx="201" cy="260" r="5"/>
+    <rect x="80" y="424" width="242" height="12"/>
+  </g>
+  <g fill="#e6f0f2">
+    <rect x="112" y="342" width="14" height="80"/><rect x="142" y="342" width="14" height="80"/>
+    <rect x="172" y="342" width="14" height="80"/><rect x="216" y="342" width="14" height="80"/>
+    <rect x="246" y="342" width="14" height="80"/><rect x="276" y="342" width="14" height="80"/>
+  </g>
+
+  <!-- Город и ветряки справа -->
+  <g fill="#cfdfe3">
+    <rect x="1330" y="300" width="46" height="120"/>
+    <rect x="1384" y="258" width="38" height="162"/>
+    <rect x="1430" y="320" width="54" height="100"/>
+    <rect x="1492" y="280" width="34" height="140"/>
+  </g>
+  <g stroke="#cfdfe3" stroke-width="5" stroke-linecap="round">
+    <line x1="1560" y1="420" x2="1560" y2="300"/>
+    <line x1="1560" y1="300" x2="1540" y2="262"/><line x1="1560" y1="300" x2="1596" y2="292"/><line x1="1560" y1="300" x2="1548" y2="340"/>
+  </g>
+
+  <!-- Холмы и деревья -->
+  <path d="M0 500 C 180 450 360 470 520 480 C 760 495 980 470 1180 470 C 1360 470 1500 480 1600 470 L1600 686 L0 686 Z" fill="#cde4da"/>
+  <g>
+    <rect x="368" y="420" width="8" height="60" fill="#8aa99a"/><circle cx="372" cy="410" r="34" fill="#9cc7b4"/>
+    <rect x="430" y="440" width="6" height="44" fill="#8aa99a"/><circle cx="433" cy="432" r="24" fill="#b2d4c4"/>
+    <rect x="1212" y="420" width="8" height="60" fill="#8aa99a"/><circle cx="1216" cy="408" r="36" fill="#9cc7b4"/>
+    <rect x="1268" y="444" width="6" height="40" fill="#8aa99a"/><circle cx="1271" cy="436" r="22" fill="#b2d4c4"/>
+  </g>
+  <ellipse cx="800" cy="606" rx="660" ry="64" fill="#eef6f3"/>
+
+  <!-- Связи между карточками -->
+  <g fill="none" stroke="#5fa2b8" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round">
+    <path d="M470 150 C 540 120 590 110 640 112"/>
+    <path d="M960 112 C 1020 104 1070 110 1112 136"/>
+    <path d="M800 176 C 800 190 800 196 800 206"/>
+    <path d="M440 210 C 460 250 500 268 548 268"/>
+  </g>
+  <g fill="#f2a541"><circle cx="470" cy="150" r="6"/><circle cx="1112" cy="136" r="6"/><circle cx="548" cy="268" r="6"/></g>
+
+  <!-- Карточка реестра -->
+  <g filter="url(#soft)">
+    <rect x="640" y="40" width="320" height="140" rx="14" fill="#ffffff"/>
+    <rect x="640" y="40" width="320" height="30" rx="14" fill="#1f6f8b"/>
+    <rect x="640" y="56" width="320" height="14" fill="#1f6f8b"/>
+  </g>
+  <g fill="#ffffff" opacity="0.9"><rect x="660" y="51" width="70" height="8" rx="4"/><rect x="742" y="51" width="40" height="8" rx="4"/></g>
+  <g>
+    <rect x="660" y="84" width="22" height="16" rx="3" fill="#d9ecf2"/><rect x="694" y="88" width="170" height="8" rx="4" fill="#d6e2e6"/><circle cx="930" cy="92" r="8" fill="#2e7d32"/>
+    <rect x="660" y="110" width="22" height="16" rx="3" fill="#d9ecf2"/><rect x="694" y="114" width="140" height="8" rx="4" fill="#d6e2e6"/><circle cx="930" cy="118" r="8" fill="#d4a000"/>
+    <rect x="660" y="136" width="22" height="16" rx="3" fill="#d9ecf2"/><rect x="694" y="140" width="190" height="8" rx="4" fill="#d6e2e6"/><circle cx="930" cy="144" r="8" fill="#c62828"/>
+    <rect x="660" y="162" width="22" height="10" rx="3" fill="#d9ecf2"/><rect x="694" y="163" width="120" height="8" rx="4" fill="#d6e2e6"/><circle cx="930" cy="167" r="7" fill="none" stroke="#8a9aa0" stroke-width="3"/>
+  </g>
+
+  <!-- Плавающие карточки: таблица и график -->
+  <g filter="url(#soft)">
+    <rect x="370" y="104" width="100" height="90" rx="12" fill="#ffffff" transform="rotate(-7 420 149)"/>
+    <rect x="1112" y="96" width="100" height="90" rx="12" fill="#ffffff" transform="rotate(6 1162 141)"/>
+  </g>
+  <g transform="rotate(-7 420 149)" fill="none" stroke="#1f6f8b" stroke-width="3">
+    <rect x="392" y="126" width="56" height="44" rx="3"/><line x1="392" y1="140" x2="448" y2="140"/><line x1="392" y1="155" x2="448" y2="155"/><line x1="411" y1="126" x2="411" y2="170"/><line x1="430" y1="126" x2="430" y2="170"/>
+  </g>
+  <g transform="rotate(6 1162 141)">
+    <rect x="1134" y="140" width="10" height="28" fill="#5fa2b8"/><rect x="1150" y="126" width="10" height="42" fill="#1f6f8b"/><rect x="1166" y="132" width="10" height="36" fill="#5fa2b8"/><rect x="1182" y="116" width="10" height="52" fill="#f2a541"/>
+  </g>
+
+  <!-- Лупа -->
+  <g>
+    <line x1="1262" y1="112" x2="1318" y2="168" stroke="#1f5567" stroke-width="18" stroke-linecap="round"/>
+    <circle cx="1226" cy="76" r="50" fill="#e9f5f9" fill-opacity="0.6" stroke="#2a6a80" stroke-width="12"/>
+    <path d="M1196 60 Q 1206 44 1224 40" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+  </g>
+
+  <!-- Стеллаж -->
+  <g filter="url(#soft)">
+    <rect x="512" y="206" width="20" height="388" rx="4" fill="url(#post)"/>
+    <rect x="1078" y="206" width="20" height="388" rx="4" fill="url(#post)"/>
+    <rect x="504" y="200" width="602" height="16" rx="5" fill="#2a6a80"/>
+    <rect x="512" y="318" width="586" height="14" rx="3" fill="#3a87a1"/>
+    <rect x="512" y="440" width="586" height="14" rx="3" fill="#3a87a1"/>
+    <rect x="512" y="562" width="586" height="14" rx="3" fill="#3a87a1"/>
+  </g>
+
+  <!-- Коробки: верхняя полка -->
+  <g stroke="#c9a46a" stroke-width="2">
+    <rect x="546" y="228" width="128" height="90" rx="5" fill="url(#box)"/>
+    <rect x="690" y="240" width="110" height="78" rx="5" fill="url(#box)"/>
+    <rect x="814" y="224" width="140" height="94" rx="5" fill="url(#box)"/>
+    <rect x="968" y="248" width="96" height="70" rx="5" fill="url(#box)"/>
+  </g>
+  <!-- средняя полка -->
+  <g stroke="#c9a46a" stroke-width="2">
+    <rect x="546" y="360" width="104" height="80" rx="5" fill="url(#box)"/>
+    <rect x="664" y="344" width="150" height="96" rx="5" fill="url(#box)"/>
+    <rect x="828" y="356" width="116" height="84" rx="5" fill="url(#box)"/>
+    <rect x="958" y="348" width="106" height="92" rx="5" fill="url(#box)"/>
+  </g>
+  <!-- нижняя полка -->
+  <g stroke="#c9a46a" stroke-width="2">
+    <rect x="546" y="468" width="140" height="94" rx="5" fill="url(#box)"/>
+    <rect x="700" y="478" width="120" height="84" rx="5" fill="url(#box)"/>
+    <rect x="958" y="468" width="106" height="94" rx="5" fill="url(#box)"/>
+  </g>
+  <!-- открытая пустая коробка: данных нет -->
+  <g stroke="#c9a46a" stroke-width="2">
+    <rect x="836" y="496" width="106" height="66" rx="4" fill="#d9b276"/>
+    <path d="M836 496 L 818 470 L 852 470 L 866 496 Z" fill="#e9c995"/>
+    <path d="M942 496 L 960 472 L 928 472 L 914 496 Z" fill="#e9c995"/>
+  </g>
+  <!-- ленты -->
+  <g fill="#d6ad70" opacity="0.8">
+    <rect x="600" y="228" width="20" height="90"/><rect x="735" y="240" width="20" height="78"/><rect x="874" y="224" width="20" height="94"/>
+    <rect x="588" y="360" width="20" height="80"/><rect x="729" y="344" width="20" height="96"/><rect x="1001" y="348" width="20" height="92"/>
+    <rect x="606" y="468" width="20" height="94"/><rect x="750" y="478" width="20" height="84"/><rect x="1001" y="468" width="20" height="94"/>
+  </g>
+
+  <!-- Значки наборов на коробках -->
+  <g fill="#ffffff" stroke="#e0c08c" stroke-width="1.5">
+    <rect x="560" y="250" width="34" height="34" rx="4"/>
+    <rect x="768" y="262" width="26" height="26" rx="4"/>
+    <rect x="904" y="246" width="38" height="38" rx="4"/>
+    <rect x="618" y="378" width="28" height="28" rx="4"/>
+    <rect x="760" y="368" width="44" height="44" rx="4"/>
+    <rect x="852" y="376" width="34" height="34" rx="4"/>
+    <rect x="566" y="490" width="34" height="34" rx="4"/>
+    <rect x="776" y="498" width="34" height="34" rx="4"/>
+    <rect x="974" y="370" width="22" height="22" rx="4"/>
+  </g>
+  <!-- таблица -->
+  <g fill="none" stroke="#1f6f8b" stroke-width="2"><rect x="566" y="257" width="22" height="20"/><line x1="566" y1="264" x2="588" y2="264"/><line x1="566" y1="271" x2="588" y2="271"/><line x1="577" y1="257" x2="577" y2="277"/></g>
+  <!-- карта с меткой -->
+  <path d="M908 252 L 920 256 L 930 250 L 938 254 L 938 280 L 930 276 L 920 282 L 908 278 Z" fill="#cfe8de" stroke="#3f8f75" stroke-width="2"/>
+  <path d="M923 270 C 916 262 916 256 923 254 C 930 256 930 262 923 270 Z" fill="#e0603f"/>
+  <!-- график -->
+  <g fill="#1f6f8b"><rect x="766" y="392" width="7" height="14"/><rect x="777" y="384" width="7" height="22"/><rect x="788" y="376" width="7" height="30"/></g>
+  <!-- база данных -->
+  <g fill="#5fa2b8"><ellipse cx="869" cy="383" rx="11" ry="4"/><rect x="858" y="383" width="22" height="18"/><ellipse cx="869" cy="401" rx="11" ry="4"/></g>
+  <ellipse cx="869" cy="383" rx="11" ry="4" fill="#9fd0df"/>
+  <!-- документ -->
+  <g fill="#9aaab0"><rect x="572" y="497" width="22" height="3" rx="1.5"/><rect x="572" y="504" width="18" height="3" rx="1.5"/><rect x="572" y="511" width="22" height="3" rx="1.5"/><rect x="572" y="518" width="14" height="3" rx="1.5"/></g>
+  <!-- круговая диаграмма -->
+  <circle cx="632" cy="392" r="9" fill="#5fa2b8"/><path d="M632 392 L 632 383 A 9 9 0 0 1 640 396 Z" fill="#f2a541"/>
+  <!-- глобус -->
+  <circle cx="793" cy="515" r="11" fill="#cfe8de" stroke="#3f8f75" stroke-width="2"/><path d="M782 515 L 804 515 M 793 504 C 787 510 787 520 793 526 C 799 520 799 510 793 504" fill="none" stroke="#3f8f75" stroke-width="1.5"/>
+  <!-- узлы связей -->
+  <g stroke="#1f6f8b" stroke-width="1.5"><line x1="779" y1="270" x2="789" y2="280"/><line x1="779" y1="270" x2="789" y2="266"/></g>
+  <g fill="#1f6f8b"><circle cx="779" cy="270" r="3.5"/><circle cx="789" cy="280" r="3"/><circle cx="789" cy="266" r="3"/></g>
+  <circle cx="985" cy="381" r="6" fill="#f2a541"/>
+
+  <!-- Бирки с цветом доступности -->
+  <g stroke="#b9c7cc" stroke-width="1.5">
+    <line x1="664" y1="236" x2="672" y2="252"/><line x1="944" y1="232" x2="952" y2="248"/><line x1="804" y1="352" x2="812" y2="368"/>
+    <line x1="1054" y1="356" x2="1062" y2="372"/><line x1="676" y1="476" x2="684" y2="492"/><line x1="1054" y1="476" x2="1062" y2="492"/>
+  </g>
+  <g fill="#ffffff" stroke="#b9c7cc" stroke-width="1.5">
+    <rect x="662" y="250" width="30" height="20" rx="4"/><rect x="942" y="246" width="30" height="20" rx="4"/><rect x="802" y="366" width="30" height="20" rx="4"/>
+    <rect x="1052" y="370" width="30" height="20" rx="4"/><rect x="674" y="490" width="30" height="20" rx="4"/><rect x="1052" y="490" width="30" height="20" rx="4"/>
+  </g>
+  <g>
+    <circle cx="684" cy="260" r="5" fill="#2e7d32"/><circle cx="964" cy="256" r="5" fill="#d4a000"/><circle cx="824" cy="376" r="5" fill="#2e7d32"/>
+    <circle cx="1074" cy="380" r="5" fill="#c62828"/><circle cx="696" cy="500" r="5" fill="#2e7d32"/><circle cx="1074" cy="500" r="5" fill="#d4a000"/>
+  </g>
+  <!-- знак вопроса над пустой коробкой -->
+  <g filter="url(#soft)"><circle cx="889" cy="446" r="18" fill="#ffffff"/></g>
+  <text x="889" y="453" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#c62828">?</text>
+
+  <!-- Человек слева со сканером -->
+  <g>
+    <rect x="380" y="500" width="20" height="96" rx="8" fill="#2b4a6b"/>
+    <rect x="404" y="500" width="20" height="96" rx="8" fill="#24405e"/>
+    <path d="M372 600 h34 v8 h-40 z M400 600 h34 v8 h-40 z" fill="#1d2f43"/>
+    <path d="M370 420 C 370 396 386 384 402 384 C 418 384 434 396 434 420 L 438 512 L 366 512 Z" fill="#e07a5f"/>
+    <path d="M426 410 C 446 400 466 380 482 362" fill="none" stroke="#e07a5f" stroke-width="18" stroke-linecap="round"/>
+    <path d="M376 420 C 364 446 368 470 382 486" fill="none" stroke="#d26b50" stroke-width="16" stroke-linecap="round"/>
+    <circle cx="490" cy="354" r="9" fill="#f2c4a0"/>
+    <rect x="478" y="332" width="38" height="20" rx="5" fill="#33414d" transform="rotate(-24 497 342)"/>
+    <rect x="380" y="374" width="16" height="16" fill="#f2c4a0"/>
+    <circle cx="402" cy="352" r="26" fill="#f2c4a0"/>
+    <path d="M376 350 C 374 322 398 314 414 320 C 430 326 432 342 428 352 C 420 342 404 336 390 344 C 384 348 380 352 376 350 Z" fill="#3b2a20"/>
+    <path d="M376 350 C 368 372 370 392 380 402 C 384 380 382 362 378 350 Z" fill="#3b2a20"/>
+  </g>
+  <!-- луч сканера к бирке -->
+  <path d="M516 328 L 664 252 L 664 268 Z" fill="#e0603f" opacity="0.28"/>
+  <line x1="516" y1="330" x2="664" y2="260" stroke="#e0603f" stroke-width="2" opacity="0.8"/>
+
+  <!-- Человек справа с планшетом-реестром -->
+  <g>
+    <rect x="1182" y="500" width="22" height="96" rx="8" fill="#2b3f55"/>
+    <rect x="1208" y="500" width="22" height="96" rx="8" fill="#24364a"/>
+    <path d="M1176 600 h36 v8 h-42 z M1204 600 h36 v8 h-42 z" fill="#1d2f43"/>
+    <path d="M1172 420 C 1172 394 1190 382 1206 382 C 1222 382 1240 394 1240 420 L 1244 512 L 1168 512 Z" fill="#2f7e95"/>
+    <rect x="1198" y="372" width="16" height="16" fill="#c99a78"/>
+    <circle cx="1206" cy="350" r="26" fill="#c99a78"/>
+    <path d="M1180 350 C 1176 326 1196 314 1212 318 C 1230 322 1236 338 1232 350 C 1222 338 1204 334 1190 342 C 1186 346 1182 352 1180 350 Z" fill="#1e1612"/>
+    <circle cx="1214" cy="318" r="12" fill="#1e1612"/>
+    <!-- планшет -->
+    <g filter="url(#soft)">
+      <rect x="1104" y="400" width="96" height="124" rx="8" fill="#5a8f7b" transform="rotate(-8 1152 462)"/>
+      <rect x="1112" y="414" width="80" height="102" rx="4" fill="#ffffff" transform="rotate(-8 1152 462)"/>
+    </g>
+    <g transform="rotate(-8 1152 462)">
+      <rect x="1138" y="396" width="28" height="12" rx="3" fill="#3f6d5d"/>
+      <use href="#check" x="1124" y="432"/><rect x="1134" y="429" width="44" height="6" rx="3" fill="#d6e2e6"/>
+      <use href="#check" x="1124" y="452"/><rect x="1134" y="449" width="36" height="6" rx="3" fill="#d6e2e6"/>
+      <use href="#check" x="1124" y="472"/><rect x="1134" y="469" width="48" height="6" rx="3" fill="#d6e2e6"/>
+      <circle cx="1124" cy="492" r="5" fill="none" stroke="#c62828" stroke-width="2.5"/><rect x="1134" y="489" width="30" height="6" rx="3" fill="#d6e2e6"/>
+    </g>
+    <path d="M1176 424 C 1160 446 1160 466 1172 482" fill="none" stroke="#2a7187" stroke-width="16" stroke-linecap="round"/>
+    <path d="M1236 424 C 1240 460 1220 482 1196 488" fill="none" stroke="#2a7187" stroke-width="16" stroke-linecap="round"/>
+    <circle cx="1188" cy="488" r="9" fill="#c99a78"/>
+    <!-- ручка -->
+    <line x1="1180" y1="492" x2="1166" y2="470" stroke="#33414d" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Листья на переднем плане -->
+  <g fill="#3f8f75">
+    <use href="#leaf" transform="translate(0 686) rotate(-60) scale(1.6)"/>
+    <use href="#leaf" transform="translate(40 686) rotate(-35) scale(1.3)"/>
+    <use href="#leaf" transform="translate(1600 686) scale(-1 1) rotate(-60) scale(1.6)"/>
+    <use href="#leaf" transform="translate(1560 686) scale(-1 1) rotate(-32) scale(1.3)"/>
+  </g>
+  <g fill="#5ba88a">
+    <use href="#leaf" transform="translate(70 686) rotate(-80) scale(1.2)"/>
+    <use href="#leaf" transform="translate(110 686) rotate(-20) scale(0.9)"/>
+    <use href="#leaf" transform="translate(1530 686) scale(-1 1) rotate(-80) scale(1.2)"/>
+    <use href="#leaf" transform="translate(1490 686) scale(-1 1) rotate(-18) scale(0.9)"/>
+  </g>
+</svg>

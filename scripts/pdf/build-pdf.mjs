@@ -2,7 +2,7 @@
 // Собирает PDF-версию книги из готовой сборки сайта.
 //
 //   npm run build   # сайт в build/
-//   npm run pdf     # PDF в build/data-maps-book.pdf
+//   npm run pdf     # PDF в build/data-inventory-book.pdf
 //
 // Скрипт перенесён из книги «Каталоги данных» (github.com/ivbeg/data-catalogs-book) и упрощён:
 // одна языковая версия, без интерактивных компонентов и логотипа спонсора.
@@ -20,7 +20,7 @@
 // 5. pdf-lib дописывает закладки (части → главы → разделы) и метаданные: название, автор,
 //    язык, ключевые слова. Закладки Chrome не используются: он задваивает в них заголовки.
 //
-// Параметры: --build-dir build  --out build/data-maps-book.pdf  --html book.html  --concurrency 4
+// Параметры: --build-dir build  --out build/data-inventory-book.pdf  --html book.html  --concurrency 4
 // Браузер: установленный Google Chrome; другой путь — CHROME_PATH, Chromium из Playwright —
 // PDF_BROWSER_CHANNEL=chromium (после `npx playwright install chromium`).
 
@@ -41,7 +41,7 @@ const BOOK_PAGE = '__pdf-book.html';
 const LOCALES = {
   ru: {
     buildDir: 'build',
-    fileName: 'data-maps-book.pdf',
+    fileName: 'data-inventory-book.pdf',
     docsDir: 'docs',
     lang: 'ru',
     browserLocale: 'ru-RU',

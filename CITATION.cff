@@ -1,4 +1,4 @@
-# Как цитировать книгу «Карты данных».
+# Как цитировать книгу «Инвентаризация данных».
 # Формат: Citation File Format 1.2.0, https://citation-file-format.github.io/
 # Адрес сайта совпадает с url + baseUrl в docusaurus.config.ts. Лицензия текста — CC BY 4.0,
 # полный текст — в файле LICENSE.
@@ -6,30 +6,31 @@ cff-version: 1.2.0
 message: >-
   Если вы ссылаетесь на эту книгу, цитируйте её так.
   If you cite this book, please use the reference below.
-title: "Карты данных"
+title: "Инвентаризация данных"
 abstract: >-
-  Как выяснить, где лежат данные, кто ими владеет и насколько они доступны.
-  Книга о картах данных: какие они бывают, как их составлять, где искать сведения
-  о государственных информационных системах и как хранить карту как данные.
-  С атласом отраслевых карт 2018–2019 годов.
+  Как выяснить, какие данные у вас есть, и найти те, которых не хватает.
+  Книга об инвентаризации данных в государстве и компаниях: цели и подходы,
+  методы, семь шагов, реестр данных, источники государственных, общественных
+  и коммерческих данных, стандарты описания и страновые практики.
 authors:
   - family-names: "Бегтин"
     given-names: "Иван"
     alias: "Ivan Begtin"
 license: CC-BY-4.0
-url: "https://infoculture.github.io/datainventorydocs/"
-repository-code: "https://github.com/infoculture/datainventorydocs"
+url: "https://datainventory.begtin.tech/"
+repository-code: "https://github.com/ivbeg/data-inventory"
 keywords:
-  - карты данных
   - инвентаризация данных
+  - реестр данных
+  - управление данными
   - государственные информационные системы
   - открытые данные
-  - источники данных
-  - data maps
+  - карты данных
   - data inventory
+  - data governance
 preferred-citation:
   type: book
-  title: "Карты данных: как выяснить, где лежат данные, кто ими владеет и насколько они доступны"
+  title: "Инвентаризация данных: как выяснить, какие данные у вас есть, и найти те, которых не хватает"
   authors:
     - family-names: "Бегтин"
       given-names: "Иван"
@@ -38,5 +39,5 @@ preferred-citation:
   languages:
     - ru
   license: CC-BY-4.0
-  url: "https://infoculture.github.io/datainventorydocs/"
-  repository-code: "https://github.com/infoculture/datainventorydocs"
+  url: "https://datainventory.begtin.tech/"
+  repository-code: "https://github.com/ivbeg/data-inventory"

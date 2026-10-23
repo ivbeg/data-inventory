@@ -21,6 +21,40 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+/* Панель навигации, правила из книги «Каталоги данных». Мобильное меню Docusaurus включается
+   только до 996 px. Выше меню ужимается по шагам,
+   иначе правые пункты наезжают на левые. Новый пункт меню — пересчитать пороги. */
+@media (min-width: 997px) and (max-width: 1499px) {
+  /* Название сайта прячем, логотип остаётся ссылкой на главную. */
+  .navbar__brand .navbar__title {
+    display: none;
+  }
+
+  .navbar__brand .navbar__logo {
+    margin-right: 0;
+  }
+
+  .navbar__items .navbar__link svg[class*='iconExternalLink'] {
+    display: none;
+  }
+}
+
+@media (min-width: 997px) and (max-width: 1299px) {
+  /* «Семь шагов», чек-листы и глоссарий остаются в боковом меню и в подвале. */
+  .navbar__item.navbar-item--wide-only {
+    display: none;
+  }
+
+  .navbar__item {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .navbar__search-input {
+    width: 9rem;
+  }
+}
+
 .markdown table {
   display: table;
   width: 100%;
@@ -68,4 +102,104 @@
 /* Интеллект-карты широкие и мелкие: на белом фоне они читаются и в тёмной теме. */
 [data-theme='dark'] .markdown img {
   background: #fff;
+}
+
+/* Главная и «Об авторе»: иллюстрация, карточка и портрет автора — как в книге «Каталоги данных». */
+.markdown .home-hero {
+  margin: 1.25rem 0 1.5rem;
+}
+
+.markdown .home-hero p {
+  margin: 0;
+}
+
+.markdown .home-hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* Светлая картинка на тёмном фоне слепит: слегка приглушаем. */
+[data-theme='dark'] .markdown .home-hero img {
+  filter: brightness(0.88);
+  box-shadow: none;
+}
+
+/* Абзац об авторе на главной: круглое фото слева, текст справа. */
+.markdown .author-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 0 0 var(--ifm-leading);
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 12px;
+  background: var(--ifm-color-emphasis-100);
+}
+
+.markdown .author-card p {
+  margin: 0;
+}
+
+.markdown .author-card > p:first-child {
+  flex: 0 0 auto;
+}
+
+.markdown .author-card img {
+  display: block;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* На узком экране колонка текста рядом с фото слишком узкая: текст обтекает фото и уходит под него. */
+@media (max-width: 575px) {
+  .markdown .author-card {
+    display: flow-root;
+    padding: 0.75rem;
+  }
+
+  .markdown .author-card > p:first-child {
+    float: left;
+    margin: 0.2rem 0.75rem 0.25rem 0;
+  }
+
+  .markdown .author-card img {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.markdown .author-portrait {
+  float: right;
+  width: 220px;
+  margin: 0.25rem 0 1rem 1.5rem;
+}
+
+.markdown .author-portrait p {
+  margin: 0;
+}
+
+.markdown .author-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* Разделы главы начинаются под портретом, а не обтекают его. */
+.markdown .author-portrait ~ h2 {
+  clear: both;
+}
+
+@media (max-width: 575px) {
+  .markdown .author-portrait {
+    float: none;
+    width: 180px;
+    margin: 0 0 1rem;
+  }
 }

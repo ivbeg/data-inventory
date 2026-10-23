@@ -2,21 +2,26 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-const REPO_URL = 'https://github.com/infoculture/datainventorydocs';
+const REPO_URL = 'https://github.com/ivbeg/data-inventory';
+// Год текущей редакции книги: в строке © подвала, не год сборки.
+const EDITION_YEAR = 2026;
+// PDF-версия книги: npm run pdf кладёт файл в корень сайта.
+const PDF = 'pathname:///data-inventory-book.pdf';
 
 const config: Config = {
-  title: 'Карты данных',
-  tagline: 'Как выяснить, где лежат данные, кто ими владеет и насколько они доступны',
+  title: 'Инвентаризация данных',
+  tagline: 'Как выяснить, какие данные у вас есть, и найти те, которых не хватает',
+  favicon: 'img/favicon.svg',
 
   future: {
     v4: true,
   },
 
-  // Постоянный адрес книги не выбран: пока сайт собирается под GitHub Pages репозитория.
-  url: 'https://infoculture.github.io',
-  baseUrl: '/datainventorydocs/',
-  organizationName: 'infoculture',
-  projectName: 'datainventorydocs',
+  // Сайт книги живёт на поддомене личного сайта автора: static/CNAME, DNS — CNAME на ivbeg.github.io.
+  url: 'https://datainventory.begtin.tech',
+  baseUrl: '/',
+  organizationName: 'ivbeg',
+  projectName: 'data-inventory',
   trailingSlash: true,
 
   onBrokenLinks: 'throw',
@@ -53,6 +58,7 @@ const config: Config = {
   ],
 
   themeConfig: {
+    image: 'img/home/data-inventory-hero.webp',
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -62,7 +68,11 @@ const config: Config = {
       },
     },
     navbar: {
-      title: 'Карты данных',
+      title: 'Инвентаризация данных',
+      logo: {
+        alt: 'Инвентаризация данных',
+        src: 'img/logo.svg',
+      },
       items: [
         {
           type: 'docSidebar',
@@ -71,14 +81,35 @@ const config: Config = {
           label: 'Книга',
         },
         {
-          to: '/atlas/how-to-read/',
-          label: 'Атлас',
+          to: '/#с-чего-начать',
+          label: 'С чего начать',
           position: 'left',
+          // Ссылка на раздел главной: без этого Docusaurus считает её активной на любой странице.
+          activeBaseRegex: '^$',
         },
         {
-          to: '/sources/overview/',
-          label: 'Источники сведений',
+          to: '/process/steps/',
+          label: 'Семь шагов',
           position: 'left',
+          className: 'navbar-item--wide-only',
+        },
+        {
+          to: '/appendices/checklists/',
+          label: 'Чек-листы',
+          position: 'left',
+          className: 'navbar-item--wide-only',
+        },
+        {
+          to: '/appendices/glossary/',
+          label: 'Глоссарий',
+          position: 'left',
+          className: 'navbar-item--wide-only',
+        },
+        {
+          href: 'https://datacatalogs.begtin.tech/',
+          label: 'Каталоги данных',
+          title: 'Соседняя книга автора о каталогах данных',
+          position: 'right',
         },
         {
           href: REPO_URL,
@@ -94,31 +125,36 @@ const config: Config = {
           title: 'Книга',
           items: [
             {label: 'О книге', to: '/'},
-            {label: 'Виды карт данных', to: '/map-types/classification/'},
-            {label: 'Как составить карту', to: '/method/process/'},
+            {label: 'Два подхода', to: '/approaches/two-approaches/'},
+            {label: 'Семь шагов', to: '/process/steps/'},
+            {label: 'Где искать данные', to: '/sources/three-layers/'},
             {label: 'Атлас карт данных', to: '/atlas/how-to-read/'},
-            {label: 'Скачать PDF', to: 'pathname:///data-maps-book.pdf'},
+            {label: 'Об авторе', to: '/about-the-author/'},
+            {label: 'Скачать PDF', to: PDF},
           ],
         },
         {
           title: 'Справочник',
           items: [
-            {label: 'Где искать сведения о данных', to: '/sources/overview/'},
-            {label: 'Нормативная база', to: '/appendices/legal-framework/'},
+            {label: 'Реестр данных: 14 атрибутов', to: '/process/registry/'},
+            {label: 'Стандарты описания', to: '/frameworks/metadata-standards/'},
+            {label: 'Шаблоны', to: '/appendices/templates/'},
+            {label: 'Чек-листы', to: '/appendices/checklists/'},
             {label: 'Глоссарий', to: '/appendices/glossary/'},
+            {label: 'Нормативная база', to: '/appendices/legal-framework/'},
           ],
         },
         {
-          title: 'Проект',
+          title: 'Автор',
           items: [
+            {label: 'Книга «Каталоги данных»', href: 'https://datacatalogs.begtin.tech/'},
+            {label: 'Сайт автора', href: 'https://begtin.tech/ru/'},
+            {label: 'Поиск данных Dateno', href: 'https://dateno.io/'},
             {label: 'Репозиторий на GitHub', href: REPO_URL},
-            {label: 'Книга «Каталоги данных»', href: 'https://github.com/ivbeg/data-catalogs-book'},
           ],
         },
       ],
-      copyright:
-        '© 2026 Иван Бегтин, «Карты данных», черновик октября 2026 года. Текст доступен по лицензии ' +
-        '<a href="https://creativecommons.org/licenses/by/4.0/deed.ru">CC BY 4.0</a>.',
+      copyright: `© ${EDITION_YEAR} Иван Бегтин, «Инвентаризация данных», черновик октября ${EDITION_YEAR} года. Текст доступен по лицензии <a href="https://creativecommons.org/licenses/by/4.0/deed.ru">CC BY 4.0</a>.`,
     },
     mermaid: {
       theme: {light: 'neutral', dark: 'dark'},

@@ -7,7 +7,7 @@ import yaml from 'js-yaml';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const DATA = path.join(ROOT, 'data');
-const OUT_MDX = path.join(ROOT, 'docs/06-atlas/_generated');
+const OUT_MDX = path.join(ROOT, 'docs/08-atlas/_generated');
 const OUT_CSV = path.join(ROOT, 'static/downloads');
 const CHECK_ONLY = process.argv.includes('--check');
 
@@ -126,7 +126,7 @@ const KIND_LABELS = {
   availability: 'с разметкой доступности',
 };
 const MONTHS = ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'];
-const REPO_DATA = 'https://github.com/infoculture/datainventorydocs/blob/master/data/maps';
+const REPO_DATA = 'https://github.com/ivbeg/data-inventory/blob/main/data/maps';
 
 function monthYear(checked) {
   const [y, mo] = String(checked).split('-').map(Number);

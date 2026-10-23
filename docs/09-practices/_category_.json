@@ -1,0 +1,8 @@
+{
+  "label": "IX. Практики",
+  "link": {
+    "type": "generated-index",
+    "slug": "/practices",
+    "description": "Хорошие практики инвентаризации данных и типичные ошибки."
+  }
+}

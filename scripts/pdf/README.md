@@ -1,14 +1,14 @@
 # PDF-версия книги
 
-PDF собирается из готового сайта, а не из Markdown: так в нём те же схемы Mermaid, таблицы атласа с отметками доступности, врезки и ссылки, что и на сайте. Скрипт перенесён из книги [«Каталоги данных»](https://github.com/ivbeg/data-catalogs-book) и упрощён: одна языковая версия, без интерактивных компонентов.
+PDF собирается из готового сайта, а не из Markdown: так в нём те же схемы Mermaid, таблицы реестра и атласа, врезки и ссылки, что и на сайте. Скрипт перенесён из книги [«Каталоги данных»](https://github.com/ivbeg/data-catalogs-book) и упрощён: одна языковая версия, без интерактивных компонентов.
 
 ```bash
 npm run build      # сайт в build/
-npm run pdf        # PDF в build/data-maps-book.pdf
+npm run pdf        # PDF в build/data-inventory-book.pdf
 npm run build:pdf  # обе команды подряд
 ```
 
-На GitHub Actions PDF собирается при каждой публикации сайта (`.github/workflows/deploy-pages.yml`) и лежит рядом с ним: `https://infoculture.github.io/datainventorydocs/data-maps-book.pdf`.
+На GitHub Actions PDF собирается при каждой публикации сайта (`.github/workflows/deploy-pages.yml`) и лежит рядом с ним: `https://datainventory.begtin.tech/data-inventory-book.pdf`.
 
 ## Что нужно
 

@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [master]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -30,7 +30,7 @@ jobs:
       - name: Build
         run: npm run build
       # PDF-версия книги ложится в build/ и публикуется вместе с сайтом:
-      # <адрес сайта>/data-maps-book.pdf. Chrome на ubuntu-latest уже установлен.
+      # <адрес сайта>/data-inventory-book.pdf. Chrome на ubuntu-latest уже установлен.
       - name: Install fonts for PDF
         run: |
           sudo apt-get update -qq

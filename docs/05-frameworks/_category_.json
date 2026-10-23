@@ -1,0 +1,8 @@
+{
+  "label": "V. Стандарты и зарубежный опыт",
+  "link": {
+    "type": "generated-index",
+    "slug": "/frameworks",
+    "description": "DAMA-DMBOK, стандарты описания данных (DCAT, DCAT-AP, Project Open Data, наборы высокой ценности), Data Mesh и зарубежные методики инвентаризации."
+  }
+}

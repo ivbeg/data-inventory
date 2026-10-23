@@ -6,5 +6,5 @@
 npm-debug.log*
 
 # Сгенерировано scripts/atlas.mjs из data/
-/docs/06-atlas/_generated/
+/docs/08-atlas/_generated/
 /static/downloads/*.csv

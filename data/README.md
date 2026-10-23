@@ -15,7 +15,7 @@ npm run atlas:check    # только проверить
 npm run check-sources  # проверить адреса источников и обновить source-checks.yaml
 ```
 
-`npm start` и `npm run build` вызывают `npm run atlas` сами. Сгенерированные файлы (`docs/06-atlas/_generated/`, `static/downloads/*.csv`) в git не хранятся.
+`npm start` и `npm run build` вызывают `npm run atlas` сами. Сгенерированные файлы (`docs/08-atlas/_generated/`, `static/downloads/*.csv`) в git не хранятся.
 
 ## sources.yaml
 
