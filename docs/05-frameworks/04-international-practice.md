@@ -44,4 +44,3 @@ description: Зарубежные методики инвентаризации 
 - [Open Data Inventory](https://odin.opendatawatch.com/) — Open Data Watch.
 - [GovEx Data Inventory](https://labs.centerforgov.org/data-governance/data-inventory/) — Johns Hopkins Center for Government Excellence.
 - [Mapping data ecosystems](https://theodi.org/article/mapping-data-ecosystems/) — Open Data Institute.
-- И. Бегтин, презентация «Инвентаризация данных» — зарубежный опыт.

@@ -31,4 +31,3 @@ DAMA-DMBOK (Data Management Body of Knowledge) — свод знаний по у
 ## Источники
 
 - DAMA International. [DAMA-DMBOK: Data Management Body of Knowledge](https://www.dama.org/cpages/body-of-knowledge), 2-е издание, 2017.
-- Обзор «Инвентаризация данных в государственных информационных системах Казахстана», 2025–2026 — «DAMA-DMBOK определяет 11 областей управления данными с Data Governance в центре».

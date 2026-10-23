@@ -40,6 +40,5 @@ description: "Общественные данные — открытые про�
 
 ## Источники
 
-- И. Бегтин, презентация «Инвентаризация данных» — общественные данные и инструменты их поиска.
 - [Wikidata](https://www.wikidata.org), [re3data.org](https://www.re3data.org/), [Awesome Public Datasets](https://github.com/awesomedata/awesome-public-datasets), [data.worldbank.org](https://data.worldbank.org).
 - Проекты «Информационной культуры» — проекты организации, которой руководит автор книги.

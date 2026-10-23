@@ -45,6 +45,4 @@ description: Семь методов инвентаризации данных �
 
 ## Источники
 
-- Обзор «Инвентаризация данных в государственных информационных системах Казахстана», 2025–2026 — семь подходов к инвентаризации.
-- И. Бегтин, презентация «Инвентаризация данных» — инструменты поиска государственных, общественных и коммерческих данных.
 - [Dateno](https://dateno.io/), [Google Dataset Search](https://datasetsearch.research.google.com/), [OpenAIRE Explore](https://explore.openaire.eu/), [re3data.org](https://www.re3data.org/), [Awesome Public Datasets](https://github.com/awesomedata/awesome-public-datasets). Dateno — проект автора книги.
