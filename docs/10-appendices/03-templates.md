@@ -8,14 +8,14 @@ description: Шаблоны для инвентаризации данных —
 
 ## Реестр данных
 
-[registry.csv](pathname:///templates/registry.csv) — 14 обязательных атрибутов из главы [«Реестр данных»](../03-process/05-registry.md) и расширенные. Названия колонок совпадают со свойствами схемы Project Open Data там, где это возможно ([«Стандарты описания»](../05-frameworks/02-metadata-standards.md)).
+[registry.csv](pathname:///templates/registry.csv) — 14 обязательных атрибутов из главы [«Реестр данных»](../03-process/05-registry.md) и расширенные. Колонки `title`, `description`, `format`, `issued`, `modified`, `license` и `publisher` названы как свойства DCAT-US v1.1 (бывшей схемы Project Open Data); у остальных названия свои, а их соответствие свойствам DCAT и DCAT-US — в главе [«Стандарты описания»](../05-frameworks/02-metadata-standards.md#сопоставление-с-реестром).
 
 | Колонка | Атрибут |
 |---------|---------|
 | `id` | уникальный идентификатор |
 | `title` | наименование |
 | `description` | описание |
-| `owner_person` | ответственный (сотрудник ИТ-подразделения) |
+| `owner_person` | ответственный — сотрудник, который знает данные |
 | `owner_contacts` | контакты ответственного |
 | `update_frequency` | периодичность обновления |
 | `access_level` | режим доступа: `open`, `unstructured`, `restricted`, `closed`, `unknown` |

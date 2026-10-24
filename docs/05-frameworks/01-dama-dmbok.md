@@ -30,4 +30,4 @@ DAMA-DMBOK (Data Management Body of Knowledge) — свод знаний по у
 
 ## Источники
 
-- DAMA International. [DAMA-DMBOK: Data Management Body of Knowledge](https://www.dama.org/cpages/body-of-knowledge), 2-е издание, 2017.
+- DAMA International. [DAMA-DMBOK: Data Management Body of Knowledge](https://dama.org/learning-resources/dama-data-management-body-of-knowledge-dmbok/), 2-е издание, 2017; исправленное издание DMBOK 2.0 Revision — 2024. С 2025 года DAMA готовит третью версию свода — DMBOK 3.0.

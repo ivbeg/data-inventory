@@ -9,3 +9,7 @@ description: Карта данных об авиации и авиаперево
 :::
 
 ![Карта данных об авиации и авиаперевозках: 18 вопросов и источники ответов с цветной разметкой доступности](/img/map-types/aviation-questions.webp)
+
+## Источники
+
+- Исходная картинка — пример «Авиация» из прежней версии книги «Карты данных» ([infoculture/datainventorydocs](https://github.com/infoculture/datainventorydocs)).

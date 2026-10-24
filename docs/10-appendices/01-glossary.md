@@ -56,13 +56,15 @@ description: Термины и сокращения, которые встреч
 
 **DCAT, DCAT-AP** — словарь W3C для описания каталогов и наборов данных и его европейский профиль. → [Стандарты описания](../05-frameworks/02-metadata-standards.md)
 
+**DCAT-US** — схема описания наборов данных федеральных ведомств США: версия 1.1 — бывшая схема Project Open Data, версия 3.0 — профиль DCAT 3. → [Стандарты описания](../05-frameworks/02-metadata-standards.md)
+
 **Data Mesh** — подход к архитектуре данных с владением у доменных команд. → [Data Mesh](../05-frameworks/03-data-mesh.md)
 
 **EDI** (Enterprise Data Inventory) — инвентарь данных федерального ведомства США. → [Зарубежные методики](../05-frameworks/04-international-practice.md)
 
 **ODIN** (Open Data Inventory) — методика Open Data Watch для оценки открытости национальной статистики. → [Зарубежные методики](../05-frameworks/04-international-practice.md)
 
-**Project Open Data** — политика и схема описания данных федеральных ведомств США. → [Стандарты описания](../05-frameworks/02-metadata-standards.md)
+**Project Open Data** — политика открытых данных федеральных ведомств США 2013 года и её схема описания; схема теперь называется DCAT-US. → [Стандарты описания](../05-frameworks/02-metadata-standards.md)
 
 **ГИС** — государственная информационная система. → [Государственные данные](../04-sources/02-government.md)
 

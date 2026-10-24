@@ -47,4 +47,4 @@ description: "Карта данных — результат подхода «г
 ## Источники
 
 - [Атлас карт данных](../08-atlas/01-how-to-read.md) — четыре отраслевые карты 2018–2019 годов в виде данных.
-- Прежняя версия книги «Карты данных» — [архив в репозитории](https://github.com/ivbeg/data-inventory/tree/main/archive).
+- Прежняя версия книги «Карты данных» — репозиторий [infoculture/datainventorydocs](https://github.com/infoculture/datainventorydocs); её план, ревизия и сверка фактов — в [archive/](https://github.com/ivbeg/data-inventory/tree/main/archive) репозитория этой книги.
