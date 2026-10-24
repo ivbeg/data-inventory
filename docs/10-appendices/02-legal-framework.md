@@ -34,7 +34,7 @@ description: Законы и нормативные акты, на которы�
 ## США
 
 - **Меморандум OMB M-13-13** «Open Data Policy — Managing Information as an Asset», 2013 — корпоративные инвентари данных федеральных ведомств.
-- **OPEN Government Data Act** — раздел II закона Foundations for Evidence-Based Policymaking Act of 2018: полный инвентарь данных каждого ведомства, каталог data.gov в законе.
+- **OPEN Government Data Act** — раздел II закона Foundations for Evidence-Based Policymaking Act of 2018 (Public Law 115-435, подписан 14 января 2019 года): полный инвентарь данных каждого ведомства, каталог data.gov в законе.
 - **Меморандум OMB M-25-05**, январь 2025 года — руководство по второму этапу реализации закона.
 
 Подробнее — в главе [«Зарубежные методики»](../05-frameworks/04-international-practice.md).

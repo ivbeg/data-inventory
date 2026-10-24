@@ -34,12 +34,12 @@ description: Инвентаризация данных в Казахстане �
 
 | Слой | Источники |
 |------|-----------|
-| **Государственные** | Портал открытых данных data.egov.kz; базовые государственные базы данных — физические лица, юридические лица, регистр недвижимости, электронное лицензирование; Бюро национальной статистики stat.gov.kz; портал госзакупок goszakup.gov.kz; репозиторий открытых данных Национального банка |
+| **Государственные** | Портал открытых данных data.egov.kz; базовые государственные базы данных — физические лица, юридические лица, регистр недвижимости, электронное лицензирование; Бюро национальной статистики stat.gov.kz; единая платформа закупок zakup.gov.kz (прежний адрес goszakup.gov.kz перенаправляет на неё); репозиторий открытых данных Национального банка |
 | **Нормативные акты** | Информационно-правовая система «Әділет» adilet.zan.kz; государственный реестр нормативных правовых актов law.gov.kz; портал «Открытые НПА» legalacts.egov.kz (проекты); сайт Мажилиса parlam.kz; «Судебный кабинет» office.sud.kz; министерство иностранных дел mfa.gov.kz — международные договоры |
 | **Общественные** | Wikidata, DBpedia; порталы Всемирного банка, ООН, ВОЗ, ОЭСР; научные репозитории (re3data.org) |
-| **Отраслевые: нефть, газ, недра** | Министерство энергетики energo.gov.kz; Комитет геологии geology.gov.kz; Министерство экологии и природных ресурсов ecogeo.gov.kz; Казгидромет kazhydromet.kz; ассоциация KAZENERGY kazenergy.com; «КазМунайГаз» kmg.kz; операторы крупных месторождений; Международное энергетическое агентство |
+| **Отраслевые: нефть, газ, недра** | Министерство энергетики (gov.kz/memleket/entities/energo); Комитет геологии geology.gov.kz; Министерство экологии и природных ресурсов ecogeo.gov.kz; Казгидромет kazhydromet.kz; ассоциация KAZENERGY kazenergy.com; «КазМунайГаз» kmg.kz; операторы крупных месторождений; Международное энергетическое агентство |
 
-Сайты data.egov.kz, stat.gov.kz, goszakup.gov.kz, adilet.zan.kz и legalacts.egov.kz открывались 23 октября 2026 года из сети, где проверялась книга.
+Сайты data.egov.kz, stat.gov.kz, adilet.zan.kz и legalacts.egov.kz открывались 23 октября 2026 года из сети, где проверялась книга. 24 октября 2026 года goszakup.gov.kz перенаправлял на zakup.gov.kz, а у energo.gov.kz не было адреса в системе доменных имён: сайт министерства — на портале gov.kz. Адреса geology.gov.kz, ecogeo.gov.kz, law.gov.kz и mfa.gov.kz из той же сети не ответили — их нужно перепроверить из казахстанской сети.
 
 ## Что особенного
 
@@ -49,5 +49,5 @@ description: Инвентаризация данных в Казахстане �
 
 ## Источники
 
-- [Kazakhstan Soars to 24th Place in Global E-Government Ranking](https://astanatimes.com/2024/09/kazakhstan-soars-to-24th-place-in-global-e-government-ranking/) — The Astana Times, сентябрь 2024 года; [UN E-Government](https://egov.kz/cms/en/news/UN_E-Government) — egov.kz.
-- Проверка адресов — 23 октября 2026 года.
+- [Kazakhstan Soars to 24th Place in Global E-Government Ranking](https://astanatimes.com/2024/09/kazakhstan-soars-to-24th-place-in-global-e-government-ranking/) — The Astana Times, сентябрь 2024 года; [Kazakhstan — E-Government Development Index](https://publicadministration.un.org/egovkb/en-us/Data/Country-Information/id/87-Kazakhstan) — UN E-Government Knowledgebase: 24-е место в 2024 году, 28-е в 2022-м.
+- Проверка адресов — 23 и 24 октября 2026 года.

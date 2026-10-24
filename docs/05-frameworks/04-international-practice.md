@@ -8,12 +8,12 @@ description: Зарубежные методики инвентаризации 
 
 ## Инвентари данных федеральных ведомств США
 
-- **2013** — меморандум OMB M-13-13 (Open Data Policy) требует от федеральных ведомств вести **корпоративный инвентарь данных** (Enterprise Data Inventory) и публиковать его общедоступную часть. Инвентарь описывают по схеме Project Open Data, публичную часть выкладывают файлом `data.json`, из которого её собирает data.gov.
-- **2018** — закон OPEN Government Data Act (раздел II закона Foundations for Evidence-Based Policymaking Act) делает это требование законом: каждое ведомство ведёт полный инвентарь данных, учитывающий все данные, которые оно создаёт, собирает, контролирует или хранит, с описанием переменных и указанием, открыт ли набор.
+- **2013** — меморандум OMB M-13-13 (Open Data Policy) требует от федеральных ведомств вести **корпоративный инвентарь данных** (Enterprise Data Inventory) и публиковать его общедоступную часть. Инвентарь описывают по схеме Project Open Data (сейчас она называется DCAT-US v1.1), публичную часть выкладывают файлом `data.json`, из которого её собирает data.gov.
+- **2019** — закон OPEN Government Data Act (раздел II закона Foundations for Evidence-Based Policymaking Act of 2018, подписан 14 января 2019 года) делает это требование законом: каждое ведомство ведёт полный инвентарь данных, учитывающий все данные, которые оно создаёт, собирает, контролирует или хранит, с описанием переменных и указанием, открыт ли набор.
 - **2020** — Счётная палата США (GAO) отмечает, что OMB не выпустило предписанное законом руководство по полным инвентарям.
 - **2025** — OMB выпускает меморандум M-25-05 с руководством по второму этапу реализации закона, в том числе по инвентарям.
 
-Главное в американской модели: один инвентарь на всё ведомство, общий стандарт описания и разделение полного реестра и его общедоступной части. Для публикации используется система inventory.data.gov.
+Главное в американской модели: один инвентарь на всё ведомство, общий стандарт описания и разделение полного реестра и его общедоступной части. Описания для data.gov ведомства могут готовить в закрытой системе inventory.data.gov. На смену схеме v1.1 пришла DCAT-US 3.0 — американский профиль DCAT 3: новые инвентари рекомендуется строить на ней ([«Стандарты описания»](./02-metadata-standards.md)).
 
 ## Open Data Inventory (ODIN)
 
@@ -38,7 +38,8 @@ description: Зарубежные методики инвентаризации 
 
 ## Источники
 
-- [Project Open Data — Implementation Guide](https://project-open-data.cio.gov/implementation-guide/); [Metadata Schema v1.1](https://project-open-data.cio.gov/v1.1/schema/); [inventory.data.gov](https://inventory.data.gov).
+- Project Open Data — [Implementation Guide](https://web.archive.org/web/20240519174130/https://project-open-data.cio.gov/implementation-guide/), копия в Internet Archive от 19 мая 2024 года: сайт project-open-data.cio.gov теперь перенаправляет на resources.data.gov.
+- [DCAT-US v1.1](https://resources.data.gov/resources/dcat-us/) и [DCAT-US 3.0](https://resources.data.gov/resources/dcat-us3/) — resources.data.gov, на октябрь 2026 года; [inventory.data.gov](https://inventory.data.gov).
 - [GAO-21-29: Open Data — Additional Action Required for Full Public Access](https://gao.gov/products/gao-21-29), 2020.
 - [The OPEN Government Data Act: A Primer](https://www.everycrsreport.com/reports/IF12299.html) — Congressional Research Service.
 - [Open Data Inventory](https://odin.opendatawatch.com/) — Open Data Watch.

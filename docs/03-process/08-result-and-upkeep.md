@@ -46,5 +46,5 @@ description: Чем заканчивается инвентаризация — 
 
 ## Источники
 
-- [Project Open Data — Implementation Guide](https://project-open-data.cio.gov/implementation-guide/) — полный инвентарь ведомства и его общедоступная часть.
+- Project Open Data — [Implementation Guide](https://web.archive.org/web/20240519174130/https://project-open-data.cio.gov/implementation-guide/), копия в Internet Archive от 19 мая 2024 года, — полный инвентарь ведомства и его общедоступная часть.
 - Проверка адресов атласа — 23 октября 2026 года, [«Как читать атлас»](../08-atlas/01-how-to-read.md#адреса-источников-в-октябре-2026-года).
