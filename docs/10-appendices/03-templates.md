@@ -42,7 +42,7 @@ description: Шаблоны для инвентаризации данных —
 Для подхода «где найти нужное» — три листа из главы [«Интеллект-карты, доски и таблицы»](../06-tools/02-mindmaps-and-boards.md#рабочая-таблица):
 
 - [sources.csv](pathname:///templates/sources.csv) — источники;
-- [questions.csv](pathname:///templates/questions.csv) — вопросы;
+- [questions.csv](pathname:///templates/questions.csv) — вопросы с типовой темой, задачей и приоритетом ([«Как записать»](../03-process/02-goals-and-questions.md#как-записать));
 - [links.csv](pathname:///templates/links.csv) — связи «вопрос — источник» с доступом и датой.
 
 И заготовка карты в формате атласа книги — [map.yaml](pathname:///templates/map.yaml); схема полей — [`data/README.md`](https://github.com/ivbeg/data-inventory/blob/main/data/README.md).
