@@ -1,2 +1,2 @@
-id,title,description,owner_person,owner_contacts,update_frequency,access_level,download_url,format,issued,modified,quality_check,license,publisher,schema,information_system,mandate,legal_act,checked
-regional-hospitals,Сведения о медицинских организациях по регионам,"Перечень медицинских организаций с адресом, типом и числом коек",,,quarterly,restricted,,,,,,,Министерство здравоохранения,,Ведомственная система здравоохранения,,,2026-10
+id,title,description,owner_person,owner_contacts,update_frequency,access_level,download_url,format,issued,modified,quality_check,license,publisher,schema,information_system,mandate,legal_act,known_from,checked
+regional-hospitals,Сведения о медицинских организациях по регионам,"Перечень медицинских организаций с адресом, типом и числом коек",,,quarterly,restricted,,,,,,,Министерство здравоохранения,,Ведомственная система здравоохранения,,,описание ведомственной системы,2026-10
