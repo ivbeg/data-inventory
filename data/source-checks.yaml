@@ -38,7 +38,7 @@ checks:
   - {id: rosrid-ru, result: tls, dns: ok, http: null, error: CERT_HAS_EXPIRED}
   - {id: minenergo-gov-ru, result: ok, dns: ok, http: 200}
   - {id: gis-tek-ru, result: dns-error, dns: ESERVFAIL, http: null, error: ENOTFOUND}
-  - {id: sacminenergo-rf, result: nxdomain, dns: nxdomain, http: null, error: ENOTFOUND}
+  - {id: sacminenergo-rf, result: ok, dns: ok, http: 200}
   - {id: rosnedra-gov-ru, result: ok, dns: ok, http: 200}
   - {id: rfgf-ru, result: unreachable, dns: ok, http: null, error: UND_ERR_CONNECT_TIMEOUT}
   - {id: lic-rfgf-ru, result: http-error, dns: ok, http: 400}

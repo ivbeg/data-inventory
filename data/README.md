@@ -13,6 +13,7 @@ data/
 npm run atlas          # проверить данные и пересобрать таблицы и CSV
 npm run atlas:check    # только проверить
 npm run check-sources  # проверить адреса источников и обновить source-checks.yaml
+npm run check-sources -- --only=sacminenergo-rf,rosim-ru  # перепроверить только эти источники
 ```
 
 `npm start` и `npm run build` вызывают `npm run atlas` сами. Сгенерированные файлы (`docs/08-atlas/_generated/`, `static/downloads/*.csv`) в git не хранятся.
@@ -46,7 +47,7 @@ npm run check-sources  # проверить адреса источников и
 | `unreachable` | Не ответил: таймаут, отказ в соединении |
 | `no-address` | Домен есть, но у него нет адреса — ни у самого домена, ни у www |
 | `dns-error` | Ошибка системы доменных имён |
-| `nxdomain` | Домена нет |
+| `nxdomain` | Домена нет. У адреса с www проверяют и домен без www: если он есть, результат — по нему |
 
 `nxdomain` не зависит от сети. Остальные результаты зависят: многие российские государственные сайты не открываются из-за рубежа. В поле `network` записано, из какой сети шла проверка (переменная окружения `CHECK_NETWORK`).
 
