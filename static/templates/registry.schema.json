@@ -1,0 +1,112 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/tableschema.json",
+  "description": "Схема шаблона registry.csv из книги «Инвентаризация данных»: https://datainventory.begtin.tech/tools/registry-as-data/#схема. 14 обязательных колонок, коды из справочников, форматы дат и связей. Проверка: frictionless validate registry.csv --schema registry.schema.json",
+  "missingValues": [""],
+  "primaryKey": ["id"],
+  "fields": [
+    {
+      "name": "id",
+      "title": "Уникальный идентификатор",
+      "type": "string",
+      "constraints": {"required": true, "unique": true, "pattern": "[a-z0-9][a-z0-9-]*"}
+    },
+    {"name": "title", "title": "Наименование", "type": "string", "constraints": {"required": true}},
+    {"name": "description", "title": "Описание", "type": "string", "constraints": {"required": true}},
+    {"name": "owner_person", "title": "Ответственный", "type": "string", "constraints": {"required": true}},
+    {"name": "owner_contacts", "title": "Контакты ответственного", "type": "string", "constraints": {"required": true}},
+    {
+      "name": "update_frequency",
+      "title": "Периодичность обновления",
+      "type": "string",
+      "constraints": {
+        "required": true,
+        "enum": ["continuous", "daily", "weekly", "monthly", "quarterly", "annual", "irregular", "never", "unknown"]
+      }
+    },
+    {
+      "name": "access_level",
+      "title": "Режим доступа",
+      "type": "string",
+      "constraints": {"required": true, "enum": ["open", "unstructured", "restricted", "closed", "unknown"]}
+    },
+    {"name": "access_basis", "title": "Чем подтверждён режим доступа", "type": "string"},
+    {
+      "name": "access_restriction",
+      "title": "Причина ограничения",
+      "description": "Один или несколько кодов через «;»",
+      "type": "string",
+      "constraints": {
+        "pattern": "(personal_data|state_secret|official|confidential|third_party|owner_decision|none|unknown)(; ?(personal_data|state_secret|official|confidential|third_party|owner_decision|none|unknown))*"
+      }
+    },
+    {"name": "access_conditions", "title": "Условия доступа", "type": "string"},
+    {
+      "name": "access_checked",
+      "title": "Дата проверки режима доступа",
+      "type": "string",
+      "constraints": {"pattern": "\\d{4}-\\d{2}(-\\d{2})?"}
+    },
+    {"name": "download_url", "title": "Ссылка для выгрузки", "type": "string", "constraints": {"required": true}},
+    {"name": "format", "title": "Формат распространения", "type": "string", "constraints": {"required": true}},
+    {
+      "name": "issued",
+      "title": "Дата публикации",
+      "description": "Дата по ISO 8601, «нет» или «не установлено», после тире — пояснение",
+      "type": "string",
+      "constraints": {"required": true, "pattern": "(\\d{4}(-\\d{2}(-\\d{2})?)?|нет|не установлено)( — .+)?"}
+    },
+    {
+      "name": "modified",
+      "title": "Дата последнего изменения данных",
+      "description": "Дата по ISO 8601, «нет» или «не установлено», после тире — пояснение",
+      "type": "string",
+      "constraints": {"required": true, "pattern": "(\\d{4}(-\\d{2}(-\\d{2})?)?|нет|не установлено)( — .+)?"}
+    },
+    {"name": "quality_check", "title": "Отметка о контроле качества", "type": "string", "constraints": {"required": true}},
+    {"name": "license", "title": "Условия использования", "type": "string", "constraints": {"required": true}},
+    {"name": "publisher", "title": "Организация-владелец", "type": "string", "constraints": {"required": true}},
+    {"name": "domain", "title": "Домен", "type": "string", "constraints": {"pattern": "[a-z0-9][a-z0-9-]*"}},
+    {"name": "aliases", "title": "Синонимы", "type": "string"},
+    {
+      "name": "type",
+      "title": "Тип записи",
+      "type": "string",
+      "constraints": {"enum": ["dataset", "resource", "system", "site", "group"]}
+    },
+    {"name": "schema", "title": "Схема данных", "type": "string"},
+    {"name": "data_contract", "title": "Контракт данных", "type": "string"},
+    {"name": "information_system", "title": "Информационная система", "type": "string"},
+    {"name": "operator", "title": "Оператор системы", "type": "string"},
+    {"name": "mandate", "title": "Полномочие", "type": "string"},
+    {"name": "legal_act", "title": "Нормативный акт", "type": "string"},
+    {
+      "name": "personal_data",
+      "title": "Есть ли персональные данные",
+      "type": "string",
+      "constraints": {"enum": ["yes", "no", "unknown"]}
+    },
+    {
+      "name": "related",
+      "title": "Связанные записи",
+      "description": "aggregate_of:, copy_of: или successor_of: и идентификатор, несколько — через «;»",
+      "type": "string",
+      "constraints": {
+        "pattern": "(aggregate_of|copy_of|successor_of):[a-z0-9-]+(; ?(aggregate_of|copy_of|successor_of):[a-z0-9-]+)*"
+      }
+    },
+    {
+      "name": "status",
+      "title": "Статус записи",
+      "type": "string",
+      "constraints": {"enum": ["active", "retired", "url_broken"]}
+    },
+    {"name": "archive_url", "title": "Копия в веб-архиве", "type": "string", "format": "uri"},
+    {"name": "known_from", "title": "Откуда известно", "type": "string"},
+    {
+      "name": "checked",
+      "title": "Дата проверки записи",
+      "type": "string",
+      "constraints": {"pattern": "\\d{4}-\\d{2}(-\\d{2})?"}
+    }
+  ]
+}
