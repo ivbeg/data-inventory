@@ -94,7 +94,7 @@ flowchart LR
 - **Даты в одном формате** — `2026-10-25`, месяц — `2026-10`.
 - **Заголовки — коды колонок из шаблонов**: тогда лист выгружается в CSV и проверяется тем же скриптом, что и атлас ([«Проверки»](./03-registry-as-data.md#проверки)).
 
-Подойдёт любая таблица, которой пользуются в организации. Если листов много и ссылки между ними путаются, удобнее таблица-база, где колонка ссылается на строку другого листа, а не хранит текст: [Grist](https://www.getgrist.com/) с открытым кодом (Apache 2.0) можно развернуть у себя, Airtable работает только в облаке. Когда записей становятся тысячи, а описания должны обновляться из самих систем, таблицу сменяет каталог метаданных ([«От таблицы до каталога метаданных»](./01-from-spreadsheet-to-catalog.md)).
+Подойдёт любая таблица, которой пользуются в организации. Если листов много и ссылки между ними путаются, удобнее табличная база данных, где колонка ссылается на строку другого листа, а не хранит текст ([«Таблица с типами и связями»](./01-from-spreadsheet-to-catalog.md#таблица-с-типами-и-связями)). Когда записей становятся тысячи, а описания должны обновляться из самих систем, таблицу сменяет каталог метаданных ([«От таблицы до каталога метаданных»](./01-from-spreadsheet-to-catalog.md)).
 
 ## Картинка из таблицы
 
@@ -232,6 +232,6 @@ kanban
 - [Freeplane](https://www.freeplane.org/) и [документация](https://docs.freeplane.org/); исходный код — [freeplane/freeplane](https://github.com/freeplane/freeplane), GPL 2.0.
 - [markmap](https://markmap.js.org/) — [markmap/markmap](https://github.com/markmap/markmap), MIT.
 - Mermaid: [интеллект-карты](https://mermaid.js.org/syntax/mindmap.html) и [доски](https://mermaid.js.org/syntax/kanban.html), версия 12.2 (октябрь 2026 года).
-- [Excalidraw](https://github.com/excalidraw/excalidraw), [Kanboard](https://github.com/kanboard/kanboard), [Wekan](https://github.com/wekan/wekan) — MIT; [Grist](https://github.com/gristlabs/grist-core) — Apache 2.0. Лицензии — по репозиториям на 25 октября 2026 года.
+- [Excalidraw](https://github.com/excalidraw/excalidraw), [Kanboard](https://github.com/kanboard/kanboard), [Wekan](https://github.com/wekan/wekan) — MIT. Лицензии — по репозиториям на 25 октября 2026 года.
 - Глава [«Реестр как данные»](./03-registry-as-data.md) — та же структура в файлах YAML и скрипт, который строит из них таблицы и интеллект-карты атласа.
 - Приложение [«Шаблоны»](../10-appendices/03-templates.md) — листы рабочей таблицы.
