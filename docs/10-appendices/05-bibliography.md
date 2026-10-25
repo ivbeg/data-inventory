@@ -14,6 +14,15 @@ description: Книги, стандарты, методики и материа�
 - **DCAT-US Schema v3.0** и **DCAT-US v1.1** (бывшая Project Open Data Metadata Schema) — [resources.data.gov](https://resources.data.gov/resources/dcat-us3/).
 - Dehghani Z. **How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh**, 2019 — [martinfowler.com](https://martinfowler.com/articles/data-monolith-to-mesh.html).
 
+## Качество данных
+
+- DAMA UK Working Group. **The Six Primary Dimensions for Data Quality Assessment**, 2013.
+- Government Data Quality Hub. **The Government Data Quality Framework**, 2020 — [gov.uk](https://www.gov.uk/government/publications/the-government-data-quality-framework/the-government-data-quality-framework).
+- Black A., van Nederpelt P. **How to Select the Right Dimensions of Data Quality**, DAMA NL, 2020 — [dama-nl.org](http://www.dama-nl.org/wp-content/uploads/2020/11/How-to-Select-the-Right-Dimensions-of-Data-Quality-v1.1-d.d.-14-Nov-2020.pdf).
+- Federal Committee on Statistical Methodology. **A Framework for Data Quality**, FCSM-20-04, 2020 — [rosap.ntl.bts.gov](https://rosap.ntl.bts.gov/view/dot/72798).
+- **ISO/IEC 25012:2008** — модель качества данных; **ISO/IEC 5259-2:2024** — показатели качества данных для аналитики и машинного обучения, в России — ГОСТ Р 71484.2-2024.
+- W3C. **Data Quality Vocabulary**, 2016 — [w3.org/TR/vocab-dqv](https://www.w3.org/TR/vocab-dqv/).
+
 ## Методики инвентаризации
 
 - Office of Management and Budget. **M-13-13: Open Data Policy — Managing Information as an Asset**, 2013 — [текст](https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/memoranda/2013/m-13-13.pdf); **Project Open Data Implementation Guide** — [копия в Internet Archive](https://web.archive.org/web/20240519174130/https://project-open-data.cio.gov/implementation-guide/), 2024.
