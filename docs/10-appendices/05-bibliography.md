@@ -43,6 +43,18 @@ description: Книги, стандарты, методики и материа�
 - data.europa.eu. **Open Data Maturity Report**, 2024 и 2025 — [2025](https://data.europa.eu/sites/default/files/2025-12/2025_odm_report_6.pdf).
 - World Bank. **Open Data Readiness Assessment** — [opendatatoolkit.worldbank.org](https://opendatatoolkit.worldbank.org/en/data/opendatatoolkit/odra).
 
+## Веб-архивы и сохранение данных
+
+Ссылки раздела проверены 25 октября 2026 года.
+
+- Internet Archive. **Wayback CDX Server API** — описание интерфейса, который отвечает, когда адрес сохранялся, — [github.com/internetarchive/wayback](https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server).
+- **End of Term Web Archive** — сайты федерального правительства США при смене администрации, с 2008 года — [eotarchive.org](https://eotarchive.org/).
+- Library Innovation Lab, Harvard Law School. **Data.gov Archive** — наборы data.gov, собранные с ноября 2024 по январь 2025 года, — [lil.law.harvard.edu](https://lil.law.harvard.edu/data-gov-archive).
+- The National Archives. **UK Government Web Archive** — [webarchive.nationalarchives.gov.uk](https://webarchive.nationalarchives.gov.uk/).
+- Publications Office of the European Union. **EU web archive** — [op.europa.eu](https://op.europa.eu/en/web/euwebarchive); что архив сохраняет и чего нет — [руководство](https://op.europa.eu/en/web/webguide/archiving).
+- АНО «Информационная культура». **Национальный цифровой архив** — [ruarxive.org](https://ruarxive.org/).
+- **Common Crawl Index Server** — [index.commoncrawl.org](https://index.commoncrawl.org/).
+
 ## Каталоги данных
 
 - Бегтин И. **Каталоги данных: как устроены порталы открытых данных, геопорталы и репозитории — и как выбрать свой**, 2026 — [datacatalogs.begtin.tech](https://datacatalogs.begtin.tech/). Соседняя книга: каталог описывает опубликованное, инвентаризация — всё, что есть.
