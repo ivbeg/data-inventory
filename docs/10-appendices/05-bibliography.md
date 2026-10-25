@@ -58,6 +58,8 @@ description: Книги, стандарты, методики и материа�
 ## Каталоги данных
 
 - Бегтин И. **Каталоги данных: как устроены порталы открытых данных, геопорталы и репозитории — и как выбрать свой**, 2026 — [datacatalogs.begtin.tech](https://datacatalogs.begtin.tech/). Соседняя книга: каталог описывает опубликованное, инвентаризация — всё, что есть.
+- Benjelloun O., Chen S., Noy N. **Google Dataset Search by the Numbers**, ISWC 2020 — [research.google](https://research.google/pubs/google-dataset-search-by-the-numbers/). Что лежит в индексе поисковика по наборам данных и как устроены описания наборов в вебе.
+- Dateno. **Реестр каталогов данных** — [datenoio/dataportals-registry](https://github.com/datenoio/dataportals-registry). Порталы, геопорталы, репозитории и каталоги показателей по странам, с платформой и программным интерфейсом; CC BY 4.0.
 
 ## Данные книги
 

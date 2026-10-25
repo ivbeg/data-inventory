@@ -1,0 +1,8 @@
+id,question_n,engine,query,lang,filters,date,viewed,result,found,note
+faa-dateno-1,,dateno,FAA aircraft registry,en,,2026-10-25,20,copy,,три копии на Kaggle; выгрузки с registry.faa.gov нет
+faa-dateno-2,,dateno,aircraft registration,en,,2026-10-25,20,lead,faa-aircraft-registry,"описание системы Aircraft Registration System без файлов в агрегаторе AmeriGEOSS — копия закрытой записи инвентаря Министерства транспорта, удалённой с data.gov; название системы — в синонимы"
+faa-gds-1,,google-dataset-search,FAA aircraft registry,en,,2026-10-25,20,lead,faa-aircraft-registry,ни одной карточки FAA; у копии MORVS — адрес выгрузки registry.faa.gov/database/ReleasableAircraft.zip
+faa-openaire-1,,openaire,aircraft registry,en,type=dataset,2026-10-25,18,none,,научные наборы об авиации; реестра нет
+kz-pop-gds-1,,google-dataset-search,численность населения Казахстан,ru,,2026-10-25,20,copy,,в первых 20 нет stat.gov.kz; копии на сайтах рейтингов и сервисах статистики
+kz-pop-dateno-1,,dateno,,,country=Kazakhstan,2026-10-25,13,lead,,без запроса — список источников по стране: 13 источников; каталогов Бюро национальной статистики и data.egov.kz в индексе нет — искать на stat.gov.kz напрямую
+health-waiting-1,4,dateno,сроки ожидания медицинской помощи,ru,country=условная страна,2026-10-01,30,none,,условный пример; вопрос — в опрос владельцев и экспертов
