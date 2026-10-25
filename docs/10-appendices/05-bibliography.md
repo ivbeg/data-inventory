@@ -14,7 +14,8 @@ description: Книги, стандарты, методики и материа�
 - SEMIC. **DCAT Application Profile for data portals in Europe** (DCAT-AP), 3.0.1, 2025 — [interoperable-europe.ec.europa.eu](https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-data-portals-europe); **DCAT-AP for High Value Datasets** 3.0.0, 2024 — [semiceu.github.io](https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd/).
 - **DCAT-US Schema v3.0**, 2026, и **DCAT-US v1.1**, 2014 (бывшая Project Open Data Metadata Schema) — [resources.data.gov](https://resources.data.gov/resources/dcat-us3/).
 - W3C. **CSV on the Web**, 2015 — [w3.org/TR/tabular-metadata](https://www.w3.org/TR/tabular-metadata/); Frictionless Data. **Data Package** v2, 2024 — [datapackage.org](https://datapackage.org/); MLCommons. **Croissant** 1.1, 2026 — [docs.mlcommons.org](https://docs.mlcommons.org/croissant/docs/croissant-spec-1.1.html); DataCite. **Metadata Schema** 4.7, 2026 — [schema.datacite.org](https://schema.datacite.org/).
-- Dehghani Z. **How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh**, 2019 — [martinfowler.com](https://martinfowler.com/articles/data-monolith-to-mesh.html).
+- Dehghani Z. **How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh**, 2019 — [martinfowler.com](https://martinfowler.com/articles/data-monolith-to-mesh.html); **Data Mesh Principles and Logical Architecture**, 2020 — [martinfowler.com](https://martinfowler.com/articles/data-mesh-principles.html); **Data Mesh: Delivering Data-Driven Value at Scale**, O'Reilly, 2022.
+- Bitol, LF AI & Data. **Open Data Contract Standard (ODCS)**, версия 3.2.0, 2026, и **Open Data Product Standard (ODPS)**, версия 1.1.0, 2026 — [bitol.io](https://bitol.io/), [github.com/bitol-io](https://github.com/bitol-io). Ссылки проверены 25 октября 2026 года.
 
 ## Качество данных
 

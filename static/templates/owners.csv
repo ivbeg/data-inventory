@@ -1,4 +1,5 @@
 id,name,short_name,level,layer,parent,unit,contacts,mandate_document,status,successor,checked
 faa,Federal Aviation Administration,FAA,центральный,government,U.S. Department of Transportation,,,49 U.S.C. Subtitle VII,active,,2026-10
+aircraft-registration,Aircraft Registration Branch (AFS-750),AFS-750,подразделение,government,Federal Aviation Administration,Aircraft Registration Branch (AFS-750),+1 866 762-9434 (справочная реестра),49 U.S.C. § 44103,active,,2026-10
 fss-ru,Фонд социального страхования Российской Федерации,ФСС России,фонд,government,,,,,abolished,sfr-ru,2026-10
 sfr-ru,Фонд пенсионного и социального страхования Российской Федерации,Социальный фонд России,фонд,government,,,,Федеральный закон от 14.07.2022 № 236-ФЗ,active,,2026-10
