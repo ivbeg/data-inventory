@@ -13,7 +13,7 @@ description: Книги, стандарты, методики и материа�
 - W3C. **Data Catalog Vocabulary (DCAT) — Version 3**, 2024 — [w3.org/TR/vocab-dcat-3](https://www.w3.org/TR/vocab-dcat-3/).
 - SEMIC. **DCAT Application Profile for data portals in Europe** (DCAT-AP), 3.0.1, 2025 — [interoperable-europe.ec.europa.eu](https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-data-portals-europe); **DCAT-AP for High Value Datasets** 3.0.0, 2024 — [semiceu.github.io](https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd/).
 - **DCAT-US Schema v3.0**, 2026, и **DCAT-US v1.1**, 2014 (бывшая Project Open Data Metadata Schema) — [resources.data.gov](https://resources.data.gov/resources/dcat-us3/).
-- W3C. **CSV on the Web**, 2015 — [w3.org/TR/tabular-metadata](https://www.w3.org/TR/tabular-metadata/); Frictionless Data. **Data Package** v2, 2024 — [datapackage.org](https://datapackage.org/); MLCommons. **Croissant** 1.1, 2026 — [docs.mlcommons.org](https://docs.mlcommons.org/croissant/docs/croissant-spec-1.1.html); DataCite. **Metadata Schema** 4.7, 2026 — [schema.datacite.org](https://schema.datacite.org/).
+- W3C. **CSV on the Web**, 2015 — [w3.org/TR/tabular-metadata](https://www.w3.org/TR/tabular-metadata/); Frictionless Data. **Data Package** v2 и **Table Schema**, 2024 — [datapackage.org](https://datapackage.org/); **JSON Schema** 2020-12 — [json-schema.org](https://json-schema.org/draft/2020-12); MLCommons. **Croissant** 1.1, 2026 — [docs.mlcommons.org](https://docs.mlcommons.org/croissant/docs/croissant-spec-1.1.html); DataCite. **Metadata Schema** 4.7, 2026 — [schema.datacite.org](https://schema.datacite.org/).
 - Dehghani Z. **How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh**, 2019 — [martinfowler.com](https://martinfowler.com/articles/data-monolith-to-mesh.html); **Data Mesh Principles and Logical Architecture**, 2020 — [martinfowler.com](https://martinfowler.com/articles/data-mesh-principles.html); **Data Mesh: Delivering Data-Driven Value at Scale**, O'Reilly, 2022.
 - Bitol, LF AI & Data. **Open Data Contract Standard (ODCS)**, версия 3.2.0, 2026, и **Open Data Product Standard (ODPS)**, версия 1.1.0, 2026 — [bitol.io](https://bitol.io/), [github.com/bitol-io](https://github.com/bitol-io). Ссылки проверены 25 октября 2026 года.
 
@@ -25,6 +25,7 @@ description: Книги, стандарты, методики и материа�
 - Federal Committee on Statistical Methodology. **A Framework for Data Quality**, FCSM-20-04, 2020 — [rosap.ntl.bts.gov](https://rosap.ntl.bts.gov/view/dot/72798).
 - **ISO/IEC 25012:2008** — модель качества данных; **ISO/IEC 5259-2:2024** — показатели качества данных для аналитики и машинного обучения, в России — ГОСТ Р 71484.2-2024.
 - W3C. **Data Quality Vocabulary**, 2016 — [w3.org/TR/vocab-dqv](https://www.w3.org/TR/vocab-dqv/).
+- Ziemann M., Eren Y., El-Osta A. **Gene name errors are widespread in the scientific literature**. Genome Biology, 2016 — [doi.org/10.1186/s13059-016-1044-7](https://doi.org/10.1186/s13059-016-1044-7); Abeysooriya M. et al. **Gene name errors: Lessons not learned**. PLoS Computational Biology, 2021 — [doi.org/10.1371/journal.pcbi.1008984](https://doi.org/10.1371/journal.pcbi.1008984). Как электронная таблица портит значения и почему реестр проверяют программой.
 
 ## Методики инвентаризации
 
@@ -67,5 +68,5 @@ description: Книги, стандарты, методики и материа�
 
 ## Данные книги
 
-- Атлас карт данных: [data/](https://github.com/ivbeg/data-inventory/tree/main/data) — источники и карты в формате YAML.
+- Атлас карт данных: [data/](https://github.com/ivbeg/data-inventory/tree/main/data) — источники и карты в формате YAML; скрипты проверки и сборки — [scripts/](https://github.com/ivbeg/data-inventory/tree/main/scripts).
 - Прежняя версия книги «Карты данных» — [infoculture/datainventorydocs](https://github.com/infoculture/datainventorydocs); её план, ревизия и сверка фактов — [archive/](https://github.com/ivbeg/data-inventory/tree/main/archive).
