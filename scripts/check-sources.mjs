@@ -75,14 +75,28 @@ function classify(dnsResult, http, url) {
   return from === to ? 'ok' : 'moved';
 }
 
+// Тот же адрес на другом хосте; через URL, чтобы не сломать кириллические домены (в hostname они в punycode).
+function withHost(url, host) {
+  const u = new URL(url);
+  u.hostname = host;
+  return u.toString();
+}
+
 async function check(url) {
   let host = new URL(url).hostname;
   let [dnsResult, http] = await Promise.all([checkDns(host), checkHttp(url)]);
   // У домена нет адреса, но он существует: сайт может жить на www.
   if (dnsResult === 'ENODATA' && !host.startsWith('www.')) {
-    const wwwUrl = url.replace(`//${host}`, `//www.${host}`);
+    const wwwUrl = withHost(url, `www.${host}`);
     const [wwwDns, wwwHttp] = await Promise.all([checkDns(`www.${host}`), checkHttp(wwwUrl)]);
     if (wwwDns === 'ok') [host, dnsResult, http, url] = [`www.${host}`, wwwDns, wwwHttp, wwwUrl];
+  }
+  // Поддомена www нет, но сам домен может жить: такой адрес не считаем исчезнувшим.
+  if (dnsResult === 'nxdomain' && host.startsWith('www.')) {
+    const bare = host.slice(4);
+    const bareUrl = withHost(url, bare);
+    const [bareDns, bareHttp] = await Promise.all([checkDns(bare), checkHttp(bareUrl)]);
+    if (bareDns === 'ok') [host, dnsResult, http, url] = [bare, bareDns, bareHttp, bareUrl];
   }
   // Если https не ответил, а домен есть, пробуем http: многие сайты карт 2018–2019 годов были без https.
   let result = http;
@@ -131,20 +145,28 @@ if (DOCS_MODE) {
     console.log(`${r.result.padEnd(11)} ${String(r.http ?? '—').padEnd(4)} ${urls[i]}${extra}`);
   }
 } else {
-  const sources = yaml.load(fs.readFileSync(path.join(ROOT, 'data/sources.yaml'), 'utf8')).filter((s) => s.url);
+  const all = yaml.load(fs.readFileSync(path.join(ROOT, 'data/sources.yaml'), 'utf8')).filter((s) => s.url);
+  // --only=id1,id2 перепроверяет только эти источники, остальные результаты и дата проверки остаются прежними.
+  const only = process.argv.find((a) => a.startsWith('--only='))?.slice(7).split(',');
+  const prev = only ? yaml.load(fs.readFileSync(path.join(ROOT, 'data/source-checks.yaml'), 'utf8')) : null;
+  const sources = only ? all.filter((s) => only.includes(s.id)) : all;
   const results = await pool(sources.map((s) => s.url), check);
-  const date = new Date().toISOString().slice(0, 7);
-  const checks = sources.map((s, i) => {
-    const r = results[i];
-    const entry = {id: s.id, result: r.result, dns: r.dns, http: r.http ?? null};
-    if (r.result === 'moved') entry.moved_to = r.final;
-    if (r.error) entry.error = r.error;
-    return entry;
-  });
+  const fresh = Object.fromEntries(
+    sources.map((s, i) => {
+      const r = results[i];
+      const entry = {id: s.id, result: r.result, dns: r.dns, http: r.http ?? null};
+      if (r.result === 'moved') entry.moved_to = r.final;
+      if (r.error) entry.error = r.error;
+      return [s.id, entry];
+    }),
+  );
+  const date = prev?.checked ?? new Date().toISOString().slice(0, 7);
+  const network = prev && !process.env.CHECK_NETWORK ? prev.network : NETWORK;
+  const checks = all.map((s) => fresh[s.id] ?? prev.checks.find((c) => c.id === s.id)).filter(Boolean);
   const header =
     `# Сгенерировано scripts/check-sources.mjs — не править вручную.\n` +
     `# Результат зависит от сети: многие российские государственные сайты не открываются из-за рубежа.\n`;
-  const body = yaml.dump({checked: date, network: NETWORK, checks}, {lineWidth: 120, flowLevel: 2});
+  const body = yaml.dump({checked: date, network, checks}, {lineWidth: 120, flowLevel: 2});
   fs.writeFileSync(path.join(ROOT, 'data/source-checks.yaml'), header + body);
   const tally = checks.reduce((t, c) => ({...t, [c.result]: (t[c.result] ?? 0) + 1}), {});
   console.log(`Проверено ${checks.length} адресов:`, tally);

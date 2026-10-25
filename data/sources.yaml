@@ -185,6 +185,7 @@
   name: www.сацминэнерго.рф
   type: site
   url: https://www.сацминэнерго.рф
+  url_note: поддомена www в DNS нет; сайт открывается по адресу сацминэнерго.рф (проверено 25.10.2026)
 - id: rosnedra-gov-ru
   name: rosnedra.gov.ru
   type: site
