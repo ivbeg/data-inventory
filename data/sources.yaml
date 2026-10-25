@@ -579,6 +579,7 @@
   name: opennko.ru
   type: site
   url: https://opennko.ru
+  url_note: копий в Internet Archive нет (проверено 25.10.2026); возможно, опечатка на исходной карте в адресе openngo.ru («Открытые НКО»)
 - id: openngo-ru
   name: openngo.ru
   type: site
