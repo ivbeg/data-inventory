@@ -1,0 +1,8 @@
+version,date,record_id,change,field,old_value,new_value,reason,author
+2027-04,2027-04-20,stat-hospital-beds,changed,download_url,https://stat.example.org/old/beds.csv,https://data.stat.example.org/beds.csv,проверка адресов: старый адрес перенаправляет на новую витрину,владелец процесса
+2027-04,2027-04-20,stat-doctors,changed,download_url,https://stat.example.org/old/doctors.csv,https://data.stat.example.org/doctors.csv,проверка адресов: старый адрес перенаправляет на новую витрину,владелец процесса
+2027-04,2027-04-20,stat-health-spending,changed,download_url,https://stat.example.org/old/spending.csv,https://data.stat.example.org/spending.csv,проверка адресов: старый адрес перенаправляет на новую витрину,владелец процесса
+2027-04,2027-04-20,region-c-waiting-journal,status,status,active,retired,ответ ответственного: журнал перенесён в региональную систему; преемник — region-c-waiting-list,владелец процесса
+2027-04,2027-04-20,region-c-waiting-list,new,,,,новая запись: листы ожидания в региональной системе; related — successor_of:region-c-waiting-journal,владелец процесса
+2027-04,2027-04-20,med-workers-yearbook,changed,modified,2025-10-01,2026-10-01,вышел новый сборник,владелец процесса
+2027-04,2027-04-20,region-b-waiting-list,changed,owner_person,заместитель начальника отдела,начальник отдела,ответ при плановой проверке: сменился ответственный,владелец процесса
