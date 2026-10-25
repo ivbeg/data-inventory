@@ -1,0 +1,2 @@
+id,owner,mandate,quote,legal_act,clause,expected_data,result,found,known_from,checked
+faa-aircraft-registration,faa,регистрация воздушных судов,"the Administrator of the Federal Aviation Administration shall— (A) register the aircraft; and (B) issue a certificate of registration to its owner.",49 U.S.C. § 44103,(a)(1),реестр воздушных судов с владельцами,found,faa-aircraft-registry,анализ полномочий; страница FAA Releasable Aircraft Database Download,2026-10
