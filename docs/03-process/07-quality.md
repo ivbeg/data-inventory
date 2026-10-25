@@ -327,7 +327,7 @@ SELECT max(trim("LAST ACTION DATE")) FROM m;
 ## Источники
 
 - Главы [«Реестр данных»](./05-registry.md) — атрибут «отметка о контроле качества» и пример записи FAA; [«Семь шагов»](./01-steps.md#5-сопоставить-цели-с-данными) — таблица «вопрос — источник — доступность — качество» и пробелы; [«DAMA-DMBOK и управление метаданными»](../05-frameworks/01-dama-dmbok.md) — качество данных как область управления данными; [«Стандарты описания»](../05-frameworks/02-metadata-standards.md) — отметка о качестве в DCAT и DCAT-US.
-- Шаблоны листа «Проверки качества» и листа «Связи» — в приложении [«Шаблоны»](../10-appendices/03-templates.md#проверки-качества).
+- Шаблоны листа «Проверки качества» и листа «Связи» — в приложении [«Шаблоны»](../09-appendices/03-templates.md#проверки-качества).
 - [Releasable Aircraft Database Download](https://www.faa.gov/licenses_certificates/aircraft_certification/aircraft_registry/releasable_aircraft_download) — FAA: выгрузка скачана 25 октября 2026 года, файлы от 23 октября; описание полей [ardata.pdf](https://registry.faa.gov/database/ardata.pdf) от 8 мая 2025 года. Проверки выполнены в DuckDB 25 октября 2026 года.
 - DAMA UK Working Group on «Data Quality Dimensions». The Six Primary Dimensions for Data Quality Assessment, октябрь 2013 года.
 - [The Government Data Quality Framework](https://www.gov.uk/government/publications/the-government-data-quality-framework/the-government-data-quality-framework) — Government Data Quality Hub, 3 декабря 2020 года: шесть измерений DAMA UK, качество как пригодность для цели, пять принципов, жизненный цикл, планы действий и поиск первопричины. Проверено 25 октября 2026 года.

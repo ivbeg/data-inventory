@@ -128,7 +128,6 @@ const config: Config = {
             {label: 'Два подхода', to: '/approaches/two-approaches/'},
             {label: 'Семь шагов', to: '/process/steps/'},
             {label: 'Где искать данные', to: '/sources/three-layers/'},
-            {label: 'Атлас карт данных', to: '/atlas/how-to-read/'},
             {label: 'Об авторе', to: '/about-the-author/'},
             {label: 'Скачать PDF', to: PDF},
           ],

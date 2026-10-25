@@ -64,41 +64,6 @@
   vertical-align: top;
 }
 
-/* Кружки доступности в таблицах атласа (scripts/atlas.mjs). */
-.avail {
-  display: inline-block;
-  width: 1em;
-  text-align: center;
-}
-
-.avail--available {
-  color: #2e7d32;
-}
-
-.avail--restricted {
-  color: #d4a000;
-}
-
-.avail--unavailable {
-  color: #c62828;
-}
-
-.avail--unknown {
-  color: var(--ifm-color-emphasis-600);
-}
-
-[data-theme='dark'] .avail--available {
-  color: #66bb6a;
-}
-
-[data-theme='dark'] .avail--restricted {
-  color: #ffd54f;
-}
-
-[data-theme='dark'] .avail--unavailable {
-  color: #ef5350;
-}
-
 /* Интеллект-карты широкие и мелкие: на белом фоне они читаются и в тёмной теме. */
 [data-theme='dark'] .markdown img {
   background: #fff;

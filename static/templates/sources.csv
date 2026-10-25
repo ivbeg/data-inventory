@@ -1,3 +1,3 @@
 id,name,type,owner,legal_basis,level,layer,url,aliases,copy_of,known_from
-egrul-nalog-ru,egrul.nalog.ru,site,ФНС России,,федеральный,government,https://egrul.nalog.ru,ЕГРЮЛ;реестр юридических лиц,,карта «Нефть и газ» 2019
-clearspending-ru,clearspending.ru,site,«Информационная культура»,,общественный проект,public,https://clearspending.ru,«Госзатраты»,zakupki-gov-ru,карта «Государственные финансы» 2019
+egrul-nalog-ru,egrul.nalog.ru,site,ФНС России,,федеральный,government,https://egrul.nalog.ru,ЕГРЮЛ;реестр юридических лиц,,поиск по теме: сведения о компаниях отрасли
+clearspending-ru,clearspending.ru,site,«Информационная культура»,,общественный проект,public,https://clearspending.ru,«Госзатраты»,zakupki-gov-ru,поиск по теме: государственные контракты

@@ -82,7 +82,7 @@ description: Шаблоны для инвентаризации данных —
 - [questions.csv](pathname:///templates/questions.csv) — вопросы с типовой темой, задачей и приоритетом ([«Как записать»](../03-process/02-goals-and-questions.md#как-записать));
 - [links.csv](pathname:///templates/links.csv) — связи «вопрос — источник» с доступом, итогом проверки качества (`quality`: `fit`, `fit_with_caveats`, `unfit`, `not_checked`) и оговоркой к нему (`quality_note`) и датой ([«Годится ли для задачи»](../03-process/07-quality.md#годится-ли-для-задачи)).
 
-И заготовка карты в формате атласа книги — [map.yaml](pathname:///templates/map.yaml); схема полей — [`data/README.md`](https://github.com/ivbeg/data-inventory/blob/main/data/README.md).
+И заготовка карты данных одним файлом YAML — [map.yaml](pathname:///templates/map.yaml): паспорт карты и вопросы со ссылками на источники из `sources.csv`; поля описаны в комментариях самого файла.
 
 ## Журнал поиска
 

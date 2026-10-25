@@ -66,7 +66,6 @@ description: Книги, стандарты, методики и материа�
 - Benjelloun O., Chen S., Noy N. **Google Dataset Search by the Numbers**, ISWC 2020 — [research.google](https://research.google/pubs/google-dataset-search-by-the-numbers/). Что лежит в индексе поисковика по наборам данных и как устроены описания наборов в вебе.
 - Dateno. **Реестр каталогов данных** — [datenoio/dataportals-registry](https://github.com/datenoio/dataportals-registry). Порталы, геопорталы, репозитории и каталоги показателей по странам, с платформой и программным интерфейсом; CC BY 4.0.
 
-## Данные книги
+## Прежняя версия книги
 
-- Атлас карт данных: [data/](https://github.com/ivbeg/data-inventory/tree/main/data) — источники и карты в формате YAML; скрипты проверки и сборки — [scripts/](https://github.com/ivbeg/data-inventory/tree/main/scripts).
 - Прежняя версия книги «Карты данных» — [infoculture/datainventorydocs](https://github.com/infoculture/datainventorydocs); её план, ревизия и сверка фактов — [archive/](https://github.com/ivbeg/data-inventory/tree/main/archive).
