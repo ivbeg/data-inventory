@@ -38,6 +38,8 @@ import EducationNotes from './_generated/education-notes.mdx';
 - [Интеллект-карта, PNG](pathname:///img/atlas/education-mindmap.png)
 - [Карта для печати, PDF](pathname:///downloads/education.pdf)
 - [Вопросы и источники, CSV](pathname:///downloads/education.csv)
+- [Интеллект-карта, Markdown — для markmap и Xmind](pathname:///downloads/education.md)
+- [Интеллект-карта, FreeMind — для Freeplane и Xmind](pathname:///downloads/education.mm)
 - [Данные карты, YAML](https://github.com/ivbeg/data-inventory/blob/main/data/maps/education.yaml)
 
 ## Что изменилось

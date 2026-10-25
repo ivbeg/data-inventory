@@ -1,6 +1,6 @@
 # Карты данных как данные
 
-Первоисточник карт атласа. Таблицы на страницах атласа и CSV для скачивания строятся из этих файлов скриптом `scripts/atlas.mjs`, правки вносят сюда, а не в страницы.
+Первоисточник карт атласа. Таблицы на страницах атласа, CSV и интеллект-карты (Markdown и FreeMind `.mm`) для скачивания строятся из этих файлов скриптом `scripts/atlas.mjs`, правки вносят сюда, а не в страницы.
 
 ```
 data/
@@ -10,13 +10,13 @@ data/
 ```
 
 ```bash
-npm run atlas          # проверить данные и пересобрать таблицы и CSV
+npm run atlas          # проверить данные и пересобрать таблицы, CSV и интеллект-карты
 npm run atlas:check    # только проверить
 npm run check-sources  # проверить адреса источников и обновить source-checks.yaml
 npm run check-sources -- --only=sacminenergo-rf,rosim-ru  # перепроверить только эти источники
 ```
 
-`npm start` и `npm run build` вызывают `npm run atlas` сами. Сгенерированные файлы (`docs/08-atlas/_generated/`, `static/downloads/*.csv`) в git не хранятся.
+`npm start` и `npm run build` вызывают `npm run atlas` сами. Сгенерированные файлы (`docs/08-atlas/_generated/`, `static/downloads/*.csv`, `*.md`, `*.mm`) в git не хранятся.
 
 ## sources.yaml
 

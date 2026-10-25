@@ -38,6 +38,8 @@ import PublicFinanceNotes from './_generated/public-finance-notes.mdx';
 - [Интеллект-карта, PNG](pathname:///img/atlas/public-finance-mindmap.png)
 - [Карта для печати, PDF](pathname:///downloads/public-finance.pdf)
 - [Вопросы и источники, CSV](pathname:///downloads/public-finance.csv)
+- [Интеллект-карта, Markdown — для markmap и Xmind](pathname:///downloads/public-finance.md)
+- [Интеллект-карта, FreeMind — для Freeplane и Xmind](pathname:///downloads/public-finance.mm)
 - [Данные карты, YAML](https://github.com/ivbeg/data-inventory/blob/main/data/maps/public-finance.yaml)
 
 ## Что изменилось

@@ -104,6 +104,15 @@
   background: #fff;
 }
 
+/* В теме neutral первая ветка интеллект-карты Mermaid почти белая и сливается с фоном. */
+[data-theme='light'] .docusaurus-mermaid-container .mindmap-node.section-0 :is(rect, path, circle, polygon) {
+  fill: #dcdcdc !important;
+}
+
+[data-theme='light'] .docusaurus-mermaid-container .section-edge-0 {
+  stroke: #dcdcdc !important;
+}
+
 /* Главная и «Об авторе»: иллюстрация, карточка и портрет автора — как в книге «Каталоги данных». */
 .markdown .home-hero {
   margin: 1.25rem 0 1.5rem;
