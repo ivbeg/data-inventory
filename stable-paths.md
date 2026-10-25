@@ -15,9 +15,8 @@
 | Стандарты описания | `/frameworks/metadata-standards/` |
 | Казахстан | `/countries/kazakhstan/` |
 | Россия | `/countries/russia/` |
-| Атлас карт данных | `/atlas/how-to-read/` |
 
-Файлы для скачивания, не страницы: `/data-inventory-book.pdf`, `/templates/registry.csv`, `/templates/questionnaire.csv`, `/templates/sources.csv`, `/templates/questions.csv`, `/templates/links.csv`, `/templates/map.yaml`, `/downloads/<карта>.csv`, `/downloads/<карта>.pdf`.
+Файлы для скачивания, не страницы: `/data-inventory-book.pdf`, `/templates/registry.csv`, `/templates/questionnaire.csv`, `/templates/sources.csv`, `/templates/questions.csv`, `/templates/links.csv`, `/templates/map.yaml`.
 
 ## Прежние сайты
 
@@ -25,7 +24,7 @@
 
 | Прежний сайт | Что там | Новый путь |
 |--------------|---------|------------|
-| `https://infoculture.gitbook.io/datamaps` | «Методика составления карт данных (черновик)», текст 2020 года | `/approaches/data-maps/`, атлас — `/atlas/how-to-read/` |
+| `https://infoculture.gitbook.io/datamaps` | «Методика составления карт данных (черновик)», текст 2020 года | `/approaches/data-maps/` |
 | `https://infoculture.github.io/datainventorydocs/` | «Карты данных», редакция октября 2026 года, репозиторий infoculture/datainventorydocs | `/` |
 
-Соответствие старых страниц GitBook: `/whatis` → `/approaches/data-maps/`; `/guide` → `/process/steps/`; `/sources` → `/sources/three-layers/`; `/datamaps` → `/atlas/how-to-read/`; `/datamaps/finances` → `/atlas/public-finance/`; `/datamaps/oil` → `/atlas/oil-and-gas/`; `/datamaps/health` → `/atlas/health/`; `/datamaps/education` → `/atlas/education/`.
+Соответствие старых страниц GitBook: `/whatis` → `/approaches/data-maps/`; `/guide` → `/process/steps/`; `/sources` → `/sources/three-layers/`; у отраслевых карт `/datamaps`, `/datamaps/finances`, `/datamaps/oil`, `/datamaps/health`, `/datamaps/education` соответствия нет: отраслевые карты из книги убраны 25 октября 2026 года, ближайшая глава — `/approaches/data-maps/`.

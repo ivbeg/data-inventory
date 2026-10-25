@@ -4,9 +4,3 @@
 /.cache-loader
 .DS_Store
 npm-debug.log*
-
-# Сгенерировано scripts/atlas.mjs из data/
-/docs/08-atlas/_generated/
-/static/downloads/*.csv
-/static/downloads/*.md
-/static/downloads/*.mm

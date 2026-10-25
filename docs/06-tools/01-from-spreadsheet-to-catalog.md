@@ -43,11 +43,11 @@ flowchart TB
 
 ## Таблица
 
-Таблица — не временная мера, а нормальный инструмент реестра на сотни записей. Атлас этой книги ведётся файлами данных в репозитории, а таблицы и файлы для скачивания строятся из них программой ([«Реестр как данные»](./03-registry-as-data.md)). Слабые места таблицы известны, и почти все закрываются правилами.
+Таблица — не временная мера, а нормальный инструмент реестра на сотни записей. Слабые места таблицы известны, и почти все закрываются правилами.
 
 ### Как устроить
 
-Листы — по шаблонам из приложения [«Шаблоны»](../10-appendices/03-templates.md):
+Листы — по шаблонам из приложения [«Шаблоны»](../09-appendices/03-templates.md):
 
 - **Наборы** — [registry.csv](pathname:///templates/registry.csv): строка — запись, колонки — коды из шаблона. Колонки `title`, `description`, `format`, `issued`, `modified`, `license` и `publisher` названы как свойства DCAT-US v1.1, поэтому переход на каталог по стандарту не потребует переименований ([«Сопоставление с реестром»](../05-frameworks/02-metadata-standards.md#сопоставление-с-реестром)).
 - **Владельцы и полномочия** — [owners.csv](pathname:///templates/owners.csv) и [mandates.csv](pathname:///templates/mandates.csv); записи ссылаются на них идентификаторами.
@@ -131,7 +131,7 @@ frictionless validate registry.csv --schema registry.schema.yaml
 
 `fieldsMatch: subset` разрешает описать не все колонки. Дата изменения — строка, а не дата: по правилам реестра вместо неё может стоять «нет» или «не установлено» с объяснением ([«Если сведение не найдено»](../03-process/05-registry.md#если-сведение-не-найдено)). Шаблон `registry.csv` эту проверку проходит. Добавленная строка с режимом доступа «открыто», датой «23.10.2026» и повторным идентификатором даёт ошибку в каждой из трёх колонок (frictionless 5.21.0, 25 октября 2026 года). Таблицу Google или Excel проверяют так же — через выгрузку в CSV. Полная схема всех колонок шаблона — [registry.schema.json](pathname:///templates/registry.schema.json) ([«Схема»](./03-registry-as-data.md#схема)).
 
-Схема ловит только форму. Правдоподобие — дата изменения не раньше даты публикации — и связи — владелец есть в листе владельцев — проверяют отдельными правилами ([«Проверки программой»](../05-frameworks/03-data-mesh.md#проверки-программой)). Так устроены и проверки атласа этой книги ([«Проверки»](./03-registry-as-data.md#проверки)).
+Схема ловит только форму. Правдоподобие — дата изменения не раньше даты публикации — и связи — владелец есть в листе владельцев — проверяют отдельными правилами ([«Проверки программой»](../05-frameworks/03-data-mesh.md#проверки-программой)). Какие правила проверяют программой и на каких уровнях — в разделе [«Проверки»](./03-registry-as-data.md#проверки) главы «Реестр как данные».
 
 ### Таблица с типами и связями
 
@@ -190,7 +190,7 @@ frictionless validate registry.csv --schema registry.schema.yaml
 
 Общий порядок перехода — [ниже](#как-перейти-на-следующий-уровень). Для каталога метаданных к нему добавляется своё:
 
-- **Подключать системы из реестра систем**, начиная с тех, где больше всего записей, а не все подряд. Каталог, собравший тысячи таблиц без владельцев, — ещё одна опись ради описи ([«Опись ради описи»](../09-practices/02-anti-patterns.md#опись-ради-описи)).
+- **Подключать системы из реестра систем**, начиная с тех, где больше всего записей, а не все подряд. Каталог, собравший тысячи таблиц без владельцев, — ещё одна опись ради описи ([«Опись ради описи»](../08-practices/02-anti-patterns.md#опись-ради-описи)).
 - **Завести настраиваемые свойства и справочники до загрузки** — с теми же кодами, что в таблице.
 - **Связать запись с объектами.** В таблицу добавляют колонку с полным именем объекта в каталоге; у агрегата или группы объектов их несколько, через «;».
 - **Загружать программой.** В OpenMetadata — массовым импортом CSV или через программный интерфейс, в DataHub — источником CSV Enricher. CSV Enricher только дополняет уже собранные объекты, а в режиме OVERRIDE пустые ячейки стирают сведения в каталоге: начинайте с режима по умолчанию, PATCH.
@@ -245,7 +245,7 @@ frictionless validate registry.csv --schema registry.schema.yaml
 
 ## Как выбрать
 
-- **Начинайте с таблицы всегда.** Даже если впереди каталог, состав атрибутов и первые записи удобнее отработать в таблице ([шаблон реестра](../10-appendices/03-templates.md#реестр-данных)).
+- **Начинайте с таблицы всегда.** Даже если впереди каталог, состав атрибутов и первые записи удобнее отработать в таблице ([шаблон реестра](../09-appendices/03-templates.md#реестр-данных)).
 - **Стандарт описания с первого дня** — DCAT или DCAT-US: тогда переход с таблицы на каталог не потребует переписывать атрибуты ([«Стандарты описания»](../05-frameworks/02-metadata-standards.md)).
 - **Каталог метаданных — когда описания должны обновляться сами**: данные в базах меняются чаще, чем люди успевают обновлять таблицу.
 - **Если описания ведут подразделения — федеративный сбор.** Домены и продукты данных есть в OpenMetadata и DataHub, но каталог видит только подключённые системы ([«Платформа»](../05-frameworks/03-data-mesh.md#платформа)).
@@ -332,4 +332,4 @@ frictionless validate registry.csv --schema registry.schema.yaml
 - Microsoft: [Excel specifications and limits](https://support.microsoft.com/en-us/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3), [Set automatic data conversions](https://support.microsoft.com/office/33d1d872-9926-4ef3-9364-492444d0c7ea); Google: [ограничения файлов в Google Диске](https://support.google.com/drive/answer/37603); 25 октября 2026 года.
 - Ziemann M., Eren Y., El-Osta A. [Gene name errors are widespread in the scientific literature](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-1044-7) — Genome Biology, 2016, 17:177; Abeysooriya M. et al. [Gene name errors: Lessons not learned](https://doi.org/10.1371/journal.pcbi.1008984) — PLOS Computational Biology, 2021, 17(7): e1008984; Bruford E. A. et al. [Guidelines for human gene nomenclature](https://doi.org/10.1038/s41588-020-0669-3) — Nature Genetics, 2020.
 - [Excel: Why using Microsoft's tool caused Covid-19 results to be lost](https://www.bbc.com/news/technology-54423988) — BBC, 5 октября 2020 года; [What a Hancock-up: Excel spreadsheet blunder blamed after England under-reports 16,000 COVID-19 cases](https://www.theregister.com/2020/10/05/excel_england_coronavirus_contact_error/) — The Register, 5 октября 2020 года.
-- Главы книги: [«Реестр данных»](../03-process/05-registry.md), [«Результат и поддержка»](../03-process/08-result-and-upkeep.md), [«Стандарты описания»](../05-frameworks/02-metadata-standards.md), [«Data Mesh»](../05-frameworks/03-data-mesh.md), [«DAMA-DMBOK»](../05-frameworks/01-dama-dmbok.md), [«Реестр как данные»](./03-registry-as-data.md), приложение [«Шаблоны»](../10-appendices/03-templates.md).
+- Главы книги: [«Реестр данных»](../03-process/05-registry.md), [«Результат и поддержка»](../03-process/08-result-and-upkeep.md), [«Стандарты описания»](../05-frameworks/02-metadata-standards.md), [«Data Mesh»](../05-frameworks/03-data-mesh.md), [«DAMA-DMBOK»](../05-frameworks/01-dama-dmbok.md), [«Реестр как данные»](./03-registry-as-data.md), приложение [«Шаблоны»](../09-appendices/03-templates.md).
