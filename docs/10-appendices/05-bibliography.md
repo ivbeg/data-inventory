@@ -4,14 +4,15 @@ description: Книги, стандарты, методики и материа�
 
 # Литература
 
-Ссылки проверены 23 октября 2026 года, ссылки на британские, французские, польские и корейские материалы — 25 октября 2026 года.
+Ссылки проверены 23 октября 2026 года, ссылки на британские, французские, польские и корейские материалы и на стандарты описания — 25 октября 2026 года.
 
 ## Управление данными и стандарты
 
 - DAMA International. **DAMA-DMBOK: Data Management Body of Knowledge**, 2-е издание, 2017; исправленное издание DMBOK 2.0 Revision, 2024 — [dama.org](https://dama.org/learning-resources/dama-data-management-body-of-knowledge-dmbok/).
 - W3C. **Data Catalog Vocabulary (DCAT) — Version 3**, 2024 — [w3.org/TR/vocab-dcat-3](https://www.w3.org/TR/vocab-dcat-3/).
-- SEMIC. **DCAT Application Profile for data portals in Europe** — [interoperable-europe.ec.europa.eu](https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-data-portals-europe).
-- **DCAT-US Schema v3.0** и **DCAT-US v1.1** (бывшая Project Open Data Metadata Schema) — [resources.data.gov](https://resources.data.gov/resources/dcat-us3/).
+- SEMIC. **DCAT Application Profile for data portals in Europe** (DCAT-AP), 3.0.1, 2025 — [interoperable-europe.ec.europa.eu](https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-data-portals-europe); **DCAT-AP for High Value Datasets** 3.0.0, 2024 — [semiceu.github.io](https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd/).
+- **DCAT-US Schema v3.0**, 2026, и **DCAT-US v1.1**, 2014 (бывшая Project Open Data Metadata Schema) — [resources.data.gov](https://resources.data.gov/resources/dcat-us3/).
+- W3C. **CSV on the Web**, 2015 — [w3.org/TR/tabular-metadata](https://www.w3.org/TR/tabular-metadata/); Frictionless Data. **Data Package** v2, 2024 — [datapackage.org](https://datapackage.org/); MLCommons. **Croissant** 1.1, 2026 — [docs.mlcommons.org](https://docs.mlcommons.org/croissant/docs/croissant-spec-1.1.html); DataCite. **Metadata Schema** 4.7, 2026 — [schema.datacite.org](https://schema.datacite.org/).
 - Dehghani Z. **How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh**, 2019 — [martinfowler.com](https://martinfowler.com/articles/data-monolith-to-mesh.html).
 
 ## Качество данных
@@ -28,6 +29,7 @@ description: Книги, стандарты, методики и материа�
 - Office of Management and Budget. **M-13-13: Open Data Policy — Managing Information as an Asset**, 2013 — [текст](https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/memoranda/2013/m-13-13.pdf); **Project Open Data Implementation Guide** — [копия в Internet Archive](https://web.archive.org/web/20240519174130/https://project-open-data.cio.gov/implementation-guide/), 2024.
 - Congressional Research Service. **The OPEN Government Data Act: A Primer** — [everycrsreport.com](https://www.everycrsreport.com/reports/IF12299.html).
 - GAO. **GAO-21-29: Open Data — Additional Action Required for Full Public Access**, 2020 — [gao.gov](https://gao.gov/products/gao-21-29).
+- Office of Management and Budget. **M-25-05: Phase 2 Implementation of the Foundations for Evidence-Based Policymaking Act of 2018: Open Government Data Access and Management Guidance**, 2025 — [whitehouse.gov](https://www.whitehouse.gov/wp-content/uploads/2025/01/M-25-05-Phase-2-Implementation-of-the-Foundations-for-Evidence-Based-Policymaking-Act-of-2018-Open-Government-Data-Access-and-Management-Guidance.pdf).
 - Open Data Watch. **Open Data Inventory** — [odin.opendatawatch.com](https://odin.opendatawatch.com/).
 - Johns Hopkins Center for Government Excellence. **GovEx Data Inventory** — [labs.centerforgov.org](https://labs.centerforgov.org/data-governance/data-inventory/).
 - Open Data Institute. **Mapping data ecosystems** — [theodi.org](https://theodi.org/article/mapping-data-ecosystems/).
