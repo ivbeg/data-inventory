@@ -1,2 +1,2 @@
-question_n,source_id,status,status_basis,checked
-1,egrul-nalog-ru,unknown,,2026-10
+question_n,source_id,status,status_basis,quality,quality_note,checked
+1,egrul-nalog-ru,unknown,,not_checked,,2026-10
