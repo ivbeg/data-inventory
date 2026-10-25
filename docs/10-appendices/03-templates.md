@@ -19,6 +19,10 @@ description: Шаблоны для инвентаризации данных —
 | `owner_contacts` | контакты ответственного |
 | `update_frequency` | периодичность обновления: `continuous`, `daily`, `weekly`, `monthly`, `quarterly`, `annual`, `irregular`, `never`, `unknown` |
 | `access_level` | режим доступа: `open`, `unstructured`, `restricted`, `closed`, `unknown` |
+| `access_basis` | чем подтверждён режим доступа: ссылка, акт с пунктом, ответ владельца с датой; у `unknown` — что проверяли и из какой сети |
+| `access_restriction` | причина ограничения: `personal_data`, `state_secret`, `official`, `confidential`, `third_party`, `owner_decision`, `none`, `unknown`, несколько — через «;» ([«Как записать»](../03-process/06-access.md#как-записать)) |
+| `access_conditions` | условия доступа: кто, как, за сколько и за какой срок получает данные |
+| `access_checked` | дата проверки режима доступа |
 | `download_url` | ссылка для выгрузки — прямой адрес файла или интерфейса |
 | `format` | формат распространения |
 | `issued` | дата публикации |
