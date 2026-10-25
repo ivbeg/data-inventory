@@ -8,7 +8,8 @@ description: Книги, стандарты, методики и материа�
 
 ## Управление данными и стандарты
 
-- DAMA International. **DAMA-DMBOK: Data Management Body of Knowledge**, 2-е издание, 2017; исправленное издание DMBOK 2.0 Revision, 2024 — [dama.org](https://dama.org/learning-resources/dama-data-management-body-of-knowledge-dmbok/).
+- DAMA International. **The DAMA Guide to the Data Management Body of Knowledge (DAMA-DMBOK2R)**, 2-е издание, исправленное, 2024; 2-е издание — 2017 — [dama.org](https://dama.org/learning-resources/dama-data-management-body-of-knowledge-dmbok/). Колесо и контекстные диаграммы областей под лицензией CC BY-ND 4.0 — [dama.org](https://dama.org/cpages/dmbok2r-wheels). Русский перевод второго издания: **DAMA-DMBOK. Свод знаний по управлению данными** / пер. Г. И. Агафонова. — М.: Олимп-Бизнес. — ISBN 978-5-9693-0404-8.
+- EDM Council. **Data Management Capability Assessment Model (DCAM)**, версия 3, 2025 — [edmcouncil.org](https://edmcouncil.org/announcement/announcing-dcam-v3-meet-the-new-standard-for-your-data/).
 - W3C. **Data Catalog Vocabulary (DCAT) — Version 3**, 2024 — [w3.org/TR/vocab-dcat-3](https://www.w3.org/TR/vocab-dcat-3/).
 - SEMIC. **DCAT Application Profile for data portals in Europe** — [interoperable-europe.ec.europa.eu](https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-data-portals-europe).
 - **DCAT-US Schema v3.0** и **DCAT-US v1.1** (бывшая Project Open Data Metadata Schema) — [resources.data.gov](https://resources.data.gov/resources/dcat-us3/).
