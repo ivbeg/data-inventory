@@ -69,6 +69,19 @@
   background: #fff;
 }
 
+/* Подпись к картинке: строка курсивом сразу под картинкой, в том же абзаце (chapter-writing.mdc). */
+.markdown p > img + em {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.875rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+/* Свёрнутые блоки «Проверить самому» с командами: заметны, но не спорят с текстом. */
+.markdown details > summary {
+  cursor: pointer;
+}
+
 /* В теме neutral первая ветка интеллект-карты Mermaid почти белая и сливается с фоном. */
 [data-theme='light'] .docusaurus-mermaid-container .mindmap-node.section-0 :is(rect, path, circle, polygon) {
   fill: #dcdcdc !important;

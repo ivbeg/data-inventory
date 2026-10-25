@@ -40,6 +40,21 @@ const config: Config = {
   },
   themes: ['@docusaurus/theme-mermaid'],
 
+  // Перенаправления со старых путей: путь не меняют без перенаправления (stable-paths.md).
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            from: ['/practices/good-practices/', '/practices/anti-patterns/'],
+            to: '/practices/practices-and-anti-patterns/',
+          },
+        ],
+      },
+    ],
+  ],
+
   presets: [
     [
       'classic',
