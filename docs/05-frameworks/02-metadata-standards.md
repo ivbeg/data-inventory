@@ -1,5 +1,5 @@
 ---
-description: Стандарты описания данных для реестра — DCAT, DCAT-AP, американская DCAT-US (бывшая схема Project Open Data) и наборы высокой ценности ЕС — и как сопоставить с ними 14 атрибутов реестра.
+description: Стандарты описания данных для реестра — DCAT, DCAT-AP и национальные профили, американская DCAT-US (бывшая схема Project Open Data) и наборы высокой ценности ЕС — и как сопоставить с ними 14 атрибутов реестра.
 ---
 
 # Стандарты описания
@@ -14,6 +14,13 @@ description: Стандарты описания данных для реест�
 | **DCAT-AP** | Европейский профиль применения DCAT: какие свойства обязательны и какие словари использовать | Порталы открытых данных стран ЕС и европейский портал data.europa.eu |
 | **DCAT-US** | Схема описания наборов для федеральных ведомств США. Версия 1.1 — прежняя схема Project Open Data (Project Open Data Metadata Schema v1.1), версия 3.0 — американский профиль DCAT 3; описания публикуются файлом `data.json` | Инвентари ведомств США и каталог data.gov |
 | **Наборы высокой ценности** (High Value Datasets) | Исполнительный регламент ЕС 2023/138: шесть категорий данных, которые государственные органы публикуют бесплатно, в машиночитаемом виде, через программный интерфейс и массовой выгрузкой | Государства — члены ЕС |
+
+Национальные профили и схемы стран, о которых идёт речь в книге:
+
+- **Польша** — DCAT-AP-PL 2.1.0 (2022), польский профиль DCAT-AP; его публикует портал dane.gov.pl.
+- **Франция** — data.gouv.fr отдаёт каталог в DCAT-AP (`catalog.rdf`, `api/1/site/catalog.jsonld`). Для каталогов местных органов есть упрощённая схема «Catalogue simplifié» из общего набора схем местных данных OpenDataFrance — 20 полей, только для опубликованных наборов.
+- **Великобритания** — профиль метаданных критически важных активов данных правительства на основе DCAT и Dublin Core (2026): в нём есть гриф (`securityClassification`), которого нет в DCAT. Для геоданных — UK GEMINI 2.3.
+- **Южная Корея** — data.go.kr показывает у каждого набора стандартные метаданные по Schema.org и DCAT; названия полей в базах данных государственных организаций берут из общего словаря стандартных терминов.
 
 Шесть категорий наборов высокой ценности: геопространственные данные; наблюдение Земли и окружающая среда; метеорологические данные; статистика; компании и владение компаниями; мобильность.
 
@@ -52,3 +59,4 @@ DCAT-US хорошо подходит для подхода «чем владе�
 - [DCAT-US Schema v3.0](https://resources.data.gov/resources/dcat-us3/) и [DCAT-US v1.1 (Project Open Data Metadata Schema)](https://resources.data.gov/resources/dcat-us/) — data.gov, на октябрь 2026 года.
 - [Commission Implementing Regulation (EU) 2023/138](https://eur-lex.europa.eu/eli/reg_impl/2023/138/oj) — наборы высокой ценности.
 - Подробно о стандартах описания и их поддержке платформами — в книге [«Каталоги данных»](https://datacatalogs.begtin.tech/).
+- Национальные профили, проверено 25 октября 2026 года: [DCAT-AP-PL](https://dane.gov.pl/dcat-ap-pl/) — dane.gov.pl; [каталог data.gouv.fr в DCAT-AP](https://www.data.gouv.fr/catalog.rdf) и [схема scdl/catalogue](https://schema.data.gouv.fr/scdl/catalogue/) — OpenDataFrance; [Record metadata to describe critical data assets](https://www.gov.uk/government/publications/record-metadata-to-describe-critical-data-assets) — GDS, 16 апреля 2026 года; [UK GEMINI](https://www.agi.org.uk/uk-gemini/) — AGI; [пример страницы набора data.go.kr](https://www.data.go.kr/data/15127106/fileData.do) со стандартными метаданными.
