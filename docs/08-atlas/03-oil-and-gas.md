@@ -38,6 +38,8 @@ import OilAndGasNotes from './_generated/oil-and-gas-notes.mdx';
 - [Интеллект-карта, PNG](pathname:///img/atlas/oil-and-gas-mindmap.png)
 - [Карта для печати, PDF](pathname:///downloads/oil-and-gas.pdf)
 - [Вопросы и источники, CSV](pathname:///downloads/oil-and-gas.csv)
+- [Интеллект-карта, Markdown — для markmap и Xmind](pathname:///downloads/oil-and-gas.md)
+- [Интеллект-карта, FreeMind — для Freeplane и Xmind](pathname:///downloads/oil-and-gas.mm)
 - [Данные карты, YAML](https://github.com/ivbeg/data-inventory/blob/main/data/maps/oil-and-gas.yaml)
 
 ## Что изменилось

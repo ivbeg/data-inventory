@@ -11,7 +11,7 @@
 
 Иллюстрации — `static/img/<часть>/`; иллюстрация главной — `static/img/home/data-inventory-hero.webp` (1600×686); файлы для скачивания — `static/downloads/` и `static/templates/`.
 
-Карты атласа хранятся как данные в `data/` (схема — `data/README.md`). Скрипт `scripts/atlas.mjs` проверяет их и строит в `docs/08-atlas/_generated/` паспорт, таблицы и список изменений для страниц атласа, а в `static/downloads/` — CSV. Сгенерированные файлы в git не хранятся; `npm start` и `npm run build` запускают скрипт сами. Таблицы атласа правят в `data/`, а не на страницах.
+Карты атласа хранятся как данные в `data/` (схема — `data/README.md`). Скрипт `scripts/atlas.mjs` проверяет их и строит в `docs/08-atlas/_generated/` паспорт, таблицы и список изменений для страниц атласа, а в `static/downloads/` — CSV и интеллект-карты в Markdown и формате FreeMind (`.mm`). Сгенерированные файлы в git не хранятся; `npm start` и `npm run build` запускают скрипт сами. Таблицы атласа правят в `data/`, а не на страницах.
 
 ```bash
 npm install           # первый запуск

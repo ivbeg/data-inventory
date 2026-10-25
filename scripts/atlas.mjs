@@ -1,4 +1,4 @@
-// Проверяет карты атласа в data/ и строит из них таблицы для страниц и CSV для скачивания.
+// Проверяет карты атласа в data/ и строит из них таблицы для страниц, CSV и интеллект-карты для скачивания.
 // Схема данных — data/README.md. Запуск: npm run atlas (с --check — только проверка).
 
 import fs from 'node:fs';
@@ -282,6 +282,57 @@ function csv(m) {
   return lines.join('\n') + '\n';
 }
 
+// --- Интеллект-карты: тема → вопрос → источник с доступностью ---
+
+const AVAILABILITY_SHORT = {
+  available: 'доступны',
+  restricted: 'с ограничениями',
+  unavailable: 'не доступны',
+};
+// Цвета — те же, что у кружков доступности на страницах атласа (src/css/custom.css).
+const AVAILABILITY_COLORS = {
+  available: '#2e7d32',
+  restricted: '#b38600',
+  unavailable: '#c62828',
+};
+
+const mindmapRoot = (m) => `${m.title} · ${monthYear(m.checked).replace(/ года$/, '')}`;
+const mindmapSource = (s, link) => `${s.name} (${AVAILABILITY_SHORT[link.availability] ?? 'доступность не указана'})`;
+
+// Markdown из одних заголовков: так его понимают и markmap, и импорт Xmind.
+function outline(m) {
+  const lines = [`# ${mindmapRoot(m)}`];
+  for (const q of m.questions) {
+    lines.push('', `## ${q.n}. ${q.text}`, '');
+    for (const link of q.sources) lines.push(`### ${mindmapSource(sources.get(link.source), link)}`);
+  }
+  return lines.join('\n') + '\n';
+}
+
+// Файл FreeMind (.mm): родной формат Freeplane, его импортирует и Xmind.
+function freemind(m) {
+  const attr = (v) => String(v).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const lines = [
+    '<map version="1.0.1">',
+    `<!-- Сгенерировано scripts/atlas.mjs из data/maps/${m.id}.yaml. Не править вручную. -->`,
+    `<node TEXT="${attr(mindmapRoot(m))}">`,
+  ];
+  for (const [i, q] of m.questions.entries()) {
+    // Вопросы — поровну справа и слева от темы, как на исходных картах.
+    const side = i < Math.ceil(m.questions.length / 2) ? 'right' : 'left';
+    lines.push(`<node TEXT="${attr(`${q.n}. ${q.text}`)}" POSITION="${side}">`);
+    for (const link of q.sources) {
+      const s = sources.get(link.source);
+      const url = s.url ? ` LINK="${attr(s.url)}"` : '';
+      const color = AVAILABILITY_COLORS[link.availability] ?? '#757575';
+      lines.push(`<node TEXT="${attr(mindmapSource(s, link))}"${url} COLOR="${color}"/>`);
+    }
+    lines.push('</node>');
+  }
+  lines.push('</node>', '</map>');
+  return lines.join('\n') + '\n';
+}
+
 const BANNER = '{/* Сгенерировано scripts/atlas.mjs из data/. Не править вручную. */}\n\n';
 
 fs.rmSync(OUT_MDX, {recursive: true, force: true});
@@ -294,10 +345,12 @@ for (const m of maps) {
   fs.writeFileSync(path.join(OUT_MDX, `${m.id}-passport.mdx`), BANNER + passport(m) + '\n');
   fs.writeFileSync(path.join(OUT_MDX, `${m.id}-notes.mdx`), BANNER + notes(m) + '\n');
   fs.writeFileSync(path.join(OUT_CSV, `${m.id}.csv`), csv(m));
+  fs.writeFileSync(path.join(OUT_CSV, `${m.id}.md`), outline(m));
+  fs.writeFileSync(path.join(OUT_CSV, `${m.id}.mm`), freemind(m));
 }
 const {mapTable, repeatedTable, checksTable} = summary();
 fs.writeFileSync(path.join(OUT_MDX, 'summary-maps.mdx'), BANNER + mapTable + '\n');
 fs.writeFileSync(path.join(OUT_MDX, 'summary-repeated.mdx'), BANNER + repeatedTable + '\n');
 fs.writeFileSync(path.join(OUT_MDX, 'summary-checks.mdx'), BANNER + (checksTable || 'Адреса источников не проверялись.') + '\n');
 
-console.log(`Сгенерировано: ${path.relative(ROOT, OUT_MDX)}/, CSV в ${path.relative(ROOT, OUT_CSV)}/.`);
+console.log(`Сгенерировано: ${path.relative(ROOT, OUT_MDX)}/, CSV и интеллект-карты в ${path.relative(ROOT, OUT_CSV)}/.`);

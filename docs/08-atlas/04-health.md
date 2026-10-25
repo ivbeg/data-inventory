@@ -38,6 +38,8 @@ import HealthNotes from './_generated/health-notes.mdx';
 - [Интеллект-карта, PNG](pathname:///img/atlas/health-mindmap.png)
 - [Карта для печати, PDF](pathname:///downloads/health.pdf)
 - [Вопросы и источники, CSV](pathname:///downloads/health.csv)
+- [Интеллект-карта, Markdown — для markmap и Xmind](pathname:///downloads/health.md)
+- [Интеллект-карта, FreeMind — для Freeplane и Xmind](pathname:///downloads/health.mm)
 - [Данные карты, YAML](https://github.com/ivbeg/data-inventory/blob/main/data/maps/health.yaml)
 
 ## Что изменилось
