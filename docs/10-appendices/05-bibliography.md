@@ -12,7 +12,8 @@ description: Книги, стандарты, методики и материа�
 - W3C. **Data Catalog Vocabulary (DCAT) — Version 3**, 2024 — [w3.org/TR/vocab-dcat-3](https://www.w3.org/TR/vocab-dcat-3/).
 - SEMIC. **DCAT Application Profile for data portals in Europe** — [interoperable-europe.ec.europa.eu](https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-data-portals-europe).
 - **DCAT-US Schema v3.0** и **DCAT-US v1.1** (бывшая Project Open Data Metadata Schema) — [resources.data.gov](https://resources.data.gov/resources/dcat-us3/).
-- Dehghani Z. **How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh**, 2019 — [martinfowler.com](https://martinfowler.com/articles/data-monolith-to-mesh.html).
+- Dehghani Z. **How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh**, 2019 — [martinfowler.com](https://martinfowler.com/articles/data-monolith-to-mesh.html); **Data Mesh Principles and Logical Architecture**, 2020 — [martinfowler.com](https://martinfowler.com/articles/data-mesh-principles.html); **Data Mesh: Delivering Data-Driven Value at Scale**, O'Reilly, 2022.
+- Bitol, LF AI & Data. **Open Data Contract Standard (ODCS)**, версия 3.2.0, 2026, и **Open Data Product Standard (ODPS)**, версия 1.1.0, 2026 — [bitol.io](https://bitol.io/), [github.com/bitol-io](https://github.com/bitol-io). Ссылки проверены 25 октября 2026 года.
 
 ## Качество данных
 
