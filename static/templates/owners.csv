@@ -3,3 +3,6 @@ faa,Federal Aviation Administration,FAA,центральный,government,U.S. D
 aircraft-registration,Aircraft Registration Branch (AFS-750),AFS-750,подразделение,government,Federal Aviation Administration,Aircraft Registration Branch (AFS-750),+1 866 762-9434 (справочная реестра),49 U.S.C. § 44103,active,,2026-10
 fss-ru,Фонд социального страхования Российской Федерации,ФСС России,фонд,government,,,,,abolished,sfr-ru,2026-10
 sfr-ru,Фонд пенсионного и социального страхования Российской Федерации,Социальный фонд России,фонд,government,,,,Федеральный закон от 14.07.2022 № 236-ФЗ,active,,2026-10
+ministry-health,Министерство здравоохранения (условный пример),,центральный,government,,,,положение о министерстве,active,,2026-10
+stat-center,Центр медицинской статистики (условный пример),,подведомственное учреждение,government,Министерство здравоохранения,,,,active,,2026-10
+region-a-health-authority,Орган управления здравоохранением региона A (условный пример),,региональный,government,,,,,active,,2026-10

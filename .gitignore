@@ -4,3 +4,9 @@
 /.cache-loader
 .DS_Store
 npm-debug.log*
+
+# Сгенерировано scripts/appendices.mjs из data/
+/docs/09-appendices/_generated/
+/static/downloads/legal-acts.csv
+/static/downloads/checklists.csv
+/static/downloads/checklists.html

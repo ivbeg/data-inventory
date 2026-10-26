@@ -15,8 +15,22 @@
 | Стандарты описания | `/frameworks/metadata-standards/` |
 | Казахстан | `/countries/kazakhstan/` |
 | Россия | `/countries/russia/` |
+| Шесть стран в сравнении | `/countries/` |
+| Пробелы и план | `/process/gaps-and-plan/` |
+| Практики и антипаттерны | `/practices/practices-and-anti-patterns/` |
 
-Файлы для скачивания, не страницы: `/data-inventory-book.pdf`, `/templates/registry.csv`, `/templates/questionnaire.csv`, `/templates/sources.csv`, `/templates/questions.csv`, `/templates/links.csv`, `/templates/map.yaml`.
+Файлы для скачивания, не страницы: `/data-inventory-book.pdf`, `/templates/registry.csv`, `/templates/questionnaire.csv`, `/templates/sources.csv`, `/templates/questions.csv`, `/templates/links.csv`, `/templates/map.yaml`, `/templates/workbook.xlsx`, `/templates/data-inventory-templates.zip`, `/downloads/legal-acts.csv`, `/downloads/checklists.csv`.
+
+## Перенаправления
+
+26 октября 2026 года «Хорошие практики» и «Антипаттерны» слиты в одну главу. Старые пути перенаправляются на новый (`@docusaurus/plugin-client-redirects`, `docusaurus.config.ts`):
+
+| Старый путь | Новый путь |
+|-------------|------------|
+| `/practices/good-practices/` | `/practices/practices-and-anti-patterns/` |
+| `/practices/anti-patterns/` | `/practices/practices-and-anti-patterns/` |
+
+Якоря старой главы «Хорошие практики» (`#1-начинать-с-цели-и-вопросов` и др.) в новой главе не сохранились: каждая практика стоит в сводной таблице рядом со своим антипаттерном. Якоря антипаттернов (`#опись-ради-описи` и др.) прежние.
 
 ## Прежние сайты
 

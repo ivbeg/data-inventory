@@ -60,6 +60,23 @@
   width: 100%;
 }
 
+/* На узком экране широкая таблица прокручивается сама, а страница не уезжает вбок. */
+@media (max-width: 996px) {
+  .markdown table {
+    display: block;
+    width: auto;
+    overflow-x: auto;
+  }
+}
+
+/* Широкая схема на узком экране не сжимается до нечитаемого: её прокручивают.
+   Минимальную ширину схемы ставит src/clientModules/mermaid-scroll.js. */
+@media (max-width: 996px) {
+  .docusaurus-mermaid-container {
+    overflow-x: auto;
+  }
+}
+
 .markdown td {
   vertical-align: top;
 }
@@ -67,6 +84,19 @@
 /* Интеллект-карты широкие и мелкие: на белом фоне они читаются и в тёмной теме. */
 [data-theme='dark'] .markdown img {
   background: #fff;
+}
+
+/* Подпись к картинке: строка курсивом сразу под картинкой, в том же абзаце (chapter-writing.mdc). */
+.markdown p > img + em {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.875rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+/* Свёрнутые блоки «Проверить самому» с командами: заметны, но не спорят с текстом. */
+.markdown details > summary {
+  cursor: pointer;
 }
 
 /* В теме neutral первая ветка интеллект-карты Mermaid почти белая и сливается с фоном. */

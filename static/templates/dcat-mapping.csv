@@ -1,0 +1,71 @@
+атрибут реестра,код колонки,DCAT-AP 3,DCAT-US 3.0,"data.json (Project Open Data, DCAT-US v1.1)",примечание
+Идентификатор,id,dct:identifier,identifier (обязательно),identifier (обязательно),Уникален и не меняется; schema.org — identifier
+Наименование,title,dct:title (обязательно),title (обязательно),title (обязательно),schema.org — name
+Описание,description,dct:description (обязательно),description (обязательно),description (обязательно),schema.org — description; Google требует от 50 до 5000 знаков
+Ответственный,owner_person,"dcat:contactPoint — карточка vCard, имя в vcard:fn",contactPoint — fn,contactPoint — fn (обязательно),"Выгружают название подразделения, а не имя сотрудника"
+Контакты ответственного,owner_contacts,"dcat:contactPoint — vcard:hasEmail, телефон — vcard:hasTelephone","contactPoint — hasEmail (обязательно), телефон — tel",contactPoint — hasEmail (обязательно),"Рабочий адрес подразделения для вопросов о данных, не личная почта и не адрес приёмной"
+Периодичность обновления,update_frequency,dct:accrualPeriodicity — словарь Frequency,accrualPeriodicity — код ISO 19115 или период ISO 8601 вида R/P1D,accrualPeriodicity — период ISO 8601 вида R/P1D или irregular,Значения — в строках «Периодичность — …» ниже
+Режим доступа,access_level,dct:accessRights — словарь Access Right,accessRestriction — статус по списку Национального архива США; accessRights — текстом; accessLevel — сохраняют до нового руководства OMB,"accessLevel (обязательно): public, restricted public, non-public","accessLevel описывает, можно ли набор сделать общедоступным, а не открыт ли он сейчас. Значения — в строках «Режим доступа — …» ниже"
+Чем подтверждён режим доступа,access_basis,—,—,—,Только в реестре
+Причина ограничения,access_restriction,"dct:rights — текстом, списка оснований нет",accessRestriction — основание по списку Национального архива (исключения закона о свободе информации); маркировка — cuiRestriction,"rights — текстом, до 255 знаков; обязательно для restricted public и non-public",Значения — в строках «Причина ограничения — …» ниже
+Условия доступа,access_conditions,dct:rights,accessRestriction — restrictionNote; ограничения использования — useRestriction,rights,"Как получить данные, если они не открыты"
+Дата проверки режима доступа,access_checked,—,—,—,Только в реестре
+Ссылка для выгрузки,download_url,dcat:distribution → dcat:downloadURL; страница или форма запроса — dcat:accessURL,distribution → downloadURL; страница — accessURL,distribution → downloadURL (с mediaType); страница или интерфейс — accessURL,downloadURL — прямой адрес файла; schema.org — distribution → contentUrl
+Формат распространения,format,dct:format — словарь File Type; dcat:mediaType — тип IANA; у архива — dcat:packageFormat,"distribution → format, mediaType, packageFormat","distribution → mediaType, format",schema.org — distribution → encodingFormat
+Дата публикации,issued,dct:issued,issued,issued,"Если дата не установлена, свойство не выгружают; schema.org — datePublished"
+Дата последнего изменения,modified,dct:modified у набора,modified,modified (обязательно),"Когда изменились данные, а не описание; schema.org — dateModified"
+Отметка о контроле качества,quality_check,"Отдельного свойства нет: словарь DQV — dqv:hasQualityMeasurement, dqv:hasQualityAnnotation",hasQualityMeasurement — измерения по словарю DQV,dataQuality — только true или false,Итог «годится ли для задачи» остаётся в реестре
+Условия использования,license,dct:license — словарь Licence; остальное — dct:rights,"license; остальное — rights, useRestriction",license — адрес лицензии; остальное — rights,"Если лицензии нет, свойство не выгружают, CC0 не подставляют; schema.org — license"
+Организация-владелец,publisher,dct:publisher,publisher,"publisher (обязательно), вышестоящая организация — subOrganizationOf",schema.org — publisher; издатель на портале — не всегда владелец
+Домен,domain,—,—,—,Только в реестре: кто ведёт запись при федеративном ведении
+Синонимы,aliases,— ; другие коды — adms:identifier,— ; другие коды — otherIdentifier,—,"otherIdentifier — для кодов вроде DOI, а не для других названий; schema.org — alternateName"
+Тип записи,type,"В каталог уходят только наборы (dcat:Dataset), серии (dcat:DatasetSeries) и сервисы данных (dcat:DataService)",То же,Только наборы,"Записи о системах, сайтах и группах не выгружают"
+Схема данных,schema,"dct:conformsTo — стандарт или схема, которой следуют данные",describedBy — словарь данных; conformsTo,describedBy и describedByType; conformsTo,
+Контракт данных,data_contract,—,—,—,Только в реестре
+Информационная система,information_system,—,—,primaryITInvestmentUII — идентификатор ИТ-инвестиции,Класса для системы в DCAT нет; федеральную систему США ищут по идентификатору на IT Dashboard
+Оператор системы,operator,prov:qualifiedAttribution с ролью dcat:hadRole,qualifiedAttribution с ролью hadRole,—,"Роли берут из словаря, например из кодов ролей ISO 19115"
+Полномочие,mandate,"prov:wasGeneratedBy — деятельность, которая создала набор",wasGeneratedBy — деятельность с названием,—,В стандарт уходит название полномочия; идентификатор из листа полномочий остаётся в реестре
+Нормативный акт,legal_act,"dcatap:applicableLegislation — адрес акта, в ЕС — ELI","Отдельного поля нет; акт, который ограничивает доступ, — основание в accessRestriction",—,"Храните не только номер и дату, но и адрес официального текста"
+Есть ли персональные данные,personal_data,—,"Отдельного поля нет; основание ограничения FOIA (b)(6), маркировка — cuiRestriction",systemOfRecords — адрес уведомления о системе записей (SORN),Само поле остаётся в реестре
+Связанные записи,related,"dct:source — из чего получен набор; dct:relation, dcat:qualifiedRelation; dct:replaces — преемник","source, relation, qualifiedRelation, replaces",isPartOf — набор из коллекции; references — связанные документы,"copy_of — source, successor_of — replaces, aggregate_of — source или qualifiedRelation"
+Статус записи,status,adms:status у распространения — словарь Distribution Status,status,—,Значения — в строках «Статус записи — …» ниже
+Копия в веб-архиве,archive_url,—,—,—,Только в реестре
+Откуда известно,known_from,—,—,—,Только в реестре
+Дата проверки записи,checked,Запись каталога (dcat:CatalogRecord) — dct:modified: когда изменили описание,inventoried — когда набор внесли в каталог; даты проверки нет,—,Дата проверки — своя колонка; inventoried при повторной проверке не меняют
+Темы и ключевые слова,— (колонки в шаблоне нет),"dcat:theme — словарь Data Theme, 13 тем; dcat:keyword","theme, keyword","keyword (обязательно), theme",Добавляют при выгрузке
+Коды ведомства и программы,— (колонки в шаблоне нет),—,"В основной схеме нет, но схема их не отвергает","bureauCode, programCode — обязательны федеральным ведомствам",Только для ведомств США
+Категория высокой ценности,— (колонки в шаблоне нет),dcatap:hvdCategory и dcatap:applicableLegislation со ссылкой на регламент 2023/138,—,—,"По профилю DCAT-AP HVD, только для наборов из перечня ЕС"
+Периодичность — непрерывно,update_frequency = continuous,…/frequency/CONT,continual,период ISO 8601 по факту обновления,Значения словарей ЕС — адреса вида http://publications.europa.eu/resource/authority/frequency/DAILY
+Периодичность — ежедневно,update_frequency = daily,…/frequency/DAILY,daily или R/P1D,R/P1D,
+Периодичность — еженедельно,update_frequency = weekly,…/frequency/WEEKLY,weekly или R/P1W,R/P1W,
+Периодичность — ежемесячно,update_frequency = monthly,…/frequency/MONTHLY,monthly или R/P1M,R/P1M,
+Периодичность — ежеквартально,update_frequency = quarterly,…/frequency/QUARTERLY,quarterly или R/P3M,R/P3M,
+Периодичность — ежегодно,update_frequency = annual,…/frequency/ANNUAL,annually или R/P1Y,R/P1Y,
+Периодичность — нерегулярно,update_frequency = irregular,…/frequency/IRREG,irregular,irregular,
+Периодичность — не обновляется,update_frequency = never,…/frequency/NEVER,notPlanned,— (свойство не выгружают),
+Периодичность — не установлено,update_frequency = unknown,…/frequency/UNKNOWN,unknown,— (свойство не выгружают),
+Режим доступа — открытые данные,access_level = open,…/access-right/PUBLIC,Unrestricted,public,
+Режим доступа — неструктурированные сведения,access_level = unstructured,…/access-right/PUBLIC,Unrestricted,public,От открытых данных отличают только в реестре
+Режим доступа — с ограничениями,access_level = restricted,…/access-right/RESTRICTED,"Restricted - Partly, условия — в restrictionNote","restricted public, пояснение — в rights",
+Режим доступа — закрыто по норме,access_level = closed,…/access-right/NON_PUBLIC,Restricted - Fully с основанием,"non-public, пояснение — в rights",
+"Режим доступа — закрыто, нормы нет","access_level = closed, access_restriction = owner_decision",…/access-right/NON_PUBLIC,Основание — Other с пояснением,"public: набор можно открыть, хотя он не опубликован",В шкале книги — «закрыто» с причиной «нормы нет»
+Режим доступа — не установлено,access_level = unknown,"Соответствия нет: запись не выгружают, пока доступ не установлен",Undetermined,Значения нет: запись не выгружают,Закон США прямо допускает «ещё не определено»
+Причина ограничения — персональные данные,access_restriction = personal_data,dct:rights — текстом,Ближе всего FOIA (b)(6),rights — текстом,
+Причина ограничения — государственная тайна,access_restriction = state_secret,dct:rights — текстом,Ближе всего FOIA (b)(1),rights — текстом,
+Причина ограничения — коммерческая тайна,access_restriction = confidential,dct:rights — текстом,Ближе всего FOIA (b)(4),rights — текстом,
+Причина ограничения — остальные,"access_restriction = official, third_party, owner_decision",dct:rights — текстом,Other с пояснением,rights — текстом,
+Формат — CSV,format = CSV,dct:format …/file-type/CSV; dcat:mediaType text/csv,mediaType text/csv; format — текстом,mediaType text/csv; format — текстом,
+Условия использования — CC BY 4.0,license = CC BY 4.0,dct:license …/licence/CC_BY_4_0,Адрес лицензии,Адрес лицензии,
+Условия использования — не указаны,license = не указаны,— (свойство не выгружают; что известно — в dct:rights),— (что известно — в rights),— (что известно — в rights),Подставить CC0 — выдать догадку за условие владельца
+Статус записи — действует,status = active,…/distribution-status/COMPLETED,completed,—,
+Статус записи — выведена,status = retired,…/distribution-status/DEPRECATED или WITHDRAWN,deprecated или withdrawn,—,"DEPRECATED — есть замена, WITHDRAWN — снят"
+Статус записи — адрес не работает,status = url_broken,—,—,—,Своё значение реестра
+Паспорт — название и описание,"passport.yaml: title, description","dct:title, dct:description у каталога",—,—,В data.json паспорта нет: у GSA на верхнем уровне файла только тип и ссылка на схему
+"Паспорт — цель, подход, методы, охват, состав, пробелы, правило общедоступной части","passport.yaml: goal, task_owner, approach, methods, coverage, contents, gaps, public_part",—,—,—,Только в паспорте
+Паспорт — границы,passport.yaml: scope,"dct:spatial, dct:temporal — частично",—,—,
+Паспорт — составители и контакты,"passport.yaml: creators, contact","dct:creator, dcat:contactPoint",—,—,
+Паспорт — владелец процесса и план обновления,"passport.yaml: process_owner, upkeep",dct:publisher — частично,—,—,План обновления — только в паспорте
+Паспорт — даты,"passport.yaml: conducted, issued, modified, next_check","dct:issued, dct:modified",—,—,Даты проведения и следующей проверки — только в паспорте
+Паспорт — версия,"passport.yaml: version, previous_version, changes","dcat:version, dcat:previousVersion",—,—,Свойства версий появились в DCAT 3
+Паспорт — лицензия,passport.yaml: license,dct:license,—,—,Лицензия на сам реестр
+Паспорт — стандарт и файлы,"passport.yaml: conforms_to, files","dct:conformsTo, dcat:distribution",—,—,
