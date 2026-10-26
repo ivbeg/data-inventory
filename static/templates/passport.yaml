@@ -20,8 +20,9 @@ coverage:
   network: адреса проверены из сети страны
 contents:
   records: 31
-  by_type: {dataset: 26, system: 2, group: 3}
-  by_access: {open: 12, unstructured: 6, restricted: 7, closed: 4, unknown: 2}
+  # by_type — сколько записей каждого типа: {dataset: …, resource: …, system: …, site: …, group: …}.
+  # В условном примере книги среди 31 записи одна группа — органы здравоохранения регионов.
+  by_access: {open: 6, unstructured: 6, restricted: 13, closed: 3, unknown: 3}
   personal_data: 6
   questions: 15
   questions_covered: {available: 10, partial: 4, gap: 1}

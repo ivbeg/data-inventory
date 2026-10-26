@@ -1,2 +1,4 @@
 question_n,source_id,status,status_basis,quality,quality_note,checked
-1,egrul-nalog-ru,unknown,,not_checked,,2026-10
+2,med-workers-yearbook,unstructured,сборник на сайте центра,fit_with_caveats,нет деления на города и сёла,2026-10
+2,med-workers-register,restricted,положение о системе,not_checked,выборки данных нет,2026-10
+2,who-physicians,open,показатель скачан с сайта ВОЗ,fit_with_caveats,только по стране в целом,2026-10

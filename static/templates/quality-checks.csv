@@ -4,4 +4,4 @@ faa-2,faa-aircraft-registry,,validity,YEAR MFR = 0000 — пропуск под 
 faa-3,faa-aircraft-registry,,uniqueness,повторы N-NUMBER,0 повторов,0 повторов,none,2026-10-23,составитель реестра,2026-10-25
 faa-4,faa-aircraft-registry,,consistency,коды MFR MDL CODE без расшифровки в ACFTREF,0,0 из 317 999,none,2026-10-23,составитель реестра,2026-10-25
 faa-5,faa-aircraft-registry,,timeliness,последняя дата LAST ACTION DATE,не старше недели,2026-10-23,none,2026-10-23,составитель реестра,2026-10-25
-wait-region-c-1,wait-list-region-c,1,completeness,доля пустых значений даты направления,не больше 10%,33%,blocking,2026-09-30,составитель реестра,2026-10-21
+wait-region-c-1,wait-list-region-c,4,completeness,доля пустых значений даты направления,не больше 10%,33%,blocking,2026-09-30,составитель реестра,2026-10-21
