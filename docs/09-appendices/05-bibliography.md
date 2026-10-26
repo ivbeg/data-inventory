@@ -17,7 +17,7 @@ description: Книги, стандарты, методики и материа�
 ## Управление данными
 
 - **The DAMA Guide to the Data Management Body of Knowledge (DAMA-DMBOK2R).** DAMA International, 2-е издание, исправленное, 2024; 2-е издание — 2017, англ. — [dama.org](https://dama.org/learning-resources/dama-data-management-body-of-knowledge-dmbok/). Оригинал свода; колесо и контекстные диаграммы областей — под лицензией CC BY-ND 4.0 на [dama.org](https://dama.org/cpages/dmbok2r-wheels).
-- **Data Management Capability Assessment Model (DCAM).** EDM Council, версия 3, 2025, англ. — [edmcouncil.org](https://edmcouncil.org/announcement/announcing-dcam-v3-meet-the-new-standard-for-your-data/). Другая модель оценки зрелости управления данными, кроме уровней DMBOK.
+- **Data Management Capability Assessment Model (DCAM).** EDM Council, версия 3, 2025, англ. — [edmcouncil.org](https://edmcouncil.org/announcement/announcing-dcam-v3-meet-the-new-standard-for-your-data/). Модель оценки зрелости управления данными — альтернатива уровням DMBOK.
 - **How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh.** Dehghani Z., 2019, англ. — [martinfowler.com](https://martinfowler.com/articles/data-monolith-to-mesh.html). Первая статья о Data Mesh: почему центральное хранилище не справляется.
 - **Data Mesh Principles and Logical Architecture.** Dehghani Z., 2020, англ. — [martinfowler.com](https://martinfowler.com/articles/data-mesh-principles.html). Четыре принципа подхода.
 - **Data Mesh: Delivering Data-Driven Value at Scale.** Dehghani Z. — O'Reilly, 2022, англ. Книга о подходе целиком.
@@ -39,7 +39,7 @@ description: Книги, стандарты, методики и материа�
 Рамки дают список того, что можно проверить; что проверять, решает цель ([«Качество данных»](../03-process/07-quality.md#рамки-и-стандарты-качества)).
 
 - **The Six Primary Dimensions for Data Quality Assessment.** DAMA UK Working Group, 2013, англ. Шесть признаков — полнота, уникальность, актуальность, валидность, точность, согласованность: короткий список для быстрой проверки.
-- **The Government Data Quality Framework.** Government Data Quality Hub, Великобритания, 2020, англ. — [gov.uk](https://www.gov.uk/government/publications/the-government-data-quality-framework/the-government-data-quality-framework). Те же шесть признаков; качество — пригодность для цели; пять принципов, проверка на всём жизненном цикле, планы действий и поиск первопричины.
+- **The Government Data Quality Framework.** Government Data Quality Hub, Великобритания, 2020, англ. — [gov.uk](https://www.gov.uk/government/publications/the-government-data-quality-framework/the-government-data-quality-framework). Те же шесть признаков, а качество понимается как пригодность для цели. Ещё в рамке — пять принципов, проверка на всём жизненном цикле, планы действий и поиск первопричины.
 - **How to Select the Right Dimensions of Data Quality.** Black A., van Nederpelt P. — DAMA NL, версия 1.1, 2020, англ. — [dama-nl.org](http://www.dama-nl.org/wp-content/uploads/2020/11/How-to-Select-the-Right-Dimensions-of-Data-Quality-v1.1-d.d.-14-Nov-2020.pdf). 60 измерений качества с определениями и четыре шага выбора под требования: какие измерения важны для категории данных, помогает ли измерение цели, какие важнее, чем и как их измерять.
 - **A Framework for Data Quality.** Federal Committee on Statistical Methodology, FCSM-20-04, 2020, англ. — [rosap.ntl.bts.gov](https://rosap.ntl.bts.gov/view/dot/72798). Рамка статистики США: 11 измерений в трёх областях — полезность, объективность, целостность; среди них гранулярность, то есть подробность данных.
 - **ISO/IEC 25012:2008 Data quality model**, англ. 15 характеристик качества с двух точек зрения — самих данных и системы, которая их хранит и выдаёт.
@@ -73,7 +73,7 @@ description: Книги, стандарты, методики и материа�
 
 **Польша**
 
-- Программа открытия данных на 2021–2027 годы — постановление Совета министров, а не методика; оно — в приложении [«Нормативная база»](./02-legal-framework.md#pl-program-2021).
+- Программа открытия данных на 2021–2027 годы — постановление Совета министров, а не методика, поэтому она — в приложении [«Нормативная база»](./02-legal-framework.md#pl-program-2021).
 - **Otwieranie danych. Praktyczny poradnik.** Ministerstwo Cyfryzacji, 2-е издание, 2023, пол. — [gov.pl](https://www.gov.pl/web/cyfryzacja/konkretnie-o-otwieraniu-danych). Практическое руководство по открытию данных для учреждений.
 - **Kluczowe rejestry publiczne**, пол. — [gov.pl/web/ia](https://www.gov.pl/web/ia/kluczowe-rejestry-publiczne). Перечень ключевых публичных реестров государства — готовый список для начала описи.
 

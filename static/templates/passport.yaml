@@ -23,7 +23,7 @@ contents:
   # by_type — сколько записей каждого типа: {dataset: …, resource: …, system: …, site: …, group: …}.
   # В условном примере книги среди 31 записи одна группа — органы здравоохранения регионов.
   by_access: {open: 6, unstructured: 6, restricted: 13, closed: 3, unknown: 3}
-  personal_data: 6
+  personal_data: 7
   questions: 15
   questions_covered: {available: 10, partial: 4, gap: 1}
 gaps:
