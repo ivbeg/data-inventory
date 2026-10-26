@@ -39,6 +39,7 @@ const config: Config = {
     },
   },
   themes: ['@docusaurus/theme-mermaid'],
+  clientModules: ['./src/clientModules/mermaid-scroll.js'],
 
   // Перенаправления со старых путей: путь не меняют без перенаправления (stable-paths.md).
   plugins: [
