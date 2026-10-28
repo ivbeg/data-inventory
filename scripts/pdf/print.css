@@ -50,9 +50,10 @@
 }
 
 :root {
-  --pdf-serif: 'PT Serif', Georgia, 'Times New Roman', serif;
-  --pdf-sans: 'PT Sans', 'Helvetica Neue', Arial, sans-serif;
-  --pdf-mono: 'PT Mono', Menlo, 'DejaVu Sans Mono', monospace;
+  /* Корейские названия в главе «Южная Корея»: Noto CJK в Ubuntu (fonts-noto-cjk), шрифты Apple в macOS. */
+  --pdf-serif: 'PT Serif', Georgia, 'Times New Roman', 'Noto Serif CJK KR', AppleMyungjo, serif;
+  --pdf-sans: 'PT Sans', 'Helvetica Neue', Arial, 'Noto Sans CJK KR', 'Apple SD Gothic Neo', sans-serif;
+  --pdf-mono: 'PT Mono', Menlo, 'DejaVu Sans Mono', 'Noto Sans Mono CJK KR', 'Apple SD Gothic Neo', monospace;
   --pdf-accent: #1f6f8b;
   --pdf-accent-dark: #154d61;
   --pdf-text: #1a1a1a;

@@ -31,10 +31,11 @@ jobs:
         run: npm run build
       # PDF-версия книги ложится в build/ и публикуется вместе с сайтом:
       # <адрес сайта>/data-inventory-book.pdf. Chrome на ubuntu-latest уже установлен.
+      # fonts-noto-cjk — корейские названия: без него вместо них в PDF квадраты.
       - name: Install fonts for PDF
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq --no-install-recommends fonts-paratype
+          sudo apt-get install -y -qq --no-install-recommends fonts-paratype fonts-noto-cjk
       - name: Build PDF
         run: npm run pdf
       - name: Upload artifact
