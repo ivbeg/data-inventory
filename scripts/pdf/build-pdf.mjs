@@ -9,7 +9,9 @@
 //
 // Как устроено:
 // 1. Порядок страниц берётся из ссылок «Следующая страница» в build/ и совпадает с боковым меню.
-//    Страницы категорий (generated-index) становятся титулами частей.
+//    Страницы категорий (generated-index) становятся титулами частей. Если категория ссылается
+//    на документ (link.type: doc), титул части ставится перед ним, а документ — первая глава части.
+//    Каждая категория из docs/ должна стать частью, иначе сборка падает.
 //    Главы верхнего уровня после частей (например, «Об авторе») идут в конце книги вне частей.
 // 2. Каждая страница открывается в Chrome через встроенный локальный сервер, поэтому схемы
 //    Mermaid рендерятся так же, как на сайте. Со страницы берётся только текст главы.
@@ -177,6 +179,14 @@ function breadcrumbLinks(html, basePath) {
     .map((href) => href.split(/[?#]/)[0]);
 }
 
+// Документ, на который ссылается категория (link.type: doc): в боковом меню текущей
+// отмечена ссылка категории, а не пункт документа.
+function isCategoryDoc(html) {
+  return [...html.matchAll(/<a\b[^>]*>/g)].some(
+    (m) => m[0].includes('menu__link--sublist') && /\saria-current=("|')?page/.test(m[0]),
+  );
+}
+
 async function readBuiltPage(basePath, pagePath) {
   const file = path.join(buildDir, decodeURIComponent(pagePath.slice(basePath.length)), 'index.html');
   return fs.readFile(file, 'utf8');
@@ -188,8 +198,13 @@ async function readingOrder(basePath) {
   const add = (pagePath, html) => {
     seen.add(pagePath);
     const isPart = !html.includes('theme-doc-markdown');
+    // Вводная глава части: перед ней титул части с тем же адресом.
+    const opensPart = !isPart && isCategoryDoc(html);
+    if (opensPart) {
+      order.push({path: pagePath, isPart: true, topLevel: false, fromDoc: true});
+    }
     // Глава верхнего уровня: в хлебных крошках нет ни одной категории.
-    const topLevel = !isPart && breadcrumbLinks(html, basePath).length === 0;
+    const topLevel = !isPart && !opensPart && breadcrumbLinks(html, basePath).length === 0;
     order.push({path: pagePath, isPart, topLevel});
   };
   let current = basePath;
@@ -219,6 +234,21 @@ async function countMermaidInSources(dir) {
     }
   }
   return total;
+}
+
+// Категории верхнего уровня в docs/: по ним проверяется, что ни одна часть не потерялась.
+async function readCategories(dir) {
+  if (!existsSync(dir)) {
+    return null;
+  }
+  const categories = [];
+  for (const entry of await fs.readdir(dir, {withFileTypes: true})) {
+    const file = path.join(dir, entry.name, '_category_.json');
+    if (entry.isDirectory() && existsSync(file)) {
+      categories.push(JSON.parse(await fs.readFile(file, 'utf8')));
+    }
+  }
+  return categories;
 }
 
 // ---------- Локальный сервер для build/ ----------
@@ -313,12 +343,25 @@ async function waitForMermaid(page) {
 }
 
 // Выполняется в браузере на странице сайта: превращает статью в фрагмент книги.
-function extractPage({prefix, pathMap, basePath, siteUrl, demote, replacements, editionPattern}) {
+function extractPage({prefix, pathMap, basePath, siteUrl, demote, asPart, replacements, editionPattern}) {
   const pageUrl = siteUrl + location.pathname.slice(basePath.length);
   const sidebarLabel =
-    document.querySelector('.theme-doc-sidebar-menu a.menu__link--active[aria-current="page"]')?.textContent.trim() ??
-    null;
+    document
+      .querySelector('.theme-doc-sidebar-menu a.menu__link--active[aria-current="page"]:not(.menu__link--sublist)')
+      ?.textContent.trim() ?? null;
   const markdown = document.querySelector('.theme-doc-markdown');
+  if (markdown && asPart) {
+    // Категория ссылается на документ: название части — из бокового меню, описание — из _category_.json.
+    return {
+      kind: 'part',
+      title:
+        document
+          .querySelector('.theme-doc-sidebar-menu a.menu__link--sublist[aria-current="page"]')
+          ?.textContent.trim() ?? document.title,
+      description: '',
+      sidebarLabel,
+    };
+  }
   if (!markdown) {
     const header = document.querySelector('main header');
     return {
@@ -468,7 +511,12 @@ async function capturePages(context, origin, order, options) {
       if (!item.isPart) {
         await waitForMermaid(page);
       }
-      results[index] = await page.evaluate(extractPage, {...options, prefix: item.id, demote: item.demote});
+      results[index] = await page.evaluate(extractPage, {
+        ...options,
+        prefix: item.id,
+        demote: item.demote,
+        asPart: item.isPart,
+      });
       done += 1;
       if (done % 10 === 0 || done === order.length) {
         log(`страниц обработано: ${done} из ${order.length}`);
@@ -823,7 +871,8 @@ async function main() {
     insidePart ||= item.isPart;
     item.demote = insidePart && !item.isPart && !item.topLevel;
   });
-  const pathMap = Object.fromEntries(order.map((item) => [item.path, item.id]));
+  // Ссылки на вводную главу части ведут на главу, а не на титул части.
+  const pathMap = Object.fromEntries(order.filter((item) => !item.fromDoc).map((item) => [item.path, item.id]));
   log(`страниц в книге: ${order.length} (частей: ${order.filter((i) => i.isPart).length})`);
 
   const virtualPages = new Map();
@@ -865,6 +914,19 @@ async function main() {
         runningTitle: isRoot ? title : data.sidebarLabel || title,
       };
     });
+
+    const categories = await readCategories(path.join(ROOT, L.docsDir));
+    if (categories) {
+      const parts = pages.filter((p) => p.kind === 'part');
+      const lost = categories.filter((c) => c.label && !parts.some((p) => p.title === c.label));
+      if (lost.length > 0) {
+        throw new Error(`Части не попали в PDF: ${lost.map((c) => c.label).join(', ')}.`);
+      }
+      // У части со ссылкой на документ нет страницы категории, описание — только в _category_.json.
+      for (const part of parts.filter((p) => !p.description)) {
+        part.description = categories.find((c) => c.label === part.title)?.description ?? '';
+      }
+    }
 
     const expectedMermaid = await countMermaidInSources(path.join(ROOT, L.docsDir));
     const renderedMermaid = pages.reduce((sum, p) => sum + (p.mermaid ?? 0), 0);
