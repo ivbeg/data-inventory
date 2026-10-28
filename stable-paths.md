@@ -15,7 +15,7 @@
 | Стандарты описания | `/frameworks/metadata-standards/` |
 | Казахстан | `/countries/kazakhstan/` |
 | Россия | `/countries/russia/` |
-| Шесть стран в сравнении | `/countries/` |
+| Двенадцать стран в сравнении | `/countries/` |
 | Пробелы и план | `/process/gaps-and-plan/` |
 | Практики и антипаттерны | `/practices/practices-and-anti-patterns/` |
 

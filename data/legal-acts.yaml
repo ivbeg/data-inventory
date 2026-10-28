@@ -48,32 +48,32 @@ countries:
     how_checked: "Тексты и редакции сверены 25 октября 2026 года по law.go.kr."
   ee:
     name: Эстония
-    chapter: 05-frameworks/04-international-practice.md
+    chapter: 07-countries/07-estonia.md
     where: "Riigi Teataja (riigiteataja.ee) — официальные консолидированные тексты с историей редакций; английские переводы — riigiteataja.ee/en"
     how_checked: "Сайт riigiteataja.ee — приложение на JavaScript; консолидированные тексты прочитаны 28 октября 2026 года через его открытый программный интерфейс, английский перевод закона о публичной информации — RT V, 25.03.2026, 1."
   fi:
     name: Финляндия
-    chapter: 05-frameworks/04-international-practice.md
+    chapter: 07-countries/08-finland.md
     where: "Finlex (finlex.fi) — консолидированные тексты и неофициальные переводы на английский; программный интерфейс — opendata.finlex.fi"
-    how_checked: "Тексты сверены 28 октября 2026 года по Finlex и opendata.finlex.fi; vm.fi и сайты Агентства цифровизации и сведений о населении (DVV) из сети проверки не открылись."
+    how_checked: "Тексты сверены 28 октября 2026 года по Finlex и opendata.finlex.fi; vm.fi, valtioneuvosto.fi, kansallisarkisto.fi, lausuntopalvelu.fi и сайты Агентства цифровизации и сведений о населении (DVV) из сети проверки не открылись — проверка Cloudflare."
   ca:
     name: Канада
-    chapter: 05-frameworks/04-international-practice.md
+    chapter: 07-countries/09-canada.md
     where: "Законы — Justice Laws (laws-lois.justice.gc.ca), консолидированные тексты на английском и французском; политики и директивы Казначейского совета — tbs-sct.canada.ca, руководства и объявления о них — canada.ca"
     how_checked: "Законы сверены 28 октября 2026 года по laws-lois.justice.gc.ca; tbs-sct.canada.ca из сети проверки не открылся, политики сверены по страницам canada.ca и записи инвентаря открытых данных на open.canada.ca."
   cn:
     name: Китай
-    chapter: 05-frameworks/04-international-practice.md
+    chapter: 07-countries/10-china.md
     where: "Законы — национальная база законов и нормативных актов flk.npc.gov.cn; постановления и документы Госсовета — библиотека политик gov.cn/zhengce; документы ведомств — их сайты (ndrc.gov.cn, nda.gov.cn)"
     how_checked: "Тексты сверены 28 октября 2026 года по gov.cn, ndrc.gov.cn и PDF-файлам ведомств; flk.npc.gov.cn и страницы nda.gov.cn — приложения на JavaScript, их не читали; адреса data.gov.cn не существует."
   jp:
     name: Япония
-    chapter: 05-frameworks/04-international-practice.md
+    chapter: 07-countries/11-japan.md
     where: "e-Gov: база законов laws.e-gov.go.jp — действующие тексты с историей изменений и программным интерфейсом; официальные переводы на английский — japaneselawtranslation.go.jp"
     how_checked: "Тексты сверены 28 октября 2026 года через программный интерфейс e-Gov; japaneselawtranslation.go.jp из сети проверки не открылся, английские названия — по его поиску."
   de:
     name: Германия
-    chapter: 05-frameworks/04-international-practice.md
+    chapter: 07-countries/12-germany.md
     where: "gesetze-im-internet.de — действующие федеральные законы; Федеральный вестник законов — recht.bund.de; документы Бундестага — dserver.bundestag.de"
     how_checked: "Тексты сверены 28 октября 2026 года по gesetze-im-internet.de."
 
@@ -2540,10 +2540,17 @@ acts:
       - § 43⁵ — что должно быть в положении о базе данных; § 43⁶ — базовые данные фиксируют в RIHA
       - § 43⁷(1) — базу данных регистрируют в RIHA до того, как начнут ею пользоваться
       - § 43⁹(1) — обеспечивающие системы, обязательные для всех: пункт 5 — X-tee, пункт 6 — RIHA
+      - §§ 11–12, § 28(1) пункт 31 — открытый регистр документов учреждения
+      - § 43³(4) — базы только для внутренней работы учреждения от согласования освобождены
+      - § 43¹⁰ — база согласий (с 16.03.2026)
     response_time: "Не позже пяти рабочих дней; если запрос нужно уточнить или сведения долго собирать — до 15 рабочих дней, о продлении сообщают в течение пяти рабочих дней"
     topics: [systems, access, open_data, data_governance]
     chapters:
       - 05-frameworks/04-international-practice.md#каталог-riha-в-эстонии
+      - 07-countries/07-estonia.md#правовая-основа
+      - 07-countries/07-estonia.md#riha
+      - 07-countries/07-estonia.md#другие-источники
+      - 07-countries/07-estonia.md#где-найти-нужное
     url: https://www.riigiteataja.ee/akt/130062026009
     links:
       - title: перевод на английский (Public Information Act)
@@ -2571,6 +2578,8 @@ acts:
     topics: [systems, standards]
     chapters:
       - 05-frameworks/04-international-practice.md#каталог-riha-в-эстонии
+      - 07-countries/07-estonia.md#правовая-основа
+      - 07-countries/07-estonia.md#riha
     url: https://www.riigiteataja.ee/akt/129122024015
     note: Закон о публичной информации называет три согласующих ведомства, постановление — пять. Каталог RIHA — riha.ee (бывший адрес riha.eesti.ee перенаправляет туда).
 
@@ -2592,6 +2601,8 @@ acts:
     topics: [data_governance, standards]
     chapters:
       - 05-frameworks/04-international-practice.md#каталог-riha-в-эстонии
+      - 07-countries/07-estonia.md#правовая-основа
+      - 07-countries/07-estonia.md#riha
     url: https://www.riigiteataja.ee/akt/129122024019
 
   - id: ee-x-tee
@@ -2612,7 +2623,68 @@ acts:
     topics: [sharing, systems]
     chapters:
       - 05-frameworks/04-international-practice.md#каталог-riha-в-эстонии
+      - 07-countries/07-estonia.md#правовая-основа
+      - 07-countries/07-estonia.md#x-tee
     url: https://www.riigiteataja.ee/akt/128042026013
+
+  - id: ee-rsts
+    country: ee
+    title: Закон о государственной статистике
+    title_original: Riikliku statistika seadus
+    short: RStS
+    number: RT I 2010, 41, 241
+    date: 2010-06-10
+    in_force: 2010-08-01
+    edition: редакция RT I, 11.03.2022, 2, действует с 21.03.2022
+    status: in_force
+    status_checked: 2026-10-28
+    about: Перечень статистических работ утверждает правительство; статистика берёт данные прежде всего из баз данных государства.
+    provisions:
+      - § 6(3) — статистические регистры не являются базами данных по закону о публичной информации
+      - § 9(2) пункт 4 — Статистическое управление координирует управление данными (с 01.04.2019)
+      - § 16, § 17(5)–(6) — состав программы; перечень работ утверждает правительство распоряжением
+      - § 20¹ — служба обмена данными; § 29 — статистика использует прежде всего данные баз; § 29(2) — управление может предложить изменить состав данных базы
+    topics: [statistics, data_governance]
+    chapters:
+      - 07-countries/07-estonia.md#правовая-основа
+      - 07-countries/07-estonia.md#государственные
+    url: https://www.riigiteataja.ee/akt/111032022002
+
+  - id: ee-stat-works-2026
+    country: ee
+    title: Перечень статистических работ на 2026–2030 годы
+    title_original: Statistikaameti 2026.−2030. aastal tehtavate statistikatööde loetelu
+    short: распоряжение № 236
+    number: распоряжение Правительства № 236, RT III, 20.12.2025, 2
+    date: 2025-12-18
+    in_force: 2026-01-01
+    status: in_force
+    status_checked: 2026-10-28
+    about: 18 областей статистики — показатели, стоимость по годам, правовое основание, периодичность; базы-источники не названы.
+    topics: [statistics]
+    chapters:
+      - 07-countries/07-estonia.md#государственные
+    url: https://www.riigiteataja.ee/akt/320122025002
+
+  - id: ee-rhs
+    country: ee
+    title: Закон о государственных закупках
+    title_original: Riigihangete seadus
+    short: RHS
+    number: RT I, 01.07.2017, 1
+    date: 2017-06-14
+    in_force: 2017-09-01
+    edition: редакция RT I, 03.07.2026, 6, действует 01.10–31.10.2026
+    status: in_force
+    status_checked: 2026-10-28
+    about: Регистр государственных закупок; сведения в нём открыты, если закон не ограничивает доступ.
+    provisions:
+      - § 181 — назначение, состав и открытость регистра закупок
+    topics: [procurement]
+    chapters:
+      - 07-countries/07-estonia.md#регистр-закупок
+    url: https://www.riigiteataja.ee/akt/103072026006
+    note: После 31 октября 2026 года проверить следующую редакцию.
 
   # --- Финляндия ---
 
@@ -2639,6 +2711,10 @@ acts:
     topics: [data_governance, systems, access]
     chapters:
       - 05-frameworks/04-international-practice.md#модель-управления-информацией-в-финляндии
+      - 07-countries/08-finland.md#правовая-основа
+      - 07-countries/08-finland.md#модель-управления-информацией-и-описание-для-запросов
+      - 07-countries/08-finland.md#совет-по-управлению-информацией
+      - 07-countries/08-finland.md#карта-управления-информацией
     url: https://www.finlex.fi/fi/lainsaadanto/2019/906
     links:
       - title: перевод на английский (Act on Information Management in Public Administration, текст 2019 года)
@@ -2664,10 +2740,110 @@ acts:
     topics: [access]
     chapters:
       - 05-frameworks/04-international-practice.md#модель-управления-информацией-в-финляндии
+      - 07-countries/08-finland.md#правовая-основа
+      - 07-countries/08-finland.md#где-найти-нужное
     url: https://www.finlex.fi/fi/lainsaadanto/1999/621
     links:
       - title: перевод на английский (Act on the Openness of Government Activities)
         url: https://www.finlex.fi/en/legislation/translations/1999/eng/621
+
+  - id: fi-529-2026
+    country: fi
+    title: Закон об архивировании
+    title_original: Arkistointilaki
+    short: закон 529/2026
+    number: 529/2026
+    date: 2026-06-16
+    in_force: 2026-07-01
+    status: in_force
+    status_checked: 2026-10-28
+    about: Национальный архив решает, какие документы и данные архивировать; заменил закон об архивах 831/1994.
+    provisions:
+      - § 9–10 — решения об архивировании, в том числе общие для многих органов
+      - § 13–15 — передача в национальный архивный ресурс, архивная копия набора данных
+      - § 25 — в силе с 01.07.2026, закон 831/1994 утратил силу
+    topics: [archives, data_governance]
+    chapters:
+      - 07-countries/08-finland.md#правовая-основа
+    url: https://www.finlex.fi/fi/lainsaadanto/2026/529
+
+  - id: fi-552-2019
+    country: fi
+    title: Закон о вторичном использовании данных здравоохранения и социального обеспечения
+    title_original: Laki sosiaali- ja terveystietojen toissijaisesta käytöstä
+    short: закон 552/2019
+    number: 552/2019
+    date: 2019-04-26
+    in_force: 2019-05-01
+    edition: консолидированный текст Finlex с изменениями до 1159/2025
+    status: in_force
+    status_checked: 2026-10-28
+    about: Разрешения Findata на вторичное использование; держатели готовят описания своих информационных ресурсов.
+    provisions:
+      - § 4–5 — Findata при Институте здоровья и благополучия (THL), её задачи
+      - § 11 — когда разрешение выдаёт Findata
+      - § 12 — держатели готовят описания содержания своих ресурсов
+    topics: [sharing, personal_data]
+    chapters:
+      - 07-countries/08-finland.md#правовая-основа
+      - 07-countries/08-finland.md#государственные
+    url: https://www.finlex.fi/fi/lainsaadanto/2019/552
+
+  - id: fi-280-2004
+    country: fi
+    title: Закон о статистике
+    title_original: Tilastolaki
+    short: закон 280/2004
+    number: 280/2004
+    date: 2004-04-23
+    in_force: 2004-05-01
+    status: in_force
+    status_checked: 2026-10-28
+    about: Сбор сведений для статистики; государственные органы передают данные Статистическому управлению.
+    provisions:
+      - § 7 — решение о сборе сведений и информирование
+      - § 14 — государственные органы передают данные несмотря на тайну
+    topics: [statistics]
+    chapters:
+      - 07-countries/08-finland.md#правовая-основа
+    url: https://www.finlex.fi/fi/lainsaadanto/2004/280
+    note: Прочитан первоначальный текст; консолидированный текст через opendata.finlex.fi получить не удалось.
+
+  - id: fi-1397-2016
+    country: fi
+    title: Закон о государственных закупках
+    title_original: Laki julkisista hankinnoista ja käyttöoikeussopimuksista
+    short: закон 1397/2016
+    number: 1397/2016
+    date: 2016-12-29
+    in_force: 2017-01-01
+    edition: консолидированный текст Finlex с изменениями до 798/2026
+    status: in_force
+    status_checked: 2026-10-28
+    about: Объявления о закупках — в HILMA, выше порогов ЕС — также в TED.
+    topics: [procurement]
+    chapters:
+      - 07-countries/08-finland.md#госзакупки
+    url: https://www.finlex.fi/fi/lainsaadanto/2016/1397
+
+  - id: fi-571-2016
+    country: fi
+    title: Закон об общих вспомогательных службах электронного обслуживания
+    title_original: Laki hallinnon yhteisistä sähköisen asioinnin tukipalveluista
+    short: закон 571/2016
+    number: 571/2016
+    date: 2016-06-29
+    in_force: 2016-07-15
+    edition: консолидированный текст Finlex с изменениями до 814/2026
+    status: in_force
+    status_checked: 2026-10-28
+    about: Шина обмена Palveluväylä и каталог услуг Suomi.fi, куда органы обязаны вносить свои услуги.
+    provisions:
+      - § 6 — органы публикуют сведения о своих услугах в каталоге услуг
+    topics: [systems, sharing]
+    chapters:
+      - 07-countries/08-finland.md#другие-источники
+    url: https://www.finlex.fi/fi/lainsaadanto/2016/571
 
   # --- Канада ---
 
@@ -2686,10 +2862,18 @@ acts:
       - статья 7 — ответ на запрос — в течение 30 дней
       - статья 9 — продление; продление больше чем на 30 дней — с уведомлением Уполномоченного по информации
       - статья 10(3) — пропущенный срок считается отказом
+      - статья 74(b) — названия записок министрам публикуются
+      - статья 86 — контракты дороже 10 000 долларов; статья 87 — гранты дороже 25 000 долларов
+      - статья 93 — пересмотр закона раз в пять лет
     response_time: "30 дней со дня получения запроса; продление — на разумный срок, если документов много, нужны консультации или уведомление третьих лиц; продление больше чем на 30 дней — с уведомлением Уполномоченного по информации. Пропущенный срок считается отказом"
     topics: [access, archives]
     chapters:
       - 05-frameworks/04-international-practice.md#info-source-и-инвентарь-открытых-данных-канады
+      - 07-countries/09-canada.md#правовая-основа
+      - 07-countries/09-canada.md#info-source
+      - 07-countries/09-canada.md#сводки-выполненных-запросов
+      - 07-countries/09-canada.md#активное-раскрытие-и-закупки
+      - 07-countries/09-canada.md#где-найти-нужное
     url: https://laws-lois.justice.gc.ca/eng/acts/A-1/
     note: Законопроект C-58 в первоначальной редакции убирал Info Source из закона; в принятом законе 2019 года статья 5 сохранена.
 
@@ -2708,6 +2892,8 @@ acts:
     topics: [personal_data, archives]
     chapters:
       - 05-frameworks/04-international-practice.md#info-source-и-инвентарь-открытых-данных-канады
+      - 07-countries/09-canada.md#info-source
+      - 07-countries/09-canada.md#пример
     url: https://laws-lois.justice.gc.ca/eng/acts/P-21/
 
   - id: ca-info-source-requirements
@@ -2723,9 +2909,11 @@ acts:
     provisions:
       - страница строится по цепочке «программа → деятельность → класс документов»
       - класс документов — название, описание, виды документов, сводки раскрытия, формат, номер; банк персональных данных — описание, категории людей, цель, допустимые использования, сроки хранения, номер банка
+      - сводки передачи персональных данных обязательны для соглашений после 26.10.2022
     topics: [access, archives]
     chapters:
       - 05-frameworks/04-international-practice.md#info-source-и-инвентарь-открытых-данных-канады
+      - 07-countries/09-canada.md#info-source
     url: https://www.canada.ca/en/treasury-board-secretariat/services/access-information-privacy/access-information/access-informatio-policies-guidance/programs-holdings-online-publishing-requirements.html
     note: Заменили требования к децентрализованной публикации от 4 октября 2019 года.
 
@@ -2744,6 +2932,7 @@ acts:
     topics: [open_data, data_governance]
     chapters:
       - 05-frameworks/04-international-practice.md#info-source-и-инвентарь-открытых-данных-канады
+      - 07-countries/09-canada.md#инвентарь-открытых-данных
     url: https://www.tbs-sct.canada.ca/pol/doc-eng.aspx?id=28108
     links:
       - title: Open Data Inventory — инвентарь открытых данных на open.canada.ca
@@ -2768,6 +2957,8 @@ acts:
     topics: [data_governance, open_data]
     chapters:
       - 05-frameworks/04-international-practice.md#info-source-и-инвентарь-открытых-данных-канады
+      - 07-countries/09-canada.md#правовая-основа
+      - 07-countries/09-canada.md#учёт-приложений-услуг-и-ии
     url: https://www.tbs-sct.canada.ca/pol/doc-eng.aspx?id=32603
     links:
       - title: Guideline on Service and Digital — руководство к политике
@@ -2775,6 +2966,43 @@ acts:
       - title: изменения политики и директивы 2025 года
         url: https://www.canada.ca/en/government/system/digital-government/policies-standards/policy-service-digital-announcements/amendments-policy-directive-service-digital.html
     note: Страница TBS из сети проверки не открылась; номера пунктов — по таблице соответствия на canada.ca, формулировки — по руководству к политике.
+
+  - id: ca-lac-act
+    country: ca
+    title: Закон о Библиотеке и архивах Канады
+    title_original: "Library and Archives of Canada Act / Loi sur la Bibliothèque et les Archives du Canada"
+    short: LAC Act
+    number: S.C. 2004, c. 11
+    date: 2004-04-22
+    edition: консолидированный текст Justice Laws, актуален на 30.09.2026, последнее изменение — 26.02.2015
+    status: in_force
+    status_checked: 2026-10-28
+    about: Документы государства уничтожают только с письменного согласия Библиотекаря и архивиста; номер разрешения стоит в описании банка персональных данных.
+    provisions:
+      - статья 12(1) — без письменного согласия Библиотекаря и архивиста документ не уничтожают и не отчуждают
+    topics: [archives]
+    chapters:
+      - 07-countries/09-canada.md#правовая-основа
+      - 07-countries/09-canada.md#info-source
+    url: https://laws-lois.justice.gc.ca/eng/acts/L-7.7/
+
+  - id: ca-statistics-act
+    country: ca
+    title: Закон о статистике
+    title_original: "Statistics Act / Loi sur la statistique"
+    short: Statistics Act
+    number: R.S.C., 1985, c. S-19
+    edition: консолидированный текст Justice Laws, актуален на 30.09.2026, последнее изменение — 12.12.2017
+    status: in_force
+    status_checked: 2026-10-28
+    about: Ведомства открывают Статистическому управлению свои записи для статистики.
+    provisions:
+      - статья 13 — тот, у кого хранятся документы ведомства или организации, открывает к ним доступ уполномоченным главного статистика
+    topics: [statistics, sharing]
+    chapters:
+      - 07-countries/09-canada.md#правовая-основа
+      - 07-countries/09-canada.md#государственные
+    url: https://laws-lois.justice.gc.ca/eng/acts/S-19/
 
   # --- Китай ---
 
@@ -2800,6 +3028,8 @@ acts:
     topics: [sharing, data_governance, systems]
     chapters:
       - 05-frameworks/04-international-practice.md#каталоги-государственных-данных-китая
+      - 07-countries/10-china.md#правовая-основа
+      - 07-countries/10-china.md#каталог-государственных-данных
     url: https://www.gov.cn/zhengce/content/202506/content_7026294.htm
     note: Принято на заседании Госсовета 9 мая 2025 года. Уполномоченный орган в тексте не назван; Национальному управлению данных при создании в 2023 году поручили координировать объединение, обмен и использование ресурсов данных.
 
@@ -2820,6 +3050,7 @@ acts:
     topics: [sharing, data_governance]
     chapters:
       - 05-frameworks/04-international-practice.md#каталоги-государственных-данных-китая
+      - 07-countries/10-china.md#каталог-государственных-данных
     url: https://www.gov.cn/zhengce/content/2016-09/19/content_5109486.htm
     note: Отмена не найдена; по существу меры заменены положением № 809 2025 года.
 
@@ -2863,6 +3094,7 @@ acts:
     topics: [data_governance, sharing]
     chapters:
       - 05-frameworks/04-international-practice.md#каталоги-государственных-данных-китая
+      - 07-countries/10-china.md#каталог-государственных-данных
     url: https://www.gov.cn/zhengce/content/2022-10/28/content_5722322.htm
     note: Документ канцелярии Госсовета; опубликован 28 октября 2022 года.
 
@@ -2886,6 +3118,8 @@ acts:
     topics: [open_data, data_governance]
     chapters:
       - 05-frameworks/04-international-practice.md#каталоги-государственных-данных-китая
+      - 07-countries/10-china.md#регистрация-общественных-ресурсов-данных
+      - 07-countries/10-china.md#пример-данные-медицинского-страхования-пекина
     url: https://www.gov.cn/zhengce/zhengceku/202501/P020250121384980006337.pdf
     links:
       - title: публикация на ndrc.gov.cn
@@ -2910,8 +3144,109 @@ acts:
     topics: [access]
     chapters:
       - 05-frameworks/04-international-practice.md#каталоги-государственных-данных-китая
+      - 07-countries/10-china.md#раскрытие-государственной-информации
+      - 07-countries/10-china.md#где-найти-нужное
     url: https://www.gov.cn/zhengce/content/2019-04/15/content_5382991.htm
     note: Первая редакция положения принята в 2007 году.
+
+  - id: cn-data-security
+    country: cn
+    title: Закон о безопасности данных
+    title_original: 中华人民共和国数据安全法
+    short: закон о безопасности данных
+    number: закон, принятый Постоянным комитетом ВСНП 10 июня 2021 года
+    date: 2021-06-10
+    in_force: 2021-09-01
+    status: in_force
+    status_checked: 2026-10-28
+    about: Перечни важных данных; государство составляет каталог открытия государственных данных и единую платформу открытых данных.
+    provisions:
+      - статья 21 — классификация данных по уровням, перечни важных данных регионов и отраслей
+      - статьи 38–41 — государственные органы собирают и используют данные в пределах полномочий, своевременно раскрывают государственные данные
+      - статья 42 — каталог открытия государственных данных и единая платформа открытых данных
+      - статья 55 — ответственность служащих
+    topics: [open_data, data_governance]
+    chapters:
+      - 07-countries/10-china.md#правовая-основа
+      - 07-countries/10-china.md#порталы-провинций-и-городов
+    url: http://www.npc.gov.cn/npc/c2/c30834/202106/t20210610_311888.html
+    note: Общегосударственный каталог открытия и единая платформа на 28 октября 2026 года не созданы.
+
+  - id: cn-it-projects
+    country: cn
+    title: Меры по управлению государственными информационными проектами
+    title_original: 国家政务信息化项目建设管理办法
+    short: меры об ИТ-проектах
+    number: 国办发〔2019〕57号
+    date: 2019-12-30
+    in_force: 2020-02-01
+    status: unverified
+    status_checked: 2026-10-28
+    about: Каталог информационных ресурсов — условие одобрения проекта; общий каталог систем центральных ведомств; без записи в нём нет денег на эксплуатацию.
+    provisions:
+      - статья 9 — состав документов проекта
+      - статья 11 — каталог информационных ресурсов — условие одобрения проекта
+      - статья 12 — общий каталог государственных информационных систем
+      - статья 25 — приёмка; статья 28 — система вне каталога не получает средств на эксплуатацию
+    topics: [systems, sharing]
+    chapters:
+      - 07-countries/10-china.md#общий-каталог-информационных-систем
+    url: https://www.mee.gov.cn/zcwj/gwywj/202001/t20200122_760798.shtml
+    note: Текст — по перепечатке на сайте Министерства экологии и окружающей среды; на gov.cn не найден, статус не проверен.
+
+  - id: cn-stat-surveys
+    country: cn
+    title: Меры по управлению ведомственными статистическими обследованиями
+    title_original: 部门统计调查项目管理办法
+    short: меры об обследованиях
+    number: приказ Государственного статистического управления № 22
+    date: 2017-07-14
+    in_force: 2017-10-01
+    status: unverified
+    status_checked: 2026-10-28
+    about: Ведомственные статистические обследования одобряют или регистрируют, их перечень публикуется.
+    provisions:
+      - статьи 7 и 14 — что обследуют и как подают проект
+      - статьи 21 и 23 — одобрение на три года, регистрация на пять лет
+      - статьи 24 и 26 — публикация перечня обследований
+    topics: [statistics, mandates]
+    chapters:
+      - 07-countries/10-china.md#правовая-основа
+      - 07-countries/10-china.md#государственные
+    url: https://www.stats.gov.cn/fw/bmdcxmsp/xgfg/202302/t20230215_1906559.html
+
+  - id: cn-public-data-opinions
+    country: cn
+    title: Мнения ЦК КПК и Госсовета об ускорении освоения общественных ресурсов данных
+    title_original: 中共中央办公厅 国务院办公厅关于加快公共数据资源开发利用的意见
+    short: мнения 2024 года
+    number: документ канцелярий ЦК КПК и Госсовета
+    date: 2024-09-21
+    status: in_force
+    status_checked: 2026-10-28
+    about: Цели на 2025 и 2030 годы — каталоги открытия, регистрация общественных данных, раскрытие сведений об операторах.
+    topics: [open_data, data_governance]
+    chapters:
+      - 07-countries/10-china.md#правовая-основа
+      - 07-countries/10-china.md#регистрация-общественных-ресурсов-данных
+    url: https://paper.people.com.cn/rmrbwap/html/2024-10/10/nw.D110000renmrb_20241010_4-04.htm
+    note: Опубликованы 9 октября 2024 года; ссылка — публикация в «Жэньминь жибао», на gov.cn текст не найден.
+
+  - id: cn-operation-disclosure
+    country: cn
+    title: Уведомление о раскрытии сведений об уполномоченной эксплуатации общественных данных
+    title_original: 国数综资源〔2026〕2号
+    short: уведомление 2026 года
+    number: 国数综资源〔2026〕2号
+    date: 2026-01-28
+    status: unverified
+    status_checked: 2026-10-28
+    about: Сведения об уполномоченной эксплуатации общественных данных раскрывают ежегодно до конца марта на платформах регистрации.
+    topics: [open_data, sharing]
+    chapters:
+      - 07-countries/10-china.md#регистрация-общественных-ресурсов-данных
+    url: https://www.secrss.com/articles/87814
+    note: Текст — по перепечатке; на сайте Национального управления данных не прочитан.
 
   # --- Япония ---
 
@@ -2935,6 +3270,7 @@ acts:
     topics: [archives, access]
     chapters:
       - 05-frameworks/04-international-practice.md#реестры-документов-и-персональных-данных-японии
+      - 07-countries/11-japan.md#реестры-файлов-документов
     url: https://laws.e-gov.go.jp/law/421AC0000000066
     links:
       - title: перевод на английский (Public Records and Archives Management Act)
@@ -2961,6 +3297,7 @@ acts:
     topics: [personal_data]
     chapters:
       - 05-frameworks/04-international-practice.md#реестры-документов-и-персональных-данных-японии
+      - 07-countries/11-japan.md#персональная-информация-реестры-файлов-и-оценки-систем
     url: https://laws.e-gov.go.jp/law/415AC0000000057
 
   - id: jp-foi
@@ -2982,6 +3319,7 @@ acts:
     topics: [access]
     chapters:
       - 05-frameworks/04-international-practice.md#реестры-документов-и-персональных-данных-японии
+      - 07-countries/11-japan.md#где-найти-нужное
     url: https://laws.e-gov.go.jp/law/411AC0000000042
 
   - id: jp-data-utilization
@@ -3000,6 +3338,7 @@ acts:
     topics: [open_data]
     chapters:
       - 05-frameworks/04-international-practice.md#реестры-документов-и-персональных-данных-японии
+      - 07-countries/11-japan.md#правовая-основа
     url: https://laws.e-gov.go.jp/law/428AC1000000103
     note: Основные принципы открытых данных (オープンデータ基本指針) приняты 30 мая 2017 года, последняя редакция — 5 июля 2024 года; по ним все данные министерств в принципе открывают.
 
@@ -3016,9 +3355,12 @@ acts:
     provisions:
       - статьи 4–5 — план развития информационных систем
       - статьи 19–20 — план развития и улучшения базы публичных базовых сведений (базовые реестры), действуют с 01.04.2025; первый план принят 13 июня 2025 года, действует до конца 2030 финансового года
+      - статьи 26–29 в редакции закона № 57 2026 года (вступают не позже 16.01.2028) — одобренный проект запрашивает данные органов, отказ объясняют
     topics: [systems, data_governance]
     chapters:
       - 05-frameworks/04-international-practice.md#реестры-документов-и-персональных-данных-японии
+      - 07-countries/11-japan.md#портал-данных-и-базовые-реестры
+      - 07-countries/11-japan.md#где-найти-нужное
     url: https://laws.e-gov.go.jp/law/414AC0000000151
     note: Изменение № 57 2026 года (обнародовано 17 июля 2026 года) ещё не вступило в силу.
 
@@ -3038,7 +3380,77 @@ acts:
     topics: [systems]
     chapters:
       - 05-frameworks/04-international-practice.md#реестры-документов-и-персональных-данных-японии
+      - 07-countries/11-japan.md#учёт-систем-и-расходы-по-системам
     url: https://www.digital.go.jp/resources/standard_guidelines
+
+  - id: jp-my-number
+    country: jp
+    title: Закон о номере My Number
+    title_original: 行政手続における特定の個人を識別するための番号の利用等に関する法律
+    short: закон о My Number
+    number: закон № 27 2013 года (平成二十五年法律第二十七号)
+    date: 2013-05-31
+    edition: редакция по закону № 87 2025 года, действует с 01.10.2026
+    status: in_force
+    status_checked: 2026-10-28
+    about: Оценка каждой системы с номером до её создания, журнал обменов, корпоративные номера.
+    provisions:
+      - статья 23 — сеть обмена записывает каждый запрос и ответ — кто, когда, какие сведения
+      - статья 28 — до создания файла с номером публикуют оценку — объём, задача, устройство системы, меры защиты; без неё обмен запрещён
+      - статьи 39–42 — корпоративные номера и их публикация
+      - приказ Цифрового агентства и MIC № 9 2024 года — список разрешённых обменов — кто, для какой задачи, у кого, какие сведения
+    topics: [personal_data, sharing]
+    chapters:
+      - 07-countries/11-japan.md#персональная-информация-реестры-файлов-и-оценки-систем
+      - 07-countries/11-japan.md#другие-источники
+    url: https://laws.e-gov.go.jp/law/425AC0000000027
+    links:
+      - title: приказ о разрешённых обменах (令和六年デジタル庁・総務省令第九号)
+        url: https://laws.e-gov.go.jp/law/506M60004008009
+
+  - id: jp-statistics
+    country: jp
+    title: Закон о статистике
+    title_original: 統計法
+    short: закон о статистике
+    number: закон № 53 2007 года (平成十九年法律第五十三号)
+    date: 2007-05-23
+    edition: редакция по закону № 46 2026 года, действует с 24.06.2026
+    status: in_force
+    status_checked: 2026-10-28
+    about: Основные статистики, одобрение MIC для каждого обследования, выдача данных обследований исследователям.
+    provisions:
+      - статья 2 — основные статистики (基幹統計), основные и общие обследования, административные записи
+      - статья 9 — основное обследование только с одобрения MIC; в заявке — что спрашивают, у кого, что сводят, когда публикуют
+      - статья 19 — то же для общих обследований
+      - статьи 33 и 36 — данные обследований и обезличенные данные выдают для статистики и исследований
+    topics: [statistics, access]
+    chapters:
+      - 07-countries/11-japan.md#государственные
+      - 07-countries/11-japan.md#где-найти-нужное
+    url: https://laws.e-gov.go.jp/law/419AC0000000053
+    note: Перечень основных статистик MIC на 21 января 2025 года — 54.
+
+  - id: jp-kanpo
+    country: jp
+    title: Закон о выпуске официального вестника
+    title_original: 官報の発行に関する法律
+    short: закон об официальном вестнике
+    number: закон № 85 2023 года (令和五年法律第八十五号)
+    date: 2023-12-13
+    in_force: 2025-04-01
+    edition: редакция по закону № 62 2026 года
+    status: in_force
+    status_checked: 2026-10-28
+    about: Официальный вестник 官報 выходит в сети; срок, в течение которого номера доступны.
+    provisions:
+      - статья 3 — законы и подзаконные акты обнародуют в 官報
+      - статья 5 — вестник выпускают, размещая файл в сети
+      - статья 8 — номера доступны установленный срок, законы — и после него
+    topics: [mandates, procurement]
+    chapters:
+      - 07-countries/11-japan.md#государственные
+    url: https://laws.e-gov.go.jp/law/505AC0000000085
 
   # --- Германия ---
 
@@ -3056,9 +3468,13 @@ acts:
     provisions:
       - § 1 и приложение — 50 регистров, в которых налоговый идентификационный номер служит дополнительным идентификатором
       - § 3(1) пункт 1 — ведомство модернизации регистров (Федеральное административное ведомство, BVA) составляет обзор существующих регистров — «карту регистров»
+      - § 9 — передачи с идентификационным номером протоколируются, протоколы хранят два года
     topics: [systems, sharing]
     chapters:
       - 05-frameworks/04-international-practice.md#карта-регистров-и-datenatlas-в-германии
+      - 07-countries/12-germany.md#правовая-основа
+      - 07-countries/12-germany.md#карта-регистров-и-vip
+      - 07-countries/12-germany.md#noots-и-модернизация-регистров
     url: https://www.gesetze-im-internet.de/idnrg/
     note: Закон — часть закона о модернизации регистров (Registermodernisierungsgesetz) от 28 марта 2021 года; § 12 действует с 07.04.2021, остальное — с 31.08.2023. Срок модернизации регистров — конец 2028 года.
 
@@ -3077,6 +3493,7 @@ acts:
     topics: [statistics, standards]
     chapters:
       - 05-frameworks/04-international-practice.md#карта-регистров-и-datenatlas-в-германии
+      - 07-countries/12-germany.md#карта-регистров-и-vip
     url: https://www.gesetze-im-internet.de/bstatg_1987/__5a.html
 
   - id: de-noots
@@ -3093,6 +3510,7 @@ acts:
     topics: [sharing, systems]
     chapters:
       - 05-frameworks/04-international-practice.md#карта-регистров-и-datenatlas-в-германии
+      - 07-countries/12-germany.md#noots-и-модернизация-регистров
     url: https://www.gesetze-im-internet.de/nootsstvtr/
 
   - id: de-egovg-12a
@@ -3113,6 +3531,8 @@ acts:
     topics: [open_data, data_governance]
     chapters:
       - 05-frameworks/04-international-practice.md#карта-регистров-и-datenatlas-в-германии
+      - 07-countries/12-germany.md#govdata
+      - 07-countries/12-germany.md#чем-владеем-опись-федерального-органа
     url: https://www.gesetze-im-internet.de/egovg/__12a.html
 
   - id: de-ifg
@@ -3134,4 +3554,47 @@ acts:
     topics: [access, archives]
     chapters:
       - 05-frameworks/04-international-practice.md#карта-регистров-и-datenatlas-в-германии
+      - 07-countries/12-germany.md#datenatlas-закрытый-каталог
+      - 07-countries/12-germany.md#где-найти-нужное
     url: https://www.gesetze-im-internet.de/ifg/
+
+  - id: de-ozg
+    country: de
+    title: Закон об онлайн-доступе к административным услугам
+    title_original: Onlinezugangsgesetz (OZG)
+    short: OZG
+    number: закон от 14.08.2017, BGBl. I S. 3122, 3138
+    date: 2017-08-14
+    edition: "изменён законом от 19.07.2024 (BGBl. 2024 I Nr. 245); последнее изменение — статья 3 закона от 06.10.2026 (BGBl. 2026 I Nr. 289)"
+    status: in_force
+    status_checked: 2026-10-28
+    about: Услуги Федерации и земель — через порталы; «кабинет защиты данных» показывает человеку передачи его данных между органами.
+    provisions:
+      - § 1a(1) — услуги и в электронном виде через порталы; услуги по федеральным законам только для предприятий — исключительно онлайн не позднее конца пятого календарного года после закона от 19.07.2024
+      - § 10 — «кабинет защиты данных» (Datenschutzcockpit) — пока только передачи с идентификационным номером, по протоколам § 9 IDNrG
+    topics: [systems, sharing]
+    chapters:
+      - 07-countries/12-germany.md#правовая-основа
+      - 07-countries/12-germany.md#noots-и-модернизация-регистров
+    url: https://www.gesetze-im-internet.de/ozg/
+
+  - id: de-bkorgerl-2025
+    country: de
+    title: Распоряжение канцлера об организации правительства 2025 года
+    title_original: Organisationserlass des Bundeskanzlers vom 6. Mai 2025
+    short: Organisationserlass 2025
+    number: BGBl. 2025 I Nr. 131
+    date: 2025-05-06
+    in_force: 2025-05-06
+    status: in_force
+    status_checked: 2026-10-28
+    about: Создано Министерство цифровых технологий и модернизации государства; ему переданы цифровая администрация, ИТ Федерации и политика данных.
+    provisions:
+      - раздел I — создано Министерство цифровых технологий и модернизации государства (BMDS)
+      - раздел XII — переданы цифровая администрация с управлением OZG, ИТ Федерации, политика данных, право использования данных, ITZBund
+      - раздел XIII — согласование существенных ИТ-расходов прямой федеральной администрации, кроме обороны, безопасности и налоговой службы
+    topics: [mandates, systems]
+    chapters:
+      - 07-countries/12-germany.md#правовая-основа
+      - 07-countries/12-germany.md#другие-источники
+    url: https://www.gesetze-im-internet.de/bkorgerl_2025/
