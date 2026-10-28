@@ -46,6 +46,21 @@ countries:
     chapter: 07-countries/06-south-korea.md
     where: "law.go.kr — у каждой редакции номер, дата обнародования и дата вступления в силу; программный интерфейс — open.law.go.kr"
     how_checked: "Тексты и редакции сверены 25 октября 2026 года по law.go.kr."
+  ee:
+    name: Эстония
+    chapter: 05-frameworks/04-international-practice.md
+    where: "Riigi Teataja (riigiteataja.ee) — официальные консолидированные тексты с историей редакций; английские переводы — riigiteataja.ee/en"
+    how_checked: "Сайт riigiteataja.ee — приложение на JavaScript; консолидированные тексты прочитаны 28 октября 2026 года через его открытый программный интерфейс, английский перевод закона о публичной информации — RT V, 25.03.2026, 1."
+  fi:
+    name: Финляндия
+    chapter: 05-frameworks/04-international-practice.md
+    where: "Finlex (finlex.fi) — консолидированные тексты и неофициальные переводы на английский; программный интерфейс — opendata.finlex.fi"
+    how_checked: "Тексты сверены 28 октября 2026 года по Finlex и opendata.finlex.fi; vm.fi и сайты Агентства цифровизации и сведений о населении (DVV) из сети проверки не открылись."
+  ca:
+    name: Канада
+    chapter: 05-frameworks/04-international-practice.md
+    where: "Законы — Justice Laws (laws-lois.justice.gc.ca), консолидированные тексты на английском и французском; политики и директивы Казначейского совета — tbs-sct.canada.ca, руководства и объявления о них — canada.ca"
+    how_checked: "Законы сверены 28 октября 2026 года по laws-lois.justice.gc.ca; tbs-sct.canada.ca из сети проверки не открылся, политики сверены по страницам canada.ca и записи инвентаря открытых данных на open.canada.ca."
 
 acts:
 
@@ -2485,3 +2500,263 @@ acts:
     topics: [systems]
     chapters:
       - 07-countries/06-south-korea.md#правовая-основа
+
+  # --- Эстония ---
+
+  - id: ee-avts
+    country: ee
+    title: Закон о публичной информации
+    title_original: Avaliku teabe seadus
+    short: AvTS
+    number: RT I 2000, 92, 597
+    date: 2000-11-15
+    in_force: 2001-01-01
+    edition: "редакция RT I, 30.06.2026, 9, действует с 01.10.2026; следующая — RT I, 30.06.2026, 10, с 01.12.2026 (обязательное использование системы согласий в обменах X-tee)"
+    status: in_force
+    status_checked: 2026-10-28
+    about: Каждую базу данных государства регистрируют в RIHA до начала работы; запросы информации и открытые данные.
+    provisions:
+      - § 3¹ — повторное использование открытых данных, машиночитаемо и с описанием данных
+      - § 18(1) — ответ на запрос — не позже пяти рабочих дней; § 19 — продление до 15 рабочих дней
+      - § 43¹ — что такое база данных (andmekogu); одни и те же сведения не собирают повторно
+      - § 43² — государственная информационная система — базы данных, подключённые к X-tee и зарегистрированные в RIHA
+      - § 43³(3) — техническую документацию базы до создания согласуют Управление информационной системы (RIA), Инспекция по защите данных и Статистическое управление
+      - § 43⁴(1¹) — управление данными координирует Статистическое управление (с 01.04.2019)
+      - § 43⁵ — что должно быть в положении о базе данных; § 43⁶ — базовые данные фиксируют в RIHA
+      - § 43⁷(1) — базу данных регистрируют в RIHA до того, как начнут ею пользоваться
+      - § 43⁹(1) — обеспечивающие системы, обязательные для всех: пункт 5 — X-tee, пункт 6 — RIHA
+    response_time: "Не позже пяти рабочих дней; если запрос нужно уточнить или сведения долго собирать — до 15 рабочих дней, о продлении сообщают в течение пяти рабочих дней"
+    topics: [systems, access, open_data, data_governance]
+    chapters:
+      - 05-frameworks/04-international-practice.md#каталог-riha-в-эстонии
+    url: https://www.riigiteataja.ee/akt/130062026009
+    links:
+      - title: перевод на английский (Public Information Act)
+        url: https://www.riigiteataja.ee/en/eli/525032026001/consolide
+
+  - id: ee-riha
+    country: ee
+    title: Постановление Правительства о RIHA — системе учёта государственной информационной системы
+    title_original: Riigi infosüsteemi haldussüsteem
+    short: постановление № 58
+    number: постановление Правительства № 58, RT I 2008, 12, 84
+    date: 2008-02-28
+    in_force: 2008-03-08
+    edition: редакция RT I, 29.12.2024, 15, действует с 01.01.2025
+    status: in_force
+    status_checked: 2026-10-28
+    about: Что записывают в RIHA о базе данных, вплоть до объектов данных, и согласование базы пятью ведомствами до создания.
+    provisions:
+      - § 6 — до создания базы проверяют, не собирают ли эти сведения уже где-то ещё
+      - § 7 — согласование пятью ведомствами за 20 рабочих дней — RIA, Инспекция по защите данных, Статистическое управление, Управление земли и пространственного развития, Национальный архив; § 8(2) — без согласования базу не создают
+      - § 9 — в RIHA регистрируют все базы данных, кроме баз по закону о государственной тайне; § 13(3) — пользоваться незарегистрированной базой запрещено
+      - § 18 — что записывают — основание, цель, документацию, владельца, персональные данные, сроки хранения, класс защиты, классификаторы, объекты данных с описаниями, архивные данные
+      - §§ 25–27¹ — подреестры сервисов, классификаторов, семантических описаний и XML-ресурсов
+      - § 28(2) — ошибку в записи владелец исправляет за три рабочих дня; § 29 — сведения RIHA открыты через веб-интерфейс
+    topics: [systems, standards]
+    chapters:
+      - 05-frameworks/04-international-practice.md#каталог-riha-в-эстонии
+    url: https://www.riigiteataja.ee/akt/129122024015
+    note: Закон о публичной информации называет три согласующих ведомства, постановление — пять. Каталог RIHA — riha.ee (бывший адрес riha.eesti.ee перенаправляет туда).
+
+  - id: ee-info-governance
+    country: ee
+    title: Основы организации услуг и управления информацией
+    title_original: Teenuste korraldamise ja teabehalduse alused
+    short: постановление № 88
+    number: постановление Правительства № 88, RT I, 31.05.2017, 7
+    date: 2017-05-25
+    in_force: 2017-06-03
+    edition: редакция RT I, 29.12.2024, 19, действует с 01.01.2025
+    status: in_force
+    status_checked: 2026-10-28
+    about: Ведомство поддерживает свои записи в RIHA актуальными; Статистическое управление пишет руководство по описанию данных.
+    provisions:
+      - § 13(2) — каждое ведомство держит свои записи в RIHA актуальными и верными
+      - § 16¹(2) — руководство по описанию данных составляет Статистическое управление; § 18(9²) — срок — до 31.05.2022
+    topics: [data_governance, standards]
+    chapters:
+      - 05-frameworks/04-international-practice.md#каталог-riha-в-эстонии
+    url: https://www.riigiteataja.ee/akt/129122024019
+
+  - id: ee-x-tee
+    country: ee
+    title: Постановление о слое обмена данными информационных систем (X-tee)
+    title_original: Infosüsteemide andmevahetuskiht
+    short: постановление № 105
+    number: постановление Правительства № 105, RT I, 27.09.2016, 4
+    date: 2016-09-23
+    in_force: 2016-09-30
+    edition: редакция RT I, 28.04.2026, 13, действует с 01.05.2026
+    status: in_force
+    status_checked: 2026-10-28
+    about: Обмен данными между системами государства через X-tee; RIA публикует обезличенную статистику обменов.
+    provisions:
+      - § 2 — определения; центр X-tee — Управление информационной системы (RIA)
+      - § 4(1) пункт 5² — RIA публикует обезличенную статистику использования X-tee
+    topics: [sharing, systems]
+    chapters:
+      - 05-frameworks/04-international-practice.md#каталог-riha-в-эстонии
+    url: https://www.riigiteataja.ee/akt/128042026013
+
+  # --- Финляндия ---
+
+  - id: fi-906-2019
+    country: fi
+    title: Закон об управлении информацией в государственном управлении
+    title_original: Laki julkisen hallinnon tiedonhallinnasta
+    short: закон 906/2019
+    number: 906/2019
+    date: 2019-08-09
+    in_force: 2020-01-01
+    edition: "консолидированный текст Finlex с изменениями до 530/2026; изменение 530/2026 действует с 01.07.2026: архивирование — часть модели управления информацией, модели приводят в соответствие за 18 месяцев"
+    status: in_force
+    status_checked: 2026-10-28
+    about: Модель управления информацией в каждом органе — процессы, информационные ресурсы, системы, обмены — и публичное описание ресурсов для запросов.
+    provisions:
+      - § 5(1)–(2) — модель управления информацией (tiedonhallintamalli) — процессы и ответственные; информационные ресурсы, их связи с процессами и системами и сведения реестра обработки по статье 30 GDPR; архивирование; системы, их интерфейсы и способы передачи данных; меры безопасности
+      - § 5(3) — до крупных изменений и новых систем оценивают их влияние и обновляют модель
+      - § 6 — Министерство финансов ведёт карту управления информацией государственного управления (julkisen hallinnon tiedonhallintakartta)
+      - §§ 10–11 — Совет по управлению информацией оценивает исполнение закона, получает сведения несмотря на тайну, при нарушениях «обращает внимание» органа, отчитывается раз в два года
+      - § 19(2) — наборы данных — машиночитаемо и с описаниями; § 22 — для регулярных обменов через интерфейсы описание структуры данных ведёт передающий орган
+      - § 28 — описание информационных ресурсов и регистра дел для доступа к документам (asiakirjajulkisuuskuvaus) — системы, кто решает о выдаче, наборы по группам данных, поисковые признаки, доступ через интерфейс; публикуется в сети
+      - § 30 — модель — в течение 12 месяцев после вступления закона в силу
+    topics: [data_governance, systems, access]
+    chapters:
+      - 05-frameworks/04-international-practice.md#модель-управления-информацией-в-финляндии
+    url: https://www.finlex.fi/fi/lainsaadanto/2019/906
+    links:
+      - title: перевод на английский (Act on Information Management in Public Administration, текст 2019 года)
+        url: https://www.finlex.fi/en/legislation/translations/2019/eng/906
+
+  - id: fi-621-1999
+    country: fi
+    title: Закон об открытости деятельности органов власти
+    title_original: Laki viranomaisten toiminnan julkisuudesta
+    short: закон 621/1999
+    number: 621/1999
+    date: 1999-05-21
+    in_force: 1999-12-01
+    edition: консолидированный текст Finlex с изменениями до 1079/2025
+    status: in_force
+    status_checked: 2026-10-28
+    about: Доступ к документам органов; орган помогает найти документ по регистру дел и указателям.
+    provisions:
+      - § 13 — запрос называет документ, орган помогает найти его по регистру дел и указателям; причину и имя называть не нужно
+      - § 14(4) — срок ответа
+      - § 20 — орган готовит и публикует в сети ключевые документы или их перечни
+    response_time: "Как можно скорее, не позже двух недель со дня получения запроса; если документов много, в них есть закрытые части или похожая нагрузка — не позже месяца"
+    topics: [access]
+    chapters:
+      - 05-frameworks/04-international-practice.md#модель-управления-информацией-в-финляндии
+    url: https://www.finlex.fi/fi/lainsaadanto/1999/621
+    links:
+      - title: перевод на английский (Act on the Openness of Government Activities)
+        url: https://www.finlex.fi/en/legislation/translations/1999/eng/621
+
+  # --- Канада ---
+
+  - id: ca-atia
+    country: ca
+    title: Закон о доступе к информации
+    title_original: "Access to Information Act / Loi sur l'accès à l'information"
+    short: ATIA
+    number: R.S.C., 1985, c. A-1
+    edition: консолидированный текст Justice Laws, актуален на 30.09.2026, последнее изменение — 14.06.2026
+    status: in_force
+    status_checked: 2026-10-28
+    about: Ежегодное описание каждого учреждения — программы и классы документов (Info Source); сроки ответа на запрос.
+    provisions:
+      - статья 5(1) — министр не реже раза в год публикует описание каждого учреждения — его организацию, программы и функции, (b) — все классы документов (classes of records)
+      - статья 7 — ответ на запрос — в течение 30 дней
+      - статья 9 — продление; продление больше чем на 30 дней — с уведомлением Уполномоченного по информации
+      - статья 10(3) — пропущенный срок считается отказом
+    response_time: "30 дней со дня получения запроса; продление — на разумный срок, если документов много, нужны консультации или уведомление третьих лиц; продление больше чем на 30 дней — с уведомлением Уполномоченного по информации. Пропущенный срок считается отказом"
+    topics: [access, archives]
+    chapters:
+      - 05-frameworks/04-international-practice.md#info-source-и-инвентарь-открытых-данных-канады
+    url: https://laws-lois.justice.gc.ca/eng/acts/A-1/
+    note: Законопроект C-58 в первоначальной редакции убирал Info Source из закона; в принятом законе 2019 года статья 5 сохранена.
+
+  - id: ca-privacy-act
+    country: ca
+    title: Закон о защите персональных данных
+    title_original: "Privacy Act / Loi sur la protection des renseignements personnels"
+    short: Privacy Act
+    number: R.S.C., 1985, c. P-21
+    status: in_force
+    status_checked: 2026-10-28
+    about: Банки персональных данных учреждений и их ежегодный указатель — с целями, использованием и сроками хранения.
+    provisions:
+      - статья 10(1) — учреждение включает персональные данные в банки персональных данных (personal information banks)
+      - статья 11(1) — ежегодный указатель банков — описание, категории людей, цели, допустимые использования, сроки хранения и уничтожения
+    topics: [personal_data, archives]
+    chapters:
+      - 05-frameworks/04-international-practice.md#info-source-и-инвентарь-открытых-данных-канады
+    url: https://laws-lois.justice.gc.ca/eng/acts/P-21/
+
+  - id: ca-info-source-requirements
+    country: ca
+    title: Требования Секретариата Казначейского совета к публикации Info Source
+    title_original: "Info Source Online Publishing Requirements"
+    short: требования к Info Source
+    number: требования TBS по ATIA 70(1)(c) и Privacy Act 71(1)(d)
+    in_force: 2023-07-01
+    status: in_force
+    status_checked: 2026-10-28
+    about: Каждое учреждение публикует свою страницу Info Source и обновляет её ежегодно — программы, классы документов, банки персональных данных.
+    provisions:
+      - страница строится по цепочке «программа → деятельность → класс документов»
+      - класс документов — название, описание, виды документов, сводки раскрытия, формат, номер; банк персональных данных — описание, категории людей, цель, допустимые использования, сроки хранения, номер банка
+    topics: [access, archives]
+    chapters:
+      - 05-frameworks/04-international-practice.md#info-source-и-инвентарь-открытых-данных-канады
+    url: https://www.canada.ca/en/treasury-board-secretariat/services/access-information-privacy/access-information/access-informatio-policies-guidance/programs-holdings-online-publishing-requirements.html
+    note: Заменили требования к децентрализованной публикации от 4 октября 2019 года.
+
+  - id: ca-open-government-directive
+    country: ca
+    title: Директива об открытом правительстве
+    title_original: "Directive on Open Government / Directive sur le gouvernement ouvert"
+    short: директива 2014 года
+    number: директива Казначейского совета
+    date: 2014-10-09
+    status: unverified
+    status_checked: 2026-10-28
+    about: Полный инвентарь данных и информационных ресурсов ведомства, ценных для его работы, — чтобы решить, что открыть и в каком порядке.
+    provisions:
+      - раздел 6.3 — вести полный инвентарь данных и информационных ресурсов, ценных для работы ведомства, чтобы определить, можно ли их открыть и в каком порядке, и спланировать открытие
+    topics: [open_data, data_governance]
+    chapters:
+      - 05-frameworks/04-international-practice.md#info-source-и-инвентарь-открытых-данных-канады
+    url: https://www.tbs-sct.canada.ca/pol/doc-eng.aspx?id=28108
+    links:
+      - title: Open Data Inventory — инвентарь открытых данных на open.canada.ca
+        url: https://open.canada.ca/data/en/dataset/4ed351cf-95d8-4c10-97ac-6b3511f359b7
+    note: Страница TBS из сети проверки не открылась. Текст раздела 6.3 — по записи инвентаря открытых данных; на странице canada.ca «Information and data governance» от 26 июля 2024 года директива значится среди действующих, сообщений об отмене не найдено.
+
+  - id: ca-policy-service-digital
+    country: ca
+    title: Политика в области услуг и цифровых технологий
+    title_original: "Policy on Service and Digital / Politique sur les services et le numérique"
+    short: политика 2020 года
+    number: политика Казначейского совета
+    in_force: 2020-04-01
+    edition: изменения объявлены 29 августа 2025 года, пункты перенумерованы
+    status: in_force
+    status_checked: 2026-10-28
+    about: Информацией и данными управляют как стратегическим активом; регулярную опись советует только руководство к политике.
+    provisions:
+      - пункт 4.1.15 (прежде 4.3.2.1) — управлять информацией и данными как стратегическим активом
+      - пункт 4.1.22 (прежде 4.3.2.8) — как можно больше информации и данных ведомства открывать
+      - пункт 4.1.2 (прежде 4.1.3.2) — директор по информационным технологиям ведомства руководит ИТ, информацией и данными; директора по данным руководитель назначает по желанию — по руководству к политике
+    topics: [data_governance, open_data]
+    chapters:
+      - 05-frameworks/04-international-practice.md#info-source-и-инвентарь-открытых-данных-канады
+    url: https://www.tbs-sct.canada.ca/pol/doc-eng.aspx?id=32603
+    links:
+      - title: Guideline on Service and Digital — руководство к политике
+        url: https://www.canada.ca/en/government/system/digital-government/guideline-service-digital.html
+      - title: изменения политики и директивы 2025 года
+        url: https://www.canada.ca/en/government/system/digital-government/policies-standards/policy-service-digital-announcements/amendments-policy-directive-service-digital.html
+    note: Страница TBS из сети проверки не открылась; номера пунктов — по таблице соответствия на canada.ca, формулировки — по руководству к политике.
