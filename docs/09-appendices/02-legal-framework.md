@@ -1,5 +1,5 @@
 ---
-description: Реестр законов и нормативных актов, на которые ссылается книга, — одиннадцать стран и ЕС, статус на октябрь 2026 года, где каждый акт работает в книге, сроки ответа на запросы и где проверять акт.
+description: Реестр законов и нормативных актов, на которые ссылается книга, — четырнадцать стран и ЕС, статус на октябрь 2026 года, где каждый акт работает в книге, сроки ответа на запросы и где проверять акт.
 ---
 
 import LegalWhere from './_generated/legal-where.mdx';
@@ -16,6 +16,9 @@ import LegalKr from './_generated/legal-kr.mdx';
 import LegalEe from './_generated/legal-ee.mdx';
 import LegalFi from './_generated/legal-fi.mdx';
 import LegalCa from './_generated/legal-ca.mdx';
+import LegalCn from './_generated/legal-cn.mdx';
+import LegalJp from './_generated/legal-jp.mdx';
+import LegalDe from './_generated/legal-de.mdx';
 
 # Нормативная база
 
@@ -92,6 +95,18 @@ import LegalCa from './_generated/legal-ca.mdx';
 ## Канада
 
 <LegalCa />
+
+## Китай
+
+<LegalCn />
+
+## Япония
+
+<LegalJp />
+
+## Германия
+
+<LegalDe />
 
 ## Источники
 
