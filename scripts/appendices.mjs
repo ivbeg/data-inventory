@@ -19,10 +19,10 @@ const LEGAL_PAGE = '09-appendices/02-legal-framework.md';
 const CHECKLISTS_PAGE = '09-appendices/04-checklists.md';
 const CHECK_ONLY = process.argv.includes('--check');
 
-const COUNTRY_ORDER = ['kz', 'ru', 'eu', 'us', 'uk', 'fr', 'pl', 'kr', 'ee', 'fi', 'ca'];
+const COUNTRY_ORDER = ['kz', 'ru', 'eu', 'us', 'uk', 'fr', 'pl', 'kr', 'ee', 'fi', 'ca', 'cn', 'jp', 'de'];
 const COUNTRY_SHORT = {
   kz: 'Казахстан', ru: 'Россия', eu: 'ЕС', us: 'США', uk: 'Великобритания', fr: 'Франция', pl: 'Польша', kr: 'Южная Корея',
-  ee: 'Эстония', fi: 'Финляндия', ca: 'Канада',
+  ee: 'Эстония', fi: 'Финляндия', ca: 'Канада', cn: 'Китай', jp: 'Япония', de: 'Германия',
 };
 const TOPICS = {
   access: 'Доступ к информации и запросы',
@@ -420,12 +420,18 @@ function countryTable(code) {
 // утратившие силу акты в неё не входят: так в ячейке остаются главные акты темы.
 const inMatrix = (a, t) => a.status !== 'repealed' && a.topics.slice(0, 2).includes(t);
 
-// Матрица — таблицами по четыре страны: так она помещается в колонку страницы и на лист PDF.
+// Матрица — таблицами не больше чем по четыре страны: так она помещается в колонку страницы
+// и на лист PDF. Страны делятся поровну, чтобы последняя таблица не оставалась узкой.
 const MATRIX_COLUMNS = 4;
 
 function matrix() {
+  const count = Math.ceil(COUNTRY_ORDER.length / MATRIX_COLUMNS);
   const groups = [];
-  for (let i = 0; i < COUNTRY_ORDER.length; i += MATRIX_COLUMNS) groups.push(COUNTRY_ORDER.slice(i, i + MATRIX_COLUMNS));
+  for (let g = 0, start = 0; g < count; g++) {
+    const size = Math.ceil((COUNTRY_ORDER.length - start) / (count - g));
+    groups.push(COUNTRY_ORDER.slice(start, start + size));
+    start += size;
+  }
   return groups
     .map((codes) => {
       const header = `| Тема | ${codes.map((c) => link(COUNTRY_SHORT[c], `#${slugOf(countries[c].name)}`)).join(' | ')} |`;
