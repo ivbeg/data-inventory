@@ -183,7 +183,7 @@ flowchart TB
 
 ## Источники
 
-- Главы о каждом слое: [государственные](./02-government.md), [общественные](./03-public.md), [коммерческие](./04-commercial.md) данные; сравнение слоёв по странам — на странице [«Шесть стран в сравнении»](../07-countries/00-overview.md), подробности — в главах стран.
+- Главы о каждом слое: [государственные](./02-government.md), [общественные](./03-public.md), [коммерческие](./04-commercial.md) данные; сравнение слоёв по странам — на странице [«Двенадцать стран в сравнении»](../07-countries/00-overview.md), подробности — в главах стран.
 - [Regulation (EU) 2023/2854 (Data Act)](https://eur-lex.europa.eu/eli/reg/2023/2854/oj), глава V — запрос данных органами власти при исключительной потребности.
 - [About EDGAR](https://www.sec.gov/submit-filings/about-edgar) — SEC.
 - [World Development Indicators](https://datatopics.worldbank.org/world-development-indicators/) — Всемирный банк.
