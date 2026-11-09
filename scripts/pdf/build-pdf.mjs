@@ -39,6 +39,13 @@ import {PDFArray, PDFDict, PDFDocument, PDFHexString, PDFName, PDFNumber} from '
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const BOOK_PAGE = '__pdf-book.html';
 
+// Схемы Mermaid в PDF. Колонка — ширина A4 без полей из print.css (210 − 2 × 24 мм), предел высоты —
+// max-height схемы там же. Схема печатается не крупнее scale от натуральной величины: шрифт Mermaid
+// 16 px даёт около 9,6 pt, чуть мельче основного текста (10,5 pt). Без предела маленькая схема
+// растягивается на всю колонку, а широкая сжимается, и шрифт на соседних схемах различается втрое.
+// Схемы, шрифт которых в PDF мельче minFontPt, скрипт перечисляет: их перестраивают в исходниках.
+const DIAGRAM = {scale: 0.8, columnMm: 162, maxHeightMm: 215, minFontPt: 7};
+
 // Всё, что зависит от языка книги. Название, автор и аннотация — из CITATION.cff.
 const LOCALES = {
   ru: {
@@ -343,7 +350,7 @@ async function waitForMermaid(page) {
 }
 
 // Выполняется в браузере на странице сайта: превращает статью в фрагмент книги.
-function extractPage({prefix, pathMap, basePath, siteUrl, demote, asPart, replacements, editionPattern}) {
+function extractPage({prefix, pathMap, basePath, siteUrl, demote, asPart, replacements, editionPattern, diagram}) {
   const pageUrl = siteUrl + location.pathname.slice(basePath.length);
   const sidebarLabel =
     document
@@ -408,6 +415,34 @@ function extractPage({prefix, pathMap, basePath, siteUrl, demote, asPart, replac
       img.setAttribute('src', img.src);
     }
     img.removeAttribute('loading');
+  });
+
+  // Схемы: ширина — доля натуральной величины, а не вся колонка (DIAGRAM в начале файла).
+  // Шрифт меряется на странице сайта: у копии статьи нет вычисленных стилей.
+  const mmToPx = (mm) => (mm * 96) / 25.4;
+  const liveSvgs = [...markdown.querySelectorAll('.docusaurus-mermaid-container svg')];
+  const headings = [...markdown.querySelectorAll('h2, h3')];
+  const smallDiagrams = [];
+  root.querySelectorAll('.docusaurus-mermaid-container svg').forEach((svg, i) => {
+    const box = svg.viewBox?.baseVal;
+    if (!box?.width || !box?.height) {
+      return;
+    }
+    svg.removeAttribute('width');
+    svg.style.maxWidth = '';
+    svg.style.width = `${(box.width * diagram.scale).toFixed(1)}px`;
+    const live = liveSvgs[i];
+    const label = live?.querySelector('.nodeLabel, text');
+    const fontPx = label ? parseFloat(getComputedStyle(label).fontSize) || 16 : 16;
+    const fit = Math.min(diagram.scale, mmToPx(diagram.columnMm) / box.width, mmToPx(diagram.maxHeightMm) / box.height);
+    const fontPt = fontPx * fit * 0.75;
+    if (fontPt < diagram.minFontPt) {
+      const heading = live && headings.filter((h) => h.compareDocumentPosition(live) & Node.DOCUMENT_POSITION_FOLLOWING).pop();
+      smallDiagrams.push({
+        section: heading?.textContent.replace(/​/g, '').trim() ?? '',
+        fontPt: Math.round(fontPt * 10) / 10,
+      });
+    }
   });
 
   // Якоря уникальны в пределах книги: префикс главы. Внутренности SVG не трогаем.
@@ -491,6 +526,7 @@ function extractPage({prefix, pathMap, basePath, siteUrl, demote, asPart, replac
     tagline,
     edition: text.match(new RegExp(editionPattern))?.[0] ?? null,
     mermaid: root.querySelectorAll('.docusaurus-mermaid-container svg').length,
+    smallDiagrams,
     sections,
     html: root.innerHTML,
   };
@@ -899,6 +935,7 @@ async function main() {
       siteUrl,
       replacements: INTERACTIVE_REPLACEMENTS,
       editionPattern: L.edition.source,
+      diagram: DIAGRAM,
     });
 
     const pages = captured.map((data, i) => {
@@ -933,6 +970,13 @@ async function main() {
     log(`схем Mermaid: ${renderedMermaid}${expectedMermaid === null ? '' : ` из ${expectedMermaid} в исходниках`}`);
     if (expectedMermaid !== null && renderedMermaid < expectedMermaid) {
       throw new Error('Отрисованы не все схемы Mermaid. Попробуйте --concurrency 1 или проверьте схемы на сайте.');
+    }
+    const small = pages.flatMap((p) => (p.smallDiagrams ?? []).map((d) => ({...d, chapter: p.title})));
+    if (small.length > 0) {
+      log(`внимание: схем со шрифтом мельче ${DIAGRAM.minFontPt} pt: ${small.length} — перестройте их в исходниках`);
+      for (const d of small) {
+        log(`  ${String(d.fontPt).replace('.', ',')} pt — «${d.chapter}», раздел «${d.section}»`);
+      }
     }
 
     const root = captured[0] ?? {};

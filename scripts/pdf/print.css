@@ -578,7 +578,8 @@ body.pdf-book {
   break-after: avoid;
 }
 
-/* Схемы Mermaid */
+/* Схемы Mermaid. Ширину схемы ставит build-pdf.mjs (DIAGRAM): доля натуральной величины,
+   но не шире колонки. Поля страницы и max-height согласованы с DIAGRAM. */
 
 .markdown .docusaurus-mermaid-container {
   margin: 2mm 0 4mm;
