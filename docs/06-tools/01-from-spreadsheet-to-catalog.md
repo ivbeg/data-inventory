@@ -32,6 +32,15 @@ description: "Чем вести инвентаризацию данных: та�
 ## Как выбрать
 
 ```mermaid
+---
+config:
+  layout: dagre
+  flowchart:
+    rankSpacing: 20
+    nodeSpacing: 30
+    minNodeWidth: 40
+    wrappingWidth: 200
+---
 flowchart TB
   T["Таблица: 14 атрибутов и справочники"] --> A("Описания таблиц обновлять из баз?")
   A -- "да" --> M["Каталог метаданных"]

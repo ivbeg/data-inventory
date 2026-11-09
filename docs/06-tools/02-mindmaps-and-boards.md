@@ -124,6 +124,12 @@ question_n,source_id,status,status_basis,quality,quality_note,checked
 **Интеллект-карта.** Из тех же листов построен Markdown для markmap и Xmind, статус в узле записан словами. Сборник здесь — два узла в двух ветках: чтобы отметить его переезд на картинке, нужно найти и исправить оба.
 
 ```mermaid
+---
+config:
+  mindmap:
+    maxNodeWidth: 140
+    padding: 6
+---
 mindmap
   root((Доступность медицинской помощи))
     q1[Медицинские организации по видам и регионам]

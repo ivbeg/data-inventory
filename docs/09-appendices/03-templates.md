@@ -55,6 +55,16 @@ CSV-шаблоны сохранены в кодировке UTF-8 без мет�
 Листы ссылаются друг на друга идентификаторами. Подпись у линии — колонка, в которой записан идентификатор строки другого файла: в `mandates.csv` колонка `owner` хранит `id` владельца из `owners.csv`.
 
 ```mermaid
+---
+config:
+  layout: dagre
+  er:
+    minEntityWidth: 60
+    minEntityHeight: 40
+    entityPadding: 8
+    rankSpacing: 30
+    nodeSpacing: 20
+---
 erDiagram
   direction LR
   owners["owners.csv"]

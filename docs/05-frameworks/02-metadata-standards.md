@@ -45,6 +45,15 @@ description: "Стандарты описания данных и как при�
 **Модель DCAT.** У всех профилей DCAT она одна, и понятия книги в ней узнаются:
 
 ```mermaid
+---
+config:
+  layout: dagre
+  flowchart:
+    rankSpacing: 20
+    nodeSpacing: 30
+    minNodeWidth: 40
+    wrappingWidth: 200
+---
 flowchart TB
   C["Каталог"]
   C -- "содержит" --> D["Набор данных — запись реестра о наборе"]
